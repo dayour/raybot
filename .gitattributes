@@ -1,0 +1,15 @@
+# Normalize text files to LF in the repository.
+* text=auto eol=lf
+
+# Emitted JSON Schemas are byte-compared by the CI drift check
+# (git diff --exit-code). Pin them to LF so a Windows checkout cannot
+# produce a false positive against a Linux regenerate.
+packages/raybot-object-model/schemas/*.json text eol=lf
+static/schemas/*.json                       text eol=lf
+
+# Binary assets.
+*.png  binary
+*.pdf  binary
+*.ico  binary
+*.woff binary
+*.woff2 binary
