@@ -25,7 +25,21 @@ re-verified on 2026-06-17. This is the schema-mapping reference for the runtime.
 | Endpoints mapped | 57 |
 
 Response-status breakdown of the 611 functional requests: 555 returned 200, 35 returned 404, 9
-returned 500, 6 returned 405, 3 returned 412, and 3 failed outright.
+returned 500, 6 returned 405, 3 returned 412, and 3 failed outright. Full methodology for every
+number is on [Audit metrics](./metrics.mdx).
+
+## Pages in this section
+
+| Page | Contents |
+| --- | --- |
+| [Naming schema](./naming.md) | Both identifier layers, area rules, state suffixes |
+| [Confidence model](./confidence.md) | The three grades and the four honesty notes |
+| [Surfaces](./surfaces.mdx) | All 16 surfaces with per-surface counts |
+| [Test id catalog](./testid-catalog.mdx) | All 177 unique test ids |
+| [Shared test ids](./shared-testids.mdx) | The 76 ids appearing on more than one surface |
+| [Element explorer](./element-explorer.mdx) | All 1,627 elements, filterable |
+| [Label gaps](./label-gaps.mdx) | The 228 interactive elements with no derivable label |
+| [Audit metrics](./metrics.mdx) | Every headline number with its methodology |
 
 ## The two identifier layers
 
@@ -47,33 +61,15 @@ coral.<area>.<surface>.<component>[.<state>]
 The API format is adopted from the authoritative Copilot Studio corpus rather than invented here, so
 identifiers in this audit line up with the published model. See [Naming schema](./naming.md).
 
-## The confidence model
+## Confidence
 
-Every assertion carries one of three grades.
-
-| Grade | Meaning |
-| --- | --- |
-| `CONFIRMED` | Observed live in a running system |
-| `SOURCE-INSPECTED` | Read from source or a published artifact, not observed executing |
-| `UNCONFIRMED` | Inferred or asserted without direct evidence |
+Every assertion carries one of three grades — `CONFIRMED`, `SOURCE-INSPECTED`, or `UNCONFIRMED`.
 
 **This audit is `CONFIRMED` throughout.** Every element row came from a live DOM walk and every
 endpoint from a live network capture.
 
-## Honesty notes
-
-These qualify every number above.
-
-1. `isInteractive` is **computed** from native control type, `href`, ARIA role, `tabindex`, and
-   `contenteditable`. It is calculated independently of whether an element carries a `data-testid`.
-   An element can be interactive with no test id, and can carry a test id while being inert.
-2. `derivedLabel` is a **heuristic**, not a strict accessible-name computation. The heuristic that
-   produced each value is recorded in `labelSource`. The 228 label gaps are a lower bound on
-   accessibility work, not an audit finding.
-3. The API map is **observed network activity**, not a published contract. It was reconciled against
-   the ground-truth corpus but not replaced by it.
-4. Test ids are **not unique**. 76 of 177 appear on more than one surface, so a test id alone is not
-   a sufficient selector across the application.
+Four honesty notes qualify every number on this page. They are load-bearing, not boilerplate, and
+they are set out in full on the [confidence model](./confidence.md) page.
 
 ## Source data
 

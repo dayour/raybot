@@ -1,0 +1,95 @@
+---
+id: shared-testids
+title: Shared test ids
+sidebar_label: Shared test ids
+---
+
+import { SharedTestIdTable } from '@site/src/components/CoralTables';
+
+# Shared test ids
+
+76 of the 177 unique test ids appear on more than one surface. That is 43 percent.
+
+This is the most actionable finding in the audit. A `data-testid` alone is **not** a sufficient
+selector in Coral.
+
+<SharedTestIdTable />
+
+## Why this table is derived, not copied
+
+The audit's own `schema-validation.json` publishes a `sharedTestIdsAcrossSurfaces` array containing
+only the **top 40** rows by surface count. The true count is 76.
+
+Rather than reproduce a truncated list, this table derives the full set from `testids.json` by
+filtering on `isShared`. The numbers here are therefore complete where the source array is not.
+
+This is worth flagging because it is a good example of a subtle data trap: a field named
+`sharedTestIdsAcrossSurfaces` reasonably reads as "all of them", and the totals object separately
+reports 76. Consuming the array and reporting its length would produce a confidently wrong answer of
+40.
+
+## What breaks
+
+A selector that matches by test id alone will, for 43 percent of ids, match on more than one surface.
+The failure modes in descending order of unpleasantness:
+
+**Silent wrong-element interaction.** The selector resolves, a click lands, and it lands on the wrong
+control. No error, wrong outcome. This is the worst case because nothing surfaces it.
+
+**Strict-mode violation.** Playwright's strict mode throws when a locator resolves to multiple
+elements. This is the good outcome — loud and immediate.
+
+**Intermittent failure.** The selector works while only one surface is mounted, and fails when a modal
+or panel that shares the id is open. This presents as flakiness and gets papered over with retries.
+
+## What to do instead
+
+**Qualify by surface.** Scope the locator to the surface container before matching the test id.
+
+```ts
+const panel = page.getByTestId('agent-side-panel');
+await panel.getByTestId('add-button').click();
+```
+
+**Prefer role and accessible name.** This is what the [Phase 7](../runbook/phase-7-reaudit.mdx)
+capture loop does, and it is the reason that loop is reliable across 13 node types:
+
+```ts
+await page.getByRole('button', { name: 'Add a step after Start' }).click();
+await page.getByRole('button', { name: 'Select action: Loop' }).click();
+```
+
+Role plus name is stable across re-renders, survives snapshot invalidation, and does not depend on
+the application author having written a unique test id.
+
+**Never cache element references.** In Coral, refs go stale on every snapshot. A ref captured before
+a render is invalid after it. This interacts badly with shared test ids: a re-resolve may bind to a
+different element than the original. Re-query by role and name each time.
+
+## Why ids are shared
+
+Mostly legitimate component reuse. A shared add-button, a shared card shell, a shared dialog footer.
+The test id travels with the component, and the component appears on many surfaces.
+
+That makes this a **selector-design** observation rather than an application defect. The application
+is not wrong to reuse components. Automation is wrong to assume the resulting ids are unique.
+
+The fix belongs on the consuming side: qualify by surface, or prefer role and name. Asking the
+application to emit globally unique test ids for reused components would trade a small automation
+inconvenience for a real maintenance burden.
+
+## Within-surface duplication is a separate problem
+
+This page covers ids shared **across** surfaces. Ids repeated **within** a single surface are counted
+separately in the `dupTestIdsInSurface` column on the [surfaces](./surfaces.mdx) page.
+
+Within-surface duplication is harder. Qualifying by surface does not help, because the collision is
+inside the surface. These need an index, a nested scope, or a distinguishing accessible name:
+
+```ts
+const rows = page.getByTestId('knowledge-card');
+await rows.filter({ hasText: 'docs.ray.io' }).click();
+```
+
+Filtering by content is preferable to indexing by position, because position changes when the
+underlying collection reorders and the resulting failure is again silent.

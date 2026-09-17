@@ -1,0 +1,87 @@
+---
+id: label-gaps
+title: Label gaps
+sidebar_label: Label gaps
+---
+
+import { LabelGapTable } from '@site/src/components/CoralTables';
+
+# Label gaps
+
+228 interactive elements had no derivable label at capture time.
+
+Read the caveat below before drawing a conclusion from that number.
+
+<LabelGapTable />
+
+## This is not an accessibility audit
+
+`derivedLabel` is a **heuristic**, not a strict accessible-name computation per the ARIA
+specification. It checks visible text, `aria-label`, `aria-labelledby`, `title`, placeholder, and
+associated `label` elements — but it does not implement the full accessible-name algorithm, including
+its traversal rules, its handling of hidden subtrees, or its CSS-generated-content cases.
+
+Two consequences:
+
+**False positives.** An element listed here may have a perfectly good accessible name that the
+heuristic did not compute. Reporting these 228 as accessibility defects would overstate the evidence.
+
+**False negatives.** An element **not** listed here may still fail a real accessible-name check. A
+label derived from a stale `title` attribute satisfies the heuristic and fails a user.
+
+So this is a **lower bound on investigation**, not a defect count. It is the list of places to point a
+real accessibility tool, not the output of one.
+
+If you want an actual accessibility result, run axe or an equivalent against the live surfaces. This
+table tells you which surfaces to prioritize.
+
+## What it is good for
+
+**Automation targeting.** An interactive element with no label and no test id cannot be targeted by
+role and name, and cannot be targeted by test id. It must be reached positionally or through a
+structural locator, both of which are brittle. These are the elements most likely to make an
+automation suite flaky.
+
+Cross-reference with the [element explorer](./element-explorer.mdx):
+
+```ts
+const untargetable = elements.filter(
+  (e) => e.isInteractive && !e.testId && !e.label,
+);
+```
+
+**Surface prioritization.** Facet by surface. A surface with a disproportionate share of the 228 is
+where both accessibility review and automation hardening pay off most.
+
+**Component identification.** Facet by tag and role together. A cluster of unlabelled elements
+sharing a tag and role usually traces to one reused component rather than 30 independent oversights,
+which makes the fix one change rather than 30.
+
+## Casing note
+
+`label-gaps.json` keys test ids in **lowercase**, while `testids.json` preserves source casing. Any
+join across the two must normalize:
+
+```ts
+import { normalizeTestId } from '@raybot/object-model';
+```
+
+This inconsistency is in the source data, not introduced by the export. It is documented rather than
+silently corrected, because a consumer reading the raw files directly will hit it.
+
+## Facets available
+
+- **surface** — which of the sixteen surfaces
+- **tag** — HTML tag name
+- **role** — ARIA role, with `none` for elements carrying no role
+
+Combining role and surface is usually the most informative view. An unlabelled `button` on a
+frequently used surface is a different priority from an unlabelled `div` with `tabindex` on a surface
+reached once.
+
+## Why capture this at all
+
+The audit could have reported only what it could name. Recording what it could **not** name is more
+useful, for the same reason the `dumpFileExists` column exists on the
+[surfaces](./surfaces.mdx) page: an audit that silently drops what it failed to resolve is
+indistinguishable from an audit that found nothing to drop.

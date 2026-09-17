@@ -76,7 +76,17 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       label: 'Coral schema',
       collapsed: false,
-      items: ['coral-schema/index', 'coral-schema/naming'],
+      items: [
+        'coral-schema/index',
+        'coral-schema/naming',
+        'coral-schema/confidence',
+        'coral-schema/surfaces',
+        'coral-schema/testid-catalog',
+        'coral-schema/shared-testids',
+        'coral-schema/element-explorer',
+        'coral-schema/label-gaps',
+        'coral-schema/metrics',
+      ],
     },
     {
       type: 'category',

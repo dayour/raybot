@@ -1,0 +1,76 @@
+---
+id: surfaces
+title: Surfaces
+sidebar_label: Surfaces
+---
+
+import { SurfaceTable } from '@site/src/components/CoralTables';
+
+# Surfaces
+
+Sixteen surfaces were audited. A surface is a distinct UI state worth capturing separately — a page,
+a modal, or a panel state that materially changes what is in the DOM.
+
+<SurfaceTable />
+
+## Reading a row
+
+| Column | Meaning |
+| --- | --- |
+| `total` | Every element catalogued on the surface |
+| `interactive` | Elements computed interactive, independently of test ids |
+| `hasTestId` | Elements carrying a `data-testid` |
+| `testIdOnlyNonInteractive` | Elements with a test id that are **not** interactive |
+| `missingLabel` | Interactive elements with no derivable label |
+| `disabled` | Elements in a disabled state at capture time |
+| `notVisible` | Present in the DOM but not visible |
+| `occludedVisibleNotTopmost` | Visible but covered by another element |
+| `dupTestIdsInSurface` | Test ids appearing more than once on this one surface |
+| `uniqueTestIds` | Distinct test ids on the surface |
+| `isModal` | Whether the surface is a modal or flyout |
+
+## Why these columns exist
+
+Three of them are there specifically to stop common analysis mistakes.
+
+**`testIdOnlyNonInteractive`** exists because test ids are frequently assumed to mark interactive
+controls. They do not. A test id on a container, a label, or a status region is common and
+legitimate. This column makes the size of that population visible per surface.
+
+**`occludedVisibleNotTopmost`** exists because a visible element is not necessarily a clickable one.
+An element behind an open modal passes a visibility check and fails a click. Automation that checks
+visibility and then clicks will flake on exactly these elements, and the flake will look
+intermittent rather than structural.
+
+**`dupTestIdsInSurface`** is distinct from cross-surface sharing. A test id repeated **within** one
+surface — typically on list items or repeated cards — cannot be disambiguated by qualifying with the
+surface. It needs an index or a nested locator. This is a harder problem than cross-surface sharing
+and is worth knowing about before writing a selector.
+
+## Modals are separate surfaces
+
+Modals and flyouts are audited as their own surfaces rather than folded into the page behind them.
+This is deliberate. A modal changes what is reachable, what is occluded, and frequently introduces
+test ids that shadow ones on the page beneath.
+
+Treating a modal-open state as the same surface as a modal-closed state would average away exactly
+the information that makes the capture useful.
+
+## `dumpFileExists`
+
+Each surface references a raw dump file under `coral-schema/surfaces/`. The `dumpFileExists` column
+records whether that file is actually present in the repository.
+
+This column exists because the audit should be able to report its own incompleteness. A surface whose
+dump is missing is still listed with its summary counts, flagged rather than silently dropped. An
+audit that quietly omits what it could not capture is not an audit.
+
+## Coverage caveat
+
+Sixteen surfaces is what was reached during the build, not an exhaustive enumeration of Coral. The
+surfaces covered are those the runbook actually walked through: the build canvas, the right-rail
+sections and their add dialogs, the four settings tabs, preview, evaluate, publish, and the analytics
+and workflow-designer surfaces added in the [Phase 7 re-audit](../runbook/phase-7-reaudit.mdx).
+
+Surfaces behind features not exercised — other channels, solution management, and most of the
+governance surfaces — are absent. Their absence carries no information.

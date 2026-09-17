@@ -1,0 +1,124 @@
+---
+id: metrics
+title: Audit metrics
+sidebar_label: Audit metrics
+---
+
+import StatGrid from '@site/src/components/StatGrid';
+
+# Audit metrics
+
+Every headline number the audit produced, in one place, with the methodology that produced it.
+
+## UI surface
+
+<StatGrid
+  stats={[
+    { label: 'Surfaces', value: 16, hint: 'Distinct UI states captured' },
+    { label: 'Elements', value: 1627, hint: 'Total catalogued' },
+    { label: 'Interactive', value: 1115, hint: 'Computed, not asserted' },
+    { label: 'With test id', value: 983, hint: 'Carrying data-testid' },
+    { label: 'Unique test ids', value: 177, hint: 'Distinct values' },
+    { label: 'Label gaps', value: 228, hint: 'Interactive, no derivable label' },
+    { label: 'Shared test ids', value: 76, hint: 'On more than one surface' },
+  ]}
+/>
+
+## API surface
+
+<StatGrid
+  stats={[
+    { label: 'Requests observed', value: 1249, hint: 'Total network traffic' },
+    { label: 'Functional', value: 611, hint: 'After filtering' },
+    { label: 'Endpoints', value: 57, hint: 'Deduplicated' },
+    { label: 'Domains', value: 11, hint: 'Functional groupings' },
+    { label: 'Hosts', value: 7, hint: 'Distinct origins' },
+  ]}
+/>
+
+## How each number was produced
+
+| Metric | Method |
+| --- | --- |
+| Surfaces | One DOM dump per distinct UI state, driven manually through the UI |
+| Elements | Every node in every dump, deduplicated within a surface |
+| Interactive | Computed from tag, role, `tabindex`, and `contenteditable` — never asserted |
+| With test id | Presence of a `data-testid` attribute, independent of interactivity |
+| Unique test ids | Distinct `data-testid` values across all surfaces |
+| Label gaps | Interactive elements where the label heuristic returned nothing |
+| Shared test ids | Test ids where `surfaceCount` exceeds one |
+| Requests observed | All network traffic captured during the sessions |
+| Functional | Requests remaining after removing static assets, telemetry, and duplicates |
+| Endpoints | Functional requests collapsed by method plus host plus normalized path |
+
+## The three overlapping populations
+
+```text
+1,627  elements
+1,115  interactive
+  983  with test id
+```
+
+`1,115 + 983` exceeds `1,627`. The sets overlap but neither contains the other: there are interactive
+elements with no test id, and test-id-bearing elements that are inert.
+
+Treating "has a test id" as a proxy for "is interactive" produces wrong numbers in both directions.
+See [honesty note 1](./confidence.md).
+
+## Request status distribution
+
+| Status | Count | Reading |
+| --- | --- | --- |
+| 200 | 555 | Success |
+| 404 | 35 | Mostly optional-resource probes |
+| 500 | 9 | Includes the Teams `msteams/app/status` failures |
+| 405 | 6 | Method not allowed — probe artifacts |
+| 412 | 3 | Precondition failed — ETag conflicts |
+| FAILED | 3 | Network-level failure, no response |
+
+555 + 35 + 9 + 6 + 3 + 3 = 611. The distribution accounts for every functional request.
+
+The 9 HTTP 500s are not noise. Some of them are the Teams channel status failure that blocked
+[Phase 6](../runbook/phase-6-teams.mdx) outright. A status distribution that silently dropped them
+would have hidden the single hardest blocker in the build.
+
+## Numbers deliberately not reported
+
+**Coverage percentage.** There is no denominator. Sixteen surfaces were captured; the total number of
+surfaces in Coral is unknown. Any percentage would be invented.
+
+**Defect counts.** The 228 label gaps are a lower bound on investigation, not defects. See
+[label gaps](./label-gaps.mdx).
+
+**Performance timings.** Captured incidentally, not measured under controlled conditions. Reporting
+them would imply a rigor the method did not have.
+
+## Counts that disagree elsewhere in the source repo
+
+Three different gallery counts exist across the source repository: 67, 41, and 38. All three are
+correct for their own scope, and none is a superset of the others.
+
+| Count | Scope |
+| --- | --- |
+| 67 | Every capture in `gallery.json` |
+| 41 | Curated set in `screenshot-map.md` |
+| 38 | Images verified HTTP 200 in the `darbot-validation` run |
+
+The disagreement is recorded in the [errata](../reference/errata.md) rather than resolved by picking
+one, because each number answers a different question and silently unifying them would lose
+information.
+
+## Validation run
+
+Validated 2026-06-07 using `@darbotlabs/darbot-browser-mcp@1.3.0` over `file://`, because Playwright
+blocks `file://` navigation.
+
+| Check | Result |
+| --- | --- |
+| Console errors across four tabs | 0 |
+| Gallery images returning HTTP 200 | 38 / 38 |
+| PDFs exported | 4 |
+
+Known limitation of that driver version: `page._snapshotForAI is not a function`, which breaks
+screenshot, snapshot, and click. Navigation and network inspection still worked, which is what the
+validation needed.

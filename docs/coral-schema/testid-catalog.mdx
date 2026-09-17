@@ -1,0 +1,94 @@
+---
+id: testid-catalog
+title: Test id catalog
+sidebar_label: Test id catalog
+---
+
+import { TestIdTable } from '@site/src/components/CoralTables';
+
+# Test id catalog
+
+All 177 unique `data-testid` values found across the sixteen audited surfaces, with the surfaces each
+appears on, how many times it occurs, the tags and roles it lands on, and a sample derived label.
+
+<TestIdTable />
+
+## Reading a row
+
+| Column | Meaning |
+| --- | --- |
+| `testId` | The `data-testid` value, in its source casing |
+| `occurrences` | Total elements carrying it, across all surfaces |
+| `surfaceCount` | How many distinct surfaces it appears on |
+| `isShared` | True when `surfaceCount` is greater than one |
+| `surfaces` | The surfaces it appears on |
+| `tags` | HTML tags it lands on |
+| `roles` | ARIA roles observed |
+| `anyInteractive` | Whether any element carrying it is computed interactive |
+| `sampleLabel` | One derived label, for orientation only |
+
+## The four things this table tells you
+
+**1. A test id is not a selector.** 76 of 177 appear on more than one surface. Sorting by
+`surfaceCount` puts the worst offenders first. See [shared test ids](./shared-testids.mdx).
+
+**2. A test id is not proof of interactivity.** Filter for `anyInteractive` false and you get test
+ids that only ever land on inert elements — containers, labels, status regions. Targeting one of
+these with a click will fail, and the failure will look like a timing problem.
+
+**3. `occurrences` above `surfaceCount` means repetition within a surface.** When a test id occurs 12
+times across 3 surfaces, it is repeating within surfaces — typically on list items or repeated cards.
+Qualifying by surface is not enough for these; you need an index or a nested locator.
+
+**4. Multiple `tags` or `roles` on one test id means it is reused across element types.** The same id
+on a `button` in one place and a `div` in another is a signal that it identifies a concept rather
+than a control, and that assumptions about what it supports will not hold uniformly.
+
+## Casing is inconsistent in the source data
+
+The audit outputs are not consistent about test id casing. `label-gaps.json` uses lowercase keys.
+`testids.json` preserves the source casing.
+
+This table shows source casing. Any cross-file join must normalize first:
+
+```ts
+import { normalizeTestId } from '@raybot/object-model';
+
+normalizeTestId('  Agent-Command-Bar.Save-Button  ');
+// 'agent-command-bar.save-button'
+```
+
+`normalizeTestId` lowercases and trims. It exists solely because of this inconsistency, and it is a
+good example of why the object model encodes quirks rather than pretending the data is clean.
+
+## Naming conventions observed
+
+Coral test ids fall into a few recognizable shapes:
+
+```text
+agent-command-bar.save-button
+agent-side-panel.tools.add-button
+dv-knowledge-add-button
+knowledge-card-publicWebsite
+skill-editor-entry-mode-blank
+```
+
+Two schemes coexist. Dot-separated hierarchical ids such as `agent-side-panel.tools.add-button`, and
+flat hyphenated ids such as `dv-knowledge-add-button`. A few mix casing mid-id, as
+`knowledge-card-publicWebsite` does.
+
+This is worth knowing before writing a matcher. There is no single pattern that captures all 177, and
+a regex tuned to the dot-separated form will silently miss the flat ones.
+
+## Relationship to the semantic id
+
+A `data-testid` is a **source artifact**. The semantic id described on the
+[naming schema](./naming.md) page is an **audit artifact** assigned by this project.
+
+They are not the same thing and should not be conflated:
+
+- A test id is whatever the application author wrote. It may be ambiguous, reused, or absent.
+- A semantic id is assigned to be unique and to carry surface and area context by construction.
+
+The semantic id includes the surface segment precisely because test ids do not. That design choice is
+a direct response to the 76 shared ids in this catalog.

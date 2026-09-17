@@ -1,0 +1,100 @@
+---
+id: element-explorer
+title: Element explorer
+sidebar_label: Element explorer
+---
+
+import { ElementTable } from '@site/src/components/CoralTables';
+
+# Element explorer
+
+All 1,627 catalogued elements, filterable by surface, tag, role, and interactivity.
+
+This is the raw material the rest of the Coral schema section is built from. Every count elsewhere in
+this wiki resolves to a subset of these rows.
+
+<ElementTable />
+
+## Reading a row
+
+| Column | Meaning |
+| --- | --- |
+| `surface` | Which of the sixteen surfaces the element was captured on |
+| `testId` | The `data-testid`, or null |
+| `tag` | HTML tag name |
+| `role` | ARIA role, explicit or implicit, or null |
+| `label` | Derived label, or null |
+| `labelSource` | Which heuristic produced the label |
+| `isInteractive` | Computed interactivity |
+| `interactiveReason` | Which rule made it interactive |
+| `isDisabled` | Disabled at capture time |
+
+## `interactiveReason` is the useful column
+
+`isInteractive` is a boolean, which is not very informative on its own. `interactiveReason` records
+**why** the element was classified interactive, drawn from:
+
+- Native interactive element type — `button`, `a[href]`, `input`, `select`, `textarea`
+- An explicit ARIA role in the interactive set
+- A `tabindex` making it focusable
+- `contenteditable`
+
+This distinction matters when deciding how to target something. An element interactive by virtue of
+`tabindex` behaves differently from a native `button`: keyboard activation may not fire a click
+handler, and a naive `.click()` may do nothing observable.
+
+## `labelSource` is the same idea for labels
+
+A derived label with no recorded provenance is an assertion. `labelSource` records which heuristic
+fired — visible text content, `aria-label`, `aria-labelledby`, `title`, placeholder, or an associated
+`label` element.
+
+This lets you judge a label rather than trust it. A label derived from visible text is strong
+evidence. One derived from a `title` attribute is weaker, because `title` is frequently stale or
+decorative.
+
+Filtering for null `label` gives you the [label gaps](./label-gaps.mdx).
+
+## Element counts do not sum the way you expect
+
+Three overlapping populations, deliberately not nested:
+
+```text
+1,627  total elements
+1,115  interactive (computed independently of test ids)
+  983  carrying a data-testid
+```
+
+`1,115 + 983` exceeds 1,627 because the sets overlap heavily but neither contains the other. There
+are interactive elements with no test id, and test-id-bearing elements that are inert.
+
+Any analysis treating "has a test id" as a proxy for "is interactive" will produce wrong numbers in
+both directions. This is honesty note 1 on the [confidence model](./confidence.md) page, and the
+element table is where you can see it directly: filter for `isInteractive` true and `testId` null,
+then invert.
+
+## Visibility and occlusion are not in this table
+
+The per-surface [surfaces](./surfaces.mdx) table carries `notVisible` and
+`occludedVisibleNotTopmost` counts. Those are summarized per surface rather than exposed per element
+here.
+
+If you need per-element visibility, it is in the raw surface dumps under `coral-schema/surfaces/`.
+The slim element dataset drops it to keep the payload shippable — `elements-slim.json` uses
+single-character keys (`s`, `t`, `r`, `l`, `i`, `d`) for the same reason.
+
+## Using this data outside the site
+
+`data/elements.json` is plain JSON with no dependency on the site or the object model:
+
+```ts
+import elements from './data/elements.json';
+
+const untestable = elements.filter(
+  (e) => e.isInteractive && !e.testId && !e.label,
+);
+```
+
+That query returns the elements that are interactive, unlabelled, and untargetable by test id — the
+hardest things in the application to automate against reliably. It is the most useful single query in
+the dataset.
