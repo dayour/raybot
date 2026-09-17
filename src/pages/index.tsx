@@ -7,27 +7,27 @@ import totals from '@site/data/audit-totals.json';
 const CARDS = [
   {
     title: 'Runbook',
-    to: '/docs/runbook/',
+    to: '/docs/runbook',
     body: 'Seven phases from first save to Teams channel, with every data-testid, every constraint, and every capture that proves it.',
   },
   {
     title: 'Object model',
-    to: '/docs/object-model/',
+    to: '/docs/object-model',
     body: 'A typed model of the agent, its knowledge, tools, skills, settings, publish channels, evaluations, and workflow nodes.',
   },
   {
     title: 'SDK',
-    to: '/docs/sdk/',
+    to: '/docs/sdk',
     body: 'The @raybot/object-model package: types, JSON Schemas, semantic id parsing, and validators over the audit datasets.',
   },
   {
     title: 'Coral schema',
-    to: '/docs/coral-schema/',
+    to: '/docs/coral-schema',
     body: 'Sixteen surfaces, 1,627 elements, 177 unique test ids, and the naming scheme that binds the UI layer to the API layer.',
   },
   {
     title: 'API surface',
-    to: '/docs/api/',
+    to: '/docs/api',
     body: 'Fifty-seven observed endpoints across eleven functional domains and seven hosts, each with a confidence rating.',
   },
   {
@@ -37,12 +37,12 @@ const CARDS = [
   },
   {
     title: 'Automation patterns',
-    to: '/docs/automation/',
+    to: '/docs/automation',
     body: 'The Playwright MCP conventions that made the build reproducible, including the per-node capture loop and the stale-ref rule.',
   },
   {
     title: 'Session forensics',
-    to: '/docs/session/',
+    to: '/docs/session',
     body: 'What the Copilot CLI session stores actually retain, the nine recovered terminal commands, and why the build transcript is gone.',
   },
 ];
@@ -66,18 +66,18 @@ export default function Home() {
             runbook, and the schema reference for that build.
           </p>
           <div className="raybotHero__actions">
-            <Link className="button button--primary button--lg" to="/docs/">
+            <Link className="button button--primary button--lg" to="/docs">
               Read the overview
             </Link>
             <Link
               className="button button--secondary button--lg"
-              to="/docs/runbook/"
+              to="/docs/runbook"
             >
               Open the runbook
             </Link>
             <Link
               className="button button--secondary button--lg"
-              to="/docs/object-model/"
+              to="/docs/object-model"
             >
               Object model
             </Link>

@@ -114,18 +114,18 @@ const config: Config = {
         {
           title: 'Documentation',
           items: [
-            { label: 'Overview', to: '/docs/' },
-            { label: 'Runbook', to: '/docs/runbook/' },
-            { label: 'Automation', to: '/docs/automation/' },
-            { label: 'Evaluation', to: '/docs/evaluation/' },
+            { label: 'Overview', to: '/docs' },
+            { label: 'Runbook', to: '/docs/runbook' },
+            { label: 'Automation', to: '/docs/automation' },
+            { label: 'Evaluation', to: '/docs/evaluation' },
           ],
         },
         {
           title: 'Reference',
           items: [
-            { label: 'Object model', to: '/docs/object-model/' },
-            { label: 'SDK', to: '/docs/sdk/' },
-            { label: 'Coral schema', to: '/docs/coral-schema/' },
+            { label: 'Object model', to: '/docs/object-model' },
+            { label: 'SDK', to: '/docs/sdk' },
+            { label: 'Coral schema', to: '/docs/coral-schema' },
             { label: 'Errata', to: '/docs/reference/errata' },
           ],
         },
