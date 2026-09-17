@@ -42,7 +42,7 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'Evaluation',
-      items: ['evaluation/index'],
+      items: ['evaluation/index', 'evaluation/evalset', 'evaluation/results'],
     },
     {
       type: 'category',

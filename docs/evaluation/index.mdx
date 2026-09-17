@@ -4,9 +4,6 @@ title: Evaluation
 sidebar_label: Overview
 ---
 
-import DataTable from '@site/src/components/DataTable';
-import evalset from '@site/data/evalset.json';
-
 # Evaluation
 
 Raybot was evaluated once, on 2026-06-07 at 12:47 PM, by Darbot. It scored **0 percent**, with all
@@ -28,39 +25,15 @@ same session, grounded correctly and returned four `docs.ray.io` citations.
 
 An agent that grounds correctly in Preview and returns a fallback under Evaluate has an evaluation
 harness problem, not a knowledge problem. The 0 percent is recorded here because suppressing it would
-be dishonest, and qualified here because reporting it bare would be misleading.
+be dishonest, and qualified here because reporting it bare would be misleading. The full argument,
+including the evidence that would overturn it, is in [Results](./results.md).
 
-## The test set
+## Pages in this section
 
-Six question and answer pairs, imported as CSV with the header
-`conversationNumber,question,response`.
-
-<DataTable
-  rows={evalset}
-  columns={[
-    { key: 'conversationNumber', header: '#', align: 'right' },
-    { key: 'question', header: 'Question' },
-    { key: 'response', header: 'Reference response' },
-  ]}
-  searchKeys={(r) => `${r.question} ${r.response}`}
-  pageSize={10}
-/>
-
-## Importer constraints
-
-Discovered by hitting them.
-
-| Constraint | Value |
+| Page | What it covers |
 | --- | --- |
-| Accepted format | CSV |
-| Required header | `conversationNumber,question,response` |
-| Maximum file size | 5 MB |
-| Maximum conversation pairs | 6 |
-| Reference response `maxLength` | 1000 characters |
-| Help link | `fwlink` 2335991 |
-
-These are encoded in the object model as `EVAL_MAX_CONVERSATION_PAIRS`,
-`EVAL_REFERENCE_MAX_LENGTH`, and enforced by `validateEvalTestSet()`.
+| [Test set](./evalset.md) | The CSV contract, all six question and answer pairs verbatim, why those six, and guidance for authoring replacements |
+| [Results](./results.md) | The run record, the Preview contrast, falsification criteria for the harness conclusion, and diagnostics |
 
 ## Evaluate only unlocks after first save
 
@@ -72,7 +45,8 @@ agent ID is minted by the first save, and every downstream surface keys off it. 
 
 The `evaluate` domain accounts for 7 of the 57 mapped endpoints. The v2 evaluation query path
 `.../makerevaluations/queries/generate?ApplyV2Migration=true` was one of four observations
-corroborated exactly against the authoritative corpus.
+corroborated exactly against the authoritative corpus. See the
+[endpoint map](../api/endpoints.mdx) for the full inventory.
 
 ## Reproducing this
 

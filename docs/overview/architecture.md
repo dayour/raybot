@@ -122,7 +122,7 @@ sequenceDiagram
 
 The verification for this path is Preview, not Evaluate. Preview shows a "Searched knowledge" trace
 and a Citations panel naming the specific Ray documentation pages used. Evaluate does not invoke this
-path at all — see Evaluation results.
+path at all — see [Evaluation results](../evaluation/results.md).
 
 ## Layer four: distribution
 
