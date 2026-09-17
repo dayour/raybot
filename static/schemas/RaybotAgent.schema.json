@@ -307,6 +307,10 @@
         "entryMode": {
           "$ref": "#/definitions/SkillEntryMode"
         },
+        "description": {
+          "type": "string",
+          "description": "Short summary shown on the skill card. Capped at 1024 characters."
+        },
         "instructions": {
           "type": "string",
           "description": "Natural-language instructions that define the skill's behaviour."

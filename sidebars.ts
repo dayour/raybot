@@ -85,6 +85,38 @@ const sidebars: SidebarsConfig = {
 
   objectModelSidebar: [
     'object-model/index',
+    {
+      type: 'category',
+      label: 'Agent',
+      collapsed: false,
+      items: [
+        'object-model/agent',
+        'object-model/identity',
+        'object-model/knowledge',
+        'object-model/tools',
+        'object-model/skills',
+        'object-model/connected-agents',
+        'object-model/memory',
+        'object-model/settings',
+        'object-model/publishing',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Platform',
+      collapsed: false,
+      items: [
+        'object-model/evaluation',
+        'object-model/workflow',
+        'object-model/coral-surface',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Provenance',
+      collapsed: false,
+      items: ['object-model/runbook', 'object-model/session'],
+    },
     'object-model/json-schemas',
     {
       type: 'category',

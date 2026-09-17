@@ -139,9 +139,17 @@ export type SkillEntryMode = 'blank' | 'generated';
 export interface AgentSkill extends Evidenced {
   name: string;
   entryMode: SkillEntryMode;
+  /** Short summary shown on the skill card. Capped at 1024 characters. */
+  description?: string;
   /** Natural-language instructions that define the skill's behaviour. */
   instructions?: string;
 }
+
+/** `maxLength` observed on `skill-name-input`. */
+export const SKILL_NAME_MAX_LENGTH = 64;
+
+/** `maxLength` observed on `skill-description-input`. */
+export const SKILL_DESCRIPTION_MAX_LENGTH = 1024;
 
 /* ---------------------------------------------------------- connected agents */
 
