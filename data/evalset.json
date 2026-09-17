@@ -1,0 +1,44 @@
+[
+    {
+        "conversationNumber":  1,
+        "question":  "How do I create a minimal RayCluster on Kubernetes with KubeRay? Show a manifest.",
+        "response":  "Install the KubeRay operator (helm install kuberay-operator), then apply a RayCluster CR with apiVersion ray.io/v1, a headGroupSpec (rayStartParams with dashboard-host 0.0.0.0 and a ray-head container using a rayproject/ray image) and one workerGroupSpecs entry with replicas. Apply with kubectl apply -f and reach the dashboard via kubectl port-forward to port 8265.",
+        "questionLength":  81,
+        "responseLength":  367
+    },
+    {
+        "conversationNumber":  2,
+        "question":  "How do I enable autoscaling on a KubeRay RayCluster?",
+        "response":  "Set enableInTreeAutoscaling: true in the RayCluster spec and configure autoscalerOptions. Define minReplicas and maxReplicas on each workerGroupSpec. The Ray autoscaler adds or removes worker pods based on pending tasks, actors, and placement group resource demands.",
+        "questionLength":  52,
+        "responseLength":  266
+    },
+    {
+        "conversationNumber":  3,
+        "question":  "What is a Ray placement group and what do the PACK and SPREAD strategies do?",
+        "response":  "A placement group atomically reserves bundles of resources across nodes (gang scheduling). PACK packs bundles onto as few nodes as possible for locality; SPREAD distributes bundles across distinct nodes. STRICT_PACK and STRICT_SPREAD enforce single-node or one-bundle-per-node placement. Create with ray.util.placement_group and schedule via PlacementGroupSchedulingStrategy.",
+        "questionLength":  76,
+        "responseLength":  375
+    },
+    {
+        "conversationNumber":  4,
+        "question":  "Explain Ray object spilling and how to configure the spill directory and threshold.",
+        "response":  "Ray spills objects from the in-memory Plasma store to disk when it fills, restoring them transparently on access. Set the directory with object_spilling_directory in ray.init or --object-spilling-directory on ray start. Tune the proactive object_spilling_threshold (default 0.8) and local_fs_capacity_threshold (default 0.95).",
+        "questionLength":  83,
+        "responseLength":  326
+    },
+    {
+        "conversationNumber":  5,
+        "question":  "What is the difference between a Ray task and a Ray actor?",
+        "response":  "A task is a stateless function decorated with @ray.remote that runs once and returns an object reference. An actor is a stateful class decorated with @ray.remote; Ray creates a long-lived worker process whose methods run sequentially, preserving instance state across calls. Use tasks for stateless parallel work and actors for stateful services.",
+        "questionLength":  58,
+        "responseLength":  346
+    },
+    {
+        "conversationNumber":  6,
+        "question":  "When should I use RayJob versus RayService versus RayCluster in KubeRay?",
+        "response":  "RayCluster provisions a standalone Ray cluster. RayJob creates a cluster, runs a batch job to completion, and can tear the cluster down after. RayService manages a Ray Serve deployment for online inference with zero-downtime upgrades and health-based restarts. Use RayCluster for interactive clusters, RayJob for batch, and RayService for serving.",
+        "questionLength":  72,
+        "responseLength":  347
+    }
+]

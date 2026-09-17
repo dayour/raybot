@@ -1,0 +1,427 @@
+/**
+ * Raybot documentation theme.
+ *
+ * Palette is derived from raybot-logo.svg: a deep slate base with a cyan/teal
+ * accent. Dark mode is the default; light mode is a faithful inversion rather
+ * than an afterthought.
+ */
+
+:root {
+  --ifm-color-primary: #0f7a8a;
+  --ifm-color-primary-dark: #0e6e7c;
+  --ifm-color-primary-darker: #0d6875;
+  --ifm-color-primary-darkest: #0a5661;
+  --ifm-color-primary-light: #108c9d;
+  --ifm-color-primary-lighter: #119aad;
+  --ifm-color-primary-lightest: #16b9cf;
+
+  --ifm-code-font-size: 90%;
+  --ifm-font-family-monospace: ui-monospace, SFMono-Regular, 'SF Mono', Menlo,
+    Consolas, 'Liberation Mono', monospace;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.08);
+
+  --raybot-surface: #f6f8f9;
+  --raybot-border: #d7dee1;
+  --raybot-muted: #5c6b70;
+
+  --raybot-confirmed: #1a7f5a;
+  --raybot-source-inspected: #9a6b00;
+  --raybot-unconfirmed: #8a2f2f;
+
+  --raybot-status-ok: #1a7f5a;
+  --raybot-status-warn: #9a6b00;
+  --raybot-status-fail: #a33a3a;
+  --raybot-status-blocked: #7a3ba3;
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #35c6da;
+  --ifm-color-primary-dark: #22bad0;
+  --ifm-color-primary-darker: #20b0c5;
+  --ifm-color-primary-darkest: #1a91a2;
+  --ifm-color-primary-light: #4dcfe0;
+  --ifm-color-primary-lighter: #5ad4e4;
+  --ifm-color-primary-lightest: #82e0ec;
+
+  --ifm-background-color: #0d1418;
+  --ifm-background-surface-color: #131e23;
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
+
+  --raybot-surface: #131e23;
+  --raybot-border: #26383f;
+  --raybot-muted: #90a4ac;
+
+  --raybot-confirmed: #4ad6a0;
+  --raybot-source-inspected: #e0b34d;
+  --raybot-unconfirmed: #ef7d7d;
+
+  --raybot-status-ok: #4ad6a0;
+  --raybot-status-warn: #e0b34d;
+  --raybot-status-fail: #ef7d7d;
+  --raybot-status-blocked: #c79af0;
+}
+
+/* ------------------------------------------------------------------ tables */
+
+.markdown table {
+  display: table;
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+.markdown table th {
+  white-space: nowrap;
+}
+
+.markdown table code {
+  white-space: nowrap;
+  font-size: 0.85em;
+}
+
+/* ------------------------------------------------------------------ badges */
+
+.raybotBadge {
+  display: inline-block;
+  padding: 0.1rem 0.5rem;
+  border-radius: 0.75rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  border: 1px solid currentColor;
+  white-space: nowrap;
+}
+
+.raybotBadge--confirmed {
+  color: var(--raybot-confirmed);
+}
+.raybotBadge--sourceInspected {
+  color: var(--raybot-source-inspected);
+}
+.raybotBadge--unconfirmed {
+  color: var(--raybot-unconfirmed);
+}
+.raybotBadge--ok {
+  color: var(--raybot-status-ok);
+}
+.raybotBadge--warn {
+  color: var(--raybot-status-warn);
+}
+.raybotBadge--fail {
+  color: var(--raybot-status-fail);
+}
+.raybotBadge--blocked {
+  color: var(--raybot-status-blocked);
+}
+.raybotBadge--neutral {
+  color: var(--raybot-muted);
+}
+
+/* ------------------------------------------------------------- stat blocks */
+
+.raybotStats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+}
+
+.raybotStat {
+  border: 1px solid var(--raybot-border);
+  border-radius: 0.5rem;
+  background: var(--raybot-surface);
+  padding: 0.9rem 1rem;
+}
+
+.raybotStat__value {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--ifm-color-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.raybotStat__label {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--raybot-muted);
+  margin-top: 0.3rem;
+}
+
+.raybotStat__hint {
+  font-size: 0.75rem;
+  color: var(--raybot-muted);
+  margin-top: 0.35rem;
+  line-height: 1.35;
+}
+
+/* ------------------------------------------------------------- data tables */
+
+.raybotToolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.raybotToolbar input[type='search'],
+.raybotToolbar select {
+  padding: 0.35rem 0.6rem;
+  border: 1px solid var(--raybot-border);
+  border-radius: 0.35rem;
+  background: var(--ifm-background-color);
+  color: inherit;
+  font-size: 0.85rem;
+  min-width: 11rem;
+}
+
+.raybotToolbar__count {
+  font-size: 0.8rem;
+  color: var(--raybot-muted);
+  margin-left: auto;
+  font-variant-numeric: tabular-nums;
+}
+
+.raybotTableWrap {
+  overflow-x: auto;
+  border: 1px solid var(--raybot-border);
+  border-radius: 0.5rem;
+}
+
+table.raybotTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+  margin: 0;
+  display: table;
+}
+
+table.raybotTable th {
+  position: sticky;
+  top: 0;
+  background: var(--raybot-surface);
+  text-align: left;
+  font-size: 0.73rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--raybot-muted);
+  padding: 0.5rem 0.7rem;
+  border-bottom: 1px solid var(--raybot-border);
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+}
+
+table.raybotTable th[data-sortable='false'] {
+  cursor: default;
+}
+
+table.raybotTable td {
+  padding: 0.45rem 0.7rem;
+  border-bottom: 1px solid var(--raybot-border);
+  vertical-align: top;
+}
+
+table.raybotTable tbody tr:last-child td {
+  border-bottom: none;
+}
+
+table.raybotTable tbody tr:hover {
+  background: var(--raybot-surface);
+}
+
+table.raybotTable code {
+  font-size: 0.85em;
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: var(--ifm-color-primary);
+}
+
+.raybotTable__num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.raybotPager {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.75rem;
+  font-size: 0.82rem;
+  color: var(--raybot-muted);
+}
+
+.raybotPager button {
+  padding: 0.25rem 0.7rem;
+  border: 1px solid var(--raybot-border);
+  border-radius: 0.3rem;
+  background: var(--raybot-surface);
+  color: inherit;
+  cursor: pointer;
+  font-size: 0.82rem;
+}
+
+.raybotPager button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ---------------------------------------------------------------- gallery */
+
+.raybotGallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.raybotGalleryCard {
+  border: 1px solid var(--raybot-border);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background: var(--raybot-surface);
+  display: flex;
+  flex-direction: column;
+}
+
+.raybotGalleryCard img {
+  width: 100%;
+  display: block;
+  background: #000;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top left;
+}
+
+.raybotGalleryCard__body {
+  padding: 0.6rem 0.75rem 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.raybotGalleryCard__phase {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ifm-color-primary);
+  font-weight: 700;
+}
+
+.raybotGalleryCard__caption {
+  font-size: 0.82rem;
+  line-height: 1.35;
+}
+
+.raybotGalleryCard__file {
+  font-size: 0.7rem;
+  color: var(--raybot-muted);
+  word-break: break-all;
+  font-family: var(--ifm-font-family-monospace);
+}
+
+/* ------------------------------------------------------------ landing page */
+
+.raybotHero {
+  padding: 4rem 0 3rem;
+  text-align: left;
+  background: linear-gradient(
+    150deg,
+    var(--ifm-background-surface-color) 0%,
+    var(--ifm-background-color) 70%
+  );
+  border-bottom: 1px solid var(--raybot-border);
+}
+
+.raybotHero__eyebrow {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ifm-color-primary);
+  font-weight: 700;
+}
+
+.raybotHero__title {
+  font-size: clamp(2.2rem, 6vw, 3.6rem);
+  line-height: 1.05;
+  margin: 0.6rem 0 0.8rem;
+}
+
+.raybotHero__subtitle {
+  font-size: 1.1rem;
+  max-width: 46rem;
+  color: var(--raybot-muted);
+  line-height: 1.55;
+}
+
+.raybotHero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.8rem;
+}
+
+.raybotCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.raybotCard {
+  border: 1px solid var(--raybot-border);
+  border-radius: 0.6rem;
+  padding: 1.1rem 1.2rem;
+  background: var(--raybot-surface);
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 120ms ease, transform 120ms ease;
+}
+
+.raybotCard:hover {
+  border-color: var(--ifm-color-primary);
+  text-decoration: none;
+  color: inherit;
+  transform: translateY(-2px);
+}
+
+.raybotCard__title {
+  font-weight: 700;
+  font-size: 1.02rem;
+  margin-bottom: 0.35rem;
+  color: var(--ifm-color-primary);
+}
+
+.raybotCard__body {
+  font-size: 0.87rem;
+  line-height: 1.5;
+  color: var(--raybot-muted);
+}
+
+/* --------------------------------------------------------------- utilities */
+
+.raybotMuted {
+  color: var(--raybot-muted);
+}
+
+.raybotKeyValue {
+  display: grid;
+  grid-template-columns: minmax(9rem, max-content) 1fr;
+  gap: 0.35rem 1rem;
+  font-size: 0.88rem;
+  margin: 1rem 0;
+}
+
+.raybotKeyValue dt {
+  font-weight: 600;
+  color: var(--raybot-muted);
+}
+
+.raybotKeyValue dd {
+  margin: 0;
+}

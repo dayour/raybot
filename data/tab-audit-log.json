@@ -1,0 +1,85 @@
+{
+    "$meta":  {
+                  "title":  "Coral designer tab audit — live ground-truth state log",
+                  "agent":  "Raybot",
+                  "agentId":  "4de4ada9-ad61-4c22-a0d0-a0bd1c189f4e",
+                  "environmentId":  "Default-6b104499-c49f-45dc-b3a2-df95efd6eeb4",
+                  "tenant":  "Cypherdyne (darbot@timelarp.com)",
+                  "auditedOn":  "2026-06-07T16:54 PDT",
+                  "method":  "simple browser automation (page.getByRole tab click + page.evaluate state read)",
+                  "confidence":  "CONFIRMED (live in-portal capture)"
+              },
+    "tabs":  {
+                 "build":  {
+                               "route":  "/agents/{botId}",
+                               "semanticRoute":  "cs:portal:designer:build",
+                               "state":  {
+                                             "agentName":  "Raybot",
+                                             "model":  "Claude Sonnet 4.6",
+                                             "knowledge":  [
+                                                               "https://docs.ray.io"
+                                                           ],
+                                             "skills":  [
+                                                            "ray-cluster-troubleshooter"
+                                                        ],
+                                             "microsoftIQ":  [
+                                                                 "raybot-kb"
+                                                             ],
+                                             "connectedAgents":  [
+
+                                                                 ],
+                                             "memoryEnabled":  true
+                                         }
+                           },
+                 "preview":  {
+                                 "route":  "/agents/{botId}/preview",
+                                 "semanticRoute":  "cs:portal:designer:preview",
+                                 "runtimeApi":  "POST agenticruntime .../bots/{botId}/test/conversations (cs:runtime:test:conversation)",
+                                 "state":  "Chat surface; grounds correctly with docs.ray.io citations (CONFIRMED Step 9d/15)."
+                             },
+                 "evaluate":  {
+                                  "route":  "/agents/{botId}/evaluate",
+                                  "semanticRoute":  "cs:portal:designer:evaluate",
+                                  "groundTruthRoutes":  [
+                                                            "cs:bm:v2:makerevaluations (list/create) — CONFIRMED live",
+                                                            "cs:bm:v2:makerevaluations-generate POST .../makerevaluations/queries/generate?ApplyV2Migration=true — CONFIRMED in ground-truth corpus 2026-03-04"
+                                                        ],
+                                  "state":  {
+                                                "testSet":  "Ray Knowledge Eval - 6Q",
+                                                "testCases":  6,
+                                                "dataType":  "Conversation",
+                                                "lastRun":  "Jun 7, 2026, 12:47 PM",
+                                                "testedBy":  "Darbot",
+                                                "generalQuality":  "0%",
+                                                "note":  "0% is an eval-runtime limitation, not agent quality — Preview grounds correctly. Matches prior runbook finding."
+                                            }
+                              },
+                 "monitor":  {
+                                 "route":  "/agents/{botId}/analytics",
+                                 "semanticRoute":  "cs:portal:designer:monitor",
+                                 "groundTruthUiMapping":  "Agent Studio kit maps this to MonitorPage.tsx -\u003e /api/copilot-studio/analytics/:botId + /activities/:botId (local-kit parity)",
+                                 "platformApis":  [
+                                                      "GET cs:bm:v1:analytics .../analytics/bots/{botId}/aiSummary — returns 500 (AI Summary fails)",
+                                                      "GET cs:bm:v1:analytics .../analytics/customMetrics/summary",
+                                                      "GET cs:bm:v1:analytics .../analytics/themes"
+                                                  ],
+                                 "state":  {
+                                               "timeRange":  "6/2/26 - 6/8/26",
+                                               "sections":  [
+                                                                "Performance",
+                                                                "Summary",
+                                                                "Overview",
+                                                                "Savings",
+                                                                "Reactions",
+                                                                "Capabilities",
+                                                                "Knowledge source use",
+                                                                "Tool use"
+                                                            ],
+                                               "aiSummaryFailed":  true,
+                                               "downloadSessions":  "disabled (no permission)",
+                                               "allMetrics":  0
+                                           }
+                             }
+             },
+    "reconciliation":  "Live tab state on 2026-06-07 PM matches the prior audit + runbook exactly. No drift. Monitor route confirmed as /analytics (aligns with ground-truth uiMapping \u0027Analytics page (/analytics)\u0027)."
+}

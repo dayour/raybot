@@ -1,0 +1,471 @@
+[
+    {
+        "order":  1,
+        "file":  "screenshots/01_build_agent_create.png",
+        "phase":  "build",
+        "caption":  "Create agent; name set to Raybot",
+        "exists":  true
+    },
+    {
+        "order":  2,
+        "file":  "screenshots/02_build_instructions.png",
+        "phase":  "build",
+        "caption":  "System instructions authored",
+        "exists":  true
+    },
+    {
+        "order":  3,
+        "file":  "screenshots/03_build_saved.png",
+        "phase":  "build",
+        "caption":  "Agent saved",
+        "exists":  true
+    },
+    {
+        "order":  4,
+        "file":  "screenshots/04_build_canvas_final.png",
+        "phase":  "build",
+        "caption":  "Build canvas with custom icon + config panel",
+        "exists":  true
+    },
+    {
+        "order":  5,
+        "file":  "screenshots/05_knowledge_add-dialog.png",
+        "phase":  "knowledge",
+        "caption":  "Add knowledge dialog",
+        "exists":  true
+    },
+    {
+        "order":  6,
+        "file":  "screenshots/06_knowledge_url-entered.png",
+        "phase":  "knowledge",
+        "caption":  "docs.ray.io URL entered",
+        "exists":  true
+    },
+    {
+        "order":  7,
+        "file":  "screenshots/07_knowledge_advanced.png",
+        "phase":  "knowledge",
+        "caption":  "Knowledge advanced options",
+        "exists":  true
+    },
+    {
+        "order":  8,
+        "file":  "screenshots/08_knowledge_attached.png",
+        "phase":  "knowledge",
+        "caption":  "Knowledge source attached",
+        "exists":  true
+    },
+    {
+        "order":  9,
+        "file":  "screenshots/09_tools_featured.png",
+        "phase":  "tools",
+        "caption":  "Add tool - Featured tab",
+        "exists":  true
+    },
+    {
+        "order":  10,
+        "file":  "screenshots/10_tools_mcp.png",
+        "phase":  "tools",
+        "caption":  "Add tool - MCP tab",
+        "exists":  true
+    },
+    {
+        "order":  11,
+        "file":  "screenshots/11_tools_connectors.png",
+        "phase":  "tools",
+        "caption":  "Add tool - Connectors tab",
+        "exists":  true
+    },
+    {
+        "order":  12,
+        "file":  "screenshots/12_tools_workflows.png",
+        "phase":  "tools",
+        "caption":  "Add tool - Workflows tab",
+        "exists":  true
+    },
+    {
+        "order":  13,
+        "file":  "screenshots/13_tools_add-menu.png",
+        "phase":  "tools",
+        "caption":  "Add tool - Add (custom) menu",
+        "exists":  true
+    },
+    {
+        "order":  14,
+        "file":  "screenshots/14_tools_add-mcp-server-form.png",
+        "phase":  "tools",
+        "caption":  "Add tool - new MCP server form",
+        "exists":  true
+    },
+    {
+        "order":  15,
+        "file":  "screenshots/15_skills_add-dialog.png",
+        "phase":  "skills",
+        "caption":  "Add skill dialog",
+        "exists":  true
+    },
+    {
+        "order":  16,
+        "file":  "screenshots/16_skills_form.png",
+        "phase":  "skills",
+        "caption":  "Skill form filled",
+        "exists":  true
+    },
+    {
+        "order":  17,
+        "file":  "screenshots/17_skills_created.png",
+        "phase":  "skills",
+        "caption":  "Skill created and attached",
+        "exists":  true
+    },
+    {
+        "order":  18,
+        "file":  "screenshots/18_iq_add-dialog.png",
+        "phase":  "iq",
+        "caption":  "Add Microsoft IQ dialog (Foundry IQ)",
+        "exists":  true
+    },
+    {
+        "order":  19,
+        "file":  "screenshots/19_iq_foundry-connection.png",
+        "phase":  "iq",
+        "caption":  "Microsoft IQ - Foundry connection",
+        "exists":  true
+    },
+    {
+        "order":  20,
+        "file":  "screenshots/20_iq_select-kb.png",
+        "phase":  "iq",
+        "caption":  "Foundry IQ - select knowledge base",
+        "exists":  true
+    },
+    {
+        "order":  21,
+        "file":  "screenshots/21_iq_attached.png",
+        "phase":  "iq",
+        "caption":  "Microsoft IQ (raybot-kb) attached",
+        "exists":  true
+    },
+    {
+        "order":  22,
+        "file":  "screenshots/22_iq_verified-preview.png",
+        "phase":  "iq",
+        "caption":  "IQ grounding verified in Preview",
+        "exists":  true
+    },
+    {
+        "order":  23,
+        "file":  "screenshots/23_connected_add-dialog.png",
+        "phase":  "connected",
+        "caption":  "Add connected agent dialog",
+        "exists":  true
+    },
+    {
+        "order":  24,
+        "file":  "screenshots/24_memory_enabled.png",
+        "phase":  "memory",
+        "caption":  "Memory toggle enabled",
+        "exists":  true
+    },
+    {
+        "order":  25,
+        "file":  "screenshots/25_settings_agent-details.png",
+        "phase":  "settings",
+        "caption":  "Agent settings - Agent details tab",
+        "exists":  true
+    },
+    {
+        "order":  26,
+        "file":  "screenshots/26_settings_ai-behavior.png",
+        "phase":  "settings",
+        "caption":  "Agent settings - AI \u0026 behavior tab",
+        "exists":  true
+    },
+    {
+        "order":  27,
+        "file":  "screenshots/27_settings_moderation-options.png",
+        "phase":  "settings",
+        "caption":  "Moderation level options",
+        "exists":  true
+    },
+    {
+        "order":  28,
+        "file":  "screenshots/28_settings_safety-access.png",
+        "phase":  "settings",
+        "caption":  "Agent settings - Safety \u0026 access tab",
+        "exists":  true
+    },
+    {
+        "order":  29,
+        "file":  "screenshots/29_settings_authentication-options.png",
+        "phase":  "settings",
+        "caption":  "Authentication options",
+        "exists":  true
+    },
+    {
+        "order":  30,
+        "file":  "screenshots/30_settings_web-channel-security.png",
+        "phase":  "settings",
+        "caption":  "Web channel security",
+        "exists":  true
+    },
+    {
+        "order":  31,
+        "file":  "screenshots/31_settings_greeting-prompts.png",
+        "phase":  "settings",
+        "caption":  "Agent settings - Greeting \u0026 prompts tab",
+        "exists":  true
+    },
+    {
+        "order":  32,
+        "file":  "screenshots/32_publish_inline.png",
+        "phase":  "publish",
+        "caption":  "Inline publish from command bar",
+        "exists":  true
+    },
+    {
+        "order":  33,
+        "file":  "screenshots/33_publish_published-state.png",
+        "phase":  "publish",
+        "caption":  "Published state",
+        "exists":  true
+    },
+    {
+        "order":  34,
+        "file":  "screenshots/34_preview_chat.png",
+        "phase":  "preview",
+        "caption":  "Preview chat surface",
+        "exists":  true
+    },
+    {
+        "order":  35,
+        "file":  "screenshots/35_evaluate_test-set.png",
+        "phase":  "evaluate",
+        "caption":  "Evaluate test set (6Q)",
+        "exists":  true
+    },
+    {
+        "order":  36,
+        "file":  "screenshots/36_evaluate_csv-imported.png",
+        "phase":  "evaluate",
+        "caption":  "Eval test cases imported from CSV",
+        "exists":  true
+    },
+    {
+        "order":  37,
+        "file":  "screenshots/37_evaluate_results.png",
+        "phase":  "evaluate",
+        "caption":  "Evaluation results grid (0%)",
+        "exists":  true
+    },
+    {
+        "order":  38,
+        "file":  "screenshots/38_monitor_dashboard.png",
+        "phase":  "monitor",
+        "caption":  "Monitor analytics dashboard",
+        "exists":  true
+    },
+    {
+        "order":  39,
+        "file":  "screenshots/39_teams_icon-uploaded.png",
+        "phase":  "teams",
+        "caption":  "Teams channel icon uploaded",
+        "exists":  true
+    },
+    {
+        "order":  40,
+        "file":  "screenshots/40_teams_publish-acp-blocked.png",
+        "phase":  "teams",
+        "caption":  "Teams publish blocked - ACP consent",
+        "exists":  true
+    },
+    {
+        "order":  41,
+        "file":  "screenshots/41_teams_search-no-result.png",
+        "phase":  "teams",
+        "caption":  "Teams search - Raybot not listed (blocked)",
+        "exists":  true
+    },
+    {
+        "order":  42,
+        "file":  "captures-2026-06-17/annotated/01-agents-list-dydev25.png",
+        "phase":  "runtime",
+        "caption":  "Agents list (New experience) - 51 agents, DYdev25",
+        "exists":  true
+    },
+    {
+        "order":  43,
+        "file":  "captures-2026-06-17/annotated/02-evaluate-empty-datasource.png",
+        "phase":  "evaluate",
+        "caption":  "Evaluate - New evaluation data source (CSV upload)",
+        "exists":  true
+    },
+    {
+        "order":  44,
+        "file":  "captures-2026-06-17/annotated/03-evaluate-testcases-generated.png",
+        "phase":  "evaluate",
+        "caption":  "Evaluate - 10 auto-generated test conversations",
+        "exists":  true
+    },
+    {
+        "order":  45,
+        "file":  "captures-2026-06-17/annotated/04-evaluate-manage-profile.png",
+        "phase":  "evaluate",
+        "caption":  "Evaluate - Manage profile \u0026 connections (auth user)",
+        "exists":  true
+    },
+    {
+        "order":  46,
+        "file":  "captures-2026-06-17/annotated/05-evaluate-running.png",
+        "phase":  "evaluate",
+        "caption":  "Evaluate - run started, preparing test cases",
+        "exists":  true
+    },
+    {
+        "order":  47,
+        "file":  "captures-2026-06-17/annotated/06-monitor-empty-powerassist.png",
+        "phase":  "runtime",
+        "caption":  "Monitor tab (in-canvas) - zero-traffic empty state",
+        "exists":  true
+    },
+    {
+        "order":  48,
+        "file":  "captures-2026-06-17/annotated/07-evaluate-stuck-running.png",
+        "phase":  "evaluate",
+        "caption":  "Evaluate - run stuck Running (IQ/tool agents hang)",
+        "exists":  true
+    },
+    {
+        "order":  49,
+        "file":  "captures-2026-06-17/annotated/08-workflows-landing-empty.png",
+        "phase":  "workflow",
+        "caption":  "Workflows landing (New experience) - empty state",
+        "exists":  true
+    },
+    {
+        "order":  50,
+        "file":  "captures-2026-06-17/annotated/09-workflow-manual-trigger-canvas.png",
+        "phase":  "workflow",
+        "caption":  "Workflow canvas - default Manual trigger (Start)",
+        "exists":  true
+    },
+    {
+        "order":  51,
+        "file":  "captures-2026-06-17/annotated/10-workflow-trigger-types.png",
+        "phase":  "workflow",
+        "caption":  "Workflow - trigger picker (Manual/Recurrence/Connector/HTTP)",
+        "exists":  true
+    },
+    {
+        "order":  52,
+        "file":  "captures-2026-06-17/annotated/11-workflow-add-action-catalog.png",
+        "phase":  "workflow",
+        "caption":  "Add step - action catalog (Favorites + Actions)",
+        "exists":  true
+    },
+    {
+        "order":  53,
+        "file":  "captures-2026-06-17/annotated/12-node-agent.png",
+        "phase":  "workflow",
+        "caption":  "Node: Agent - generative step (Configure/Test)",
+        "exists":  true
+    },
+    {
+        "order":  54,
+        "file":  "captures-2026-06-17/annotated/13-node-classify.png",
+        "phase":  "workflow",
+        "caption":  "Node: Classify - AI classification routing",
+        "exists":  true
+    },
+    {
+        "order":  55,
+        "file":  "captures-2026-06-17/annotated/14-node-m365copilot.png",
+        "phase":  "workflow",
+        "caption":  "Node: M365 Copilot - call Microsoft 365 Copilot",
+        "exists":  true
+    },
+    {
+        "order":  56,
+        "file":  "captures-2026-06-17/annotated/15-node-human-review.png",
+        "phase":  "workflow",
+        "caption":  "Node: Human review - approval pause",
+        "exists":  true
+    },
+    {
+        "order":  57,
+        "file":  "captures-2026-06-17/annotated/16-node-connector-catalog.png",
+        "phase":  "workflow",
+        "caption":  "Node: Connector - 1000+ connector catalog",
+        "exists":  true
+    },
+    {
+        "order":  58,
+        "file":  "captures-2026-06-17/annotated/17-node-function-picker.png",
+        "phase":  "workflow",
+        "caption":  "Node: Function - built-in function groups",
+        "exists":  true
+    },
+    {
+        "order":  59,
+        "file":  "captures-2026-06-17/annotated/18-node-variable.png",
+        "phase":  "workflow",
+        "caption":  "Node: Variable - Initialize Variable",
+        "exists":  true
+    },
+    {
+        "order":  60,
+        "file":  "captures-2026-06-17/annotated/19-node-ifelse.png",
+        "phase":  "workflow",
+        "caption":  "Node: If/Else - condition + auto Else branch",
+        "exists":  true
+    },
+    {
+        "order":  61,
+        "file":  "captures-2026-06-17/annotated/20-node-loop.png",
+        "phase":  "workflow",
+        "caption":  "Node: Loop - For each over an array",
+        "exists":  true
+    },
+    {
+        "order":  62,
+        "file":  "captures-2026-06-17/annotated/21-node-note.png",
+        "phase":  "workflow",
+        "caption":  "Node: Note - freestanding sticky annotation",
+        "exists":  true
+    },
+    {
+        "order":  63,
+        "file":  "captures-2026-06-17/annotated/22-node-switch.png",
+        "phase":  "workflow",
+        "caption":  "Node: Switch - Case 1 + auto Default branch",
+        "exists":  true
+    },
+    {
+        "order":  64,
+        "file":  "captures-2026-06-17/annotated/23-node-scope.png",
+        "phase":  "workflow",
+        "caption":  "Node: Scope - grouped actions, shared failure",
+        "exists":  true
+    },
+    {
+        "order":  65,
+        "file":  "captures-2026-06-17/annotated/24-node-end.png",
+        "phase":  "workflow",
+        "caption":  "Node: End - terminator with Run status",
+        "exists":  true
+    },
+    {
+        "order":  66,
+        "file":  "captures-2026-06-17/annotated/25-analytics-askhr-summary.png",
+        "phase":  "runtime",
+        "caption":  "Analytics tab (new Monitor) - Summary/Overview/Billing/Savings",
+        "exists":  true
+    },
+    {
+        "order":  67,
+        "file":  "captures-2026-06-17/annotated/26-analytics-askhr-effectiveness.png",
+        "phase":  "runtime",
+        "caption":  "Analytics - Effectiveness: Conversation outcomes chart",
+        "exists":  true
+    }
+]

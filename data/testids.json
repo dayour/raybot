@@ -1,0 +1,3790 @@
+[
+    {
+        "testId":  "agent-command-bar",
+        "occurrences":  16,
+        "surfaces":  [
+                         "build.main",
+                         "dialog.add.microsoft-iq",
+                         "dialog.add-connected-agent",
+                         "dialog.add-knowledge",
+                         "dialog.add-knowledge.advanced",
+                         "dialog.add-mcp-server",
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload",
+                         "dialog.add-tool",
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access",
+                         "evaluate.main",
+                         "monitor.main",
+                         "preview.main"
+                     ],
+        "surfaceCount":  16,
+        "isShared":  true,
+        "tags":  [
+                     "header"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "Agent toolbar"
+    },
+    {
+        "testId":  "agent-command-bar.feedback",
+        "occurrences":  16,
+        "surfaces":  [
+                         "build.main",
+                         "dialog.add.microsoft-iq",
+                         "dialog.add-connected-agent",
+                         "dialog.add-knowledge",
+                         "dialog.add-knowledge.advanced",
+                         "dialog.add-mcp-server",
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload",
+                         "dialog.add-tool",
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access",
+                         "evaluate.main",
+                         "monitor.main",
+                         "preview.main"
+                     ],
+        "surfaceCount":  16,
+        "isShared":  true,
+        "tags":  [
+                     "button"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Send feedback"
+    },
+    {
+        "testId":  "agent-command-bar.overflow-trigger",
+        "occurrences":  16,
+        "surfaces":  [
+                         "build.main",
+                         "dialog.add.microsoft-iq",
+                         "dialog.add-connected-agent",
+                         "dialog.add-knowledge",
+                         "dialog.add-knowledge.advanced",
+                         "dialog.add-mcp-server",
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload",
+                         "dialog.add-tool",
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access",
+                         "evaluate.main",
+                         "monitor.main",
+                         "preview.main"
+                     ],
+        "surfaceCount":  16,
+        "isShared":  true,
+        "tags":  [
+                     "button"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "More options"
+    },
+    {
+        "testId":  "agent-command-bar.publish-button",
+        "occurrences":  16,
+        "surfaces":  [
+                         "build.main",
+                         "dialog.add.microsoft-iq",
+                         "dialog.add-connected-agent",
+                         "dialog.add-knowledge",
+                         "dialog.add-knowledge.advanced",
+                         "dialog.add-mcp-server",
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload",
+                         "dialog.add-tool",
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access",
+                         "evaluate.main",
+                         "monitor.main",
+                         "preview.main"
+                     ],
+        "surfaceCount":  16,
+        "isShared":  true,
+        "tags":  [
+                     "button"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Publish"
+    },
+    {
+        "testId":  "agent-command-bar.publish-split-chevron",
+        "occurrences":  16,
+        "surfaces":  [
+                         "build.main",
+                         "dialog.add.microsoft-iq",
+                         "dialog.add-connected-agent",
+                         "dialog.add-knowledge",
+                         "dialog.add-knowledge.advanced",
+                         "dialog.add-mcp-server",
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload",
+                         "dialog.add-tool",
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access",
+                         "evaluate.main",
+                         "monitor.main",
+                         "preview.main"
+                     ],
+        "surfaceCount":  16,
+        "isShared":  true,
+        "tags":  [
+                     "button"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Customize publish channels"
+    },
+    {
+        "testId":  "agent-command-bar.save-button",
+        "occurrences":  16,
+        "surfaces":  [
+                         "build.main",
+                         "dialog.add.microsoft-iq",
+                         "dialog.add-connected-agent",
+                         "dialog.add-knowledge",
+                         "dialog.add-knowledge.advanced",
+                         "dialog.add-mcp-server",
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload",
+                         "dialog.add-tool",
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access",
+                         "evaluate.main",
+                         "monitor.main",
+                         "preview.main"
+                     ],
+        "surfaceCount":  16,
+        "isShared":  true,
+        "tags":  [
+                     "button"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Save"
+    },
+    {
+        "testId":  "agent-command-bar.share-button",
+        "occurrences":  16,
+        "surfaces":  [
+                         "build.main",
+                         "dialog.add.microsoft-iq",
+                         "dialog.add-connected-agent",
+                         "dialog.add-knowledge",
+                         "dialog.add-knowledge.advanced",
+                         "dialog.add-mcp-server",
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload",
+                         "dialog.add-tool",
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access",
+                         "evaluate.main",
+                         "monitor.main",
+                         "preview.main"
+                     ],
+        "surfaceCount":  16,
+        "isShared":  true,
+        "tags":  [
+                     "button"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Share"
+    },
+    {
+        "testId":  "agent-command-bar.tabs",
+        "occurrences":  16,
+        "surfaces":  [
+                         "build.main",
+                         "dialog.add.microsoft-iq",
+                         "dialog.add-connected-agent",
+                         "dialog.add-knowledge",
+                         "dialog.add-knowledge.advanced",
+                         "dialog.add-mcp-server",
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload",
+                         "dialog.add-tool",
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access",
+                         "evaluate.main",
+                         "monitor.main",
+                         "preview.main"
+                     ],
+        "surfaceCount":  16,
+        "isShared":  true,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+                      "tablist"
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "Designer sections"
+    },
+    {
+        "testId":  "agent-command-bar.title",
+        "occurrences":  16,
+        "surfaces":  [
+                         "build.main",
+                         "dialog.add.microsoft-iq",
+                         "dialog.add-connected-agent",
+                         "dialog.add-knowledge",
+                         "dialog.add-knowledge.advanced",
+                         "dialog.add-mcp-server",
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload",
+                         "dialog.add-tool",
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access",
+                         "evaluate.main",
+                         "monitor.main",
+                         "preview.main"
+                     ],
+        "surfaceCount":  16,
+        "isShared":  true,
+        "tags":  [
+                     "button"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Rename agent"
+    },
+    {
+        "testId":  "agent-connected-agents",
+        "occurrences":  13,
+        "surfaces":  [
+                         "build.main",
+                         "dialog.add.microsoft-iq",
+                         "dialog.add-connected-agent",
+                         "dialog.add-knowledge",
+                         "dialog.add-knowledge.advanced",
+                         "dialog.add-mcp-server",
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload",
+                         "dialog.add-tool",
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access"
+                     ],
+        "surfaceCount":  13,
+        "isShared":  true,
+        "tags":  [
+                     "section"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "Connected agents"
+    },
+    {
+        "testId":  "agent-connected-agents-add-dialog",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.add-connected-agent"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+                      "dialog"
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "Add a connected agent"
+    },
+    {
+        "testId":  "agent-connected-agents-pick-list",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.add-connected-agent"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "ul"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "Choose an agent"
+    },
+    {
+        "testId":  "agent-connected-agents-pick-row",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.add-connected-agent"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "li"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "Workers Comp AgentDefault_draft_x5WFQw"
+    },
+    {
+        "testId":  "agent-connected-agents-refresh-button",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.add-connected-agent"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "button"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Refresh the list of available agents"
+    },
+    {
+        "testId":  "agent-connected-agents-search",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.add-connected-agent"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "input"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Search agents by name or description"
+    },
+    {
+        "testId":  "agent-connected-agents-section",
+        "occurrences":  13,
+        "surfaces":  [
+                         "build.main",
+                         "dialog.add.microsoft-iq",
+                         "dialog.add-connected-agent",
+                         "dialog.add-knowledge",
+                         "dialog.add-knowledge.advanced",
+                         "dialog.add-mcp-server",
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload",
+                         "dialog.add-tool",
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access"
+                     ],
+        "surfaceCount":  13,
+        "isShared":  true,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "Connected agents"
+    },
+    {
+        "testId":  "agent-details",
+        "occurrences":  13,
+        "surfaces":  [
+                         "build.main",
+                         "dialog.add.microsoft-iq",
+                         "dialog.add-connected-agent",
+                         "dialog.add-knowledge",
+                         "dialog.add-knowledge.advanced",
+                         "dialog.add-mcp-server",
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload",
+                         "dialog.add-tool",
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access"
+                     ],
+        "surfaceCount":  13,
+        "isShared":  true,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "Raybot"
+    },
+    {
+        "testId":  "agent-icon-button",
+        "occurrences":  13,
+        "surfaces":  [
+                         "build.main",
+                         "dialog.add.microsoft-iq",
+                         "dialog.add-connected-agent",
+                         "dialog.add-knowledge",
+                         "dialog.add-knowledge.advanced",
+                         "dialog.add-mcp-server",
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload",
+                         "dialog.add-tool",
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access"
+                     ],
+        "surfaceCount":  13,
+        "isShared":  true,
+        "tags":  [
+                     "button"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Edit agent icon"
+    },
+    {
+        "testId":  "agent-instructions-builder",
+        "occurrences":  13,
+        "surfaces":  [
+                         "build.main",
+                         "dialog.add.microsoft-iq",
+                         "dialog.add-connected-agent",
+                         "dialog.add-knowledge",
+                         "dialog.add-knowledge.advanced",
+                         "dialog.add-mcp-server",
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload",
+                         "dialog.add-tool",
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access"
+                     ],
+        "surfaceCount":  13,
+        "isShared":  true,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "InstructionsYou are Raybot, an expert assistant for Ray and Ray clusters (the open-source distributed computing framewor…"
+    },
+    {
+        "testId":  "agent-iq-add-button",
+        "occurrences":  13,
+        "surfaces":  [
+                         "build.main",
+                         "dialog.add.microsoft-iq",
+                         "dialog.add-connected-agent",
+                         "dialog.add-knowledge",
+                         "dialog.add-knowledge.advanced",
+                         "dialog.add-mcp-server",
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload",
+                         "dialog.add-tool",
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access"
+                     ],
+        "surfaceCount":  13,
+        "isShared":  true,
+        "tags":  [
+                     "button"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Add Microsoft IQ"
+    },
+    {
+        "testId":  "agent-iq-add-dialog",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.add.microsoft-iq"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+                      "dialog"
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "Add Microsoft IQ"
+    },
+    {
+        "testId":  "agent-iq-foundry-add-button",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.add.microsoft-iq"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "button"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Add"
+    },
+    {
+        "testId":  "agent-iq-list",
+        "occurrences":  13,
+        "surfaces":  [
+                         "build.main",
+                         "dialog.add.microsoft-iq",
+                         "dialog.add-connected-agent",
+                         "dialog.add-knowledge",
+                         "dialog.add-knowledge.advanced",
+                         "dialog.add-mcp-server",
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload",
+                         "dialog.add-tool",
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access"
+                     ],
+        "surfaceCount":  13,
+        "isShared":  true,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+                      "toolbar"
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "Microsoft IQ"
+    },
+    {
+        "testId":  "agent-iq-pill",
+        "occurrences":  13,
+        "surfaces":  [
+                         "build.main",
+                         "dialog.add.microsoft-iq",
+                         "dialog.add-connected-agent",
+                         "dialog.add-knowledge",
+                         "dialog.add-knowledge.advanced",
+                         "dialog.add-mcp-server",
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload",
+                         "dialog.add-tool",
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access"
+                     ],
+        "surfaceCount":  13,
+        "isShared":  true,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "raybot-kb"
+    },
+    {
+        "testId":  "agent-iq-row-foundry",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.add.microsoft-iq"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  null
+    },
+    {
+        "testId":  "agent-iq-section",
+        "occurrences":  13,
+        "surfaces":  [
+                         "build.main",
+                         "dialog.add.microsoft-iq",
+                         "dialog.add-connected-agent",
+                         "dialog.add-knowledge",
+                         "dialog.add-knowledge.advanced",
+                         "dialog.add-mcp-server",
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload",
+                         "dialog.add-tool",
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access"
+                     ],
+        "surfaceCount":  13,
+        "isShared":  true,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "Microsoft IQ"
+    },
+    {
+        "testId":  "agent-preview-chat",
+        "occurrences":  16,
+        "surfaces":  [
+                         "build.main",
+                         "dialog.add.microsoft-iq",
+                         "dialog.add-connected-agent",
+                         "dialog.add-knowledge",
+                         "dialog.add-knowledge.advanced",
+                         "dialog.add-mcp-server",
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload",
+                         "dialog.add-tool",
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access",
+                         "evaluate.main",
+                         "monitor.main",
+                         "preview.main"
+                     ],
+        "surfaceCount":  16,
+        "isShared":  true,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "New chatEnd user preview"
+    },
+    {
+        "testId":  "agent-settings-card-agent-details",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.settings.agent-details"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  null
+    },
+    {
+        "testId":  "agent-settings-card-authentication",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.settings.safety-access"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  null
+    },
+    {
+        "testId":  "agent-settings-card-feedback",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.settings.safety-access"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  null
+    },
+    {
+        "testId":  "agent-settings-card-orchestration",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.settings.ai-behavior"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  null
+    },
+    {
+        "testId":  "agent-settings-card-safety",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.settings.ai-behavior"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  null
+    },
+    {
+        "testId":  "agent-settings-copy-primaryLanguage",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.settings.agent-details"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "button"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Copy primary language to clipboard"
+    },
+    {
+        "testId":  "agent-settings-copy-schemaName",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.settings.agent-details"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "button"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Copy schema name to clipboard"
+    },
+    {
+        "testId":  "agent-settings-copy-solution",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.settings.agent-details"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "button"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Copy solution to clipboard"
+    },
+    {
+        "testId":  "agent-settings-dialog",
+        "occurrences":  4,
+        "surfaces":  [
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access"
+                     ],
+        "surfaceCount":  4,
+        "isShared":  true,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+                      "dialog"
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "Agent settings"
+    },
+    {
+        "testId":  "agent-settings-dialog.close-button",
+        "occurrences":  4,
+        "surfaces":  [
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access"
+                     ],
+        "surfaceCount":  4,
+        "isShared":  true,
+        "tags":  [
+                     "button"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Close"
+    },
+    {
+        "testId":  "agent-settings-field-allowOtherAgentsToConnect",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.settings.ai-behavior"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "input"
+                 ],
+        "roles":  [
+                      "switch"
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  null
+    },
+    {
+        "testId":  "agent-settings-field-authenticationMode",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.settings.safety-access"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "button"
+                 ],
+        "roles":  [
+                      "combobox"
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Authenticate with Microsoft"
+    },
+    {
+        "testId":  "agent-settings-field-control-allowOtherAgentsToConnect",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.settings.ai-behavior"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  null
+    },
+    {
+        "testId":  "agent-settings-field-control-authenticationMode",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.settings.safety-access"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "Authenticate with Microsoft"
+    },
+    {
+        "testId":  "agent-settings-field-control-moderationLevel",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.settings.ai-behavior"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "Medium"
+    },
+    {
+        "testId":  "agent-settings-field-control-primaryLanguage",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.settings.agent-details"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  null
+    },
+    {
+        "testId":  "agent-settings-field-control-schemaName",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.settings.agent-details"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  null
+    },
+    {
+        "testId":  "agent-settings-field-control-solution",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.settings.agent-details"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  null
+    },
+    {
+        "testId":  "agent-settings-field-control-userFeedbackEnabled",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.settings.safety-access"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  null
+    },
+    {
+        "testId":  "agent-settings-field-control-webChannelSecurity",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.settings.safety-access"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  null
+    },
+    {
+        "testId":  "agent-settings-field-label-allowOtherAgentsToConnect-description",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.settings.ai-behavior"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "span"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "Let other agents in your organization invoke this agent as a tool."
+    },
+    {
+        "testId":  "agent-settings-field-label-allowOtherAgentsToConnect-title",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.settings.ai-behavior"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "span"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "Allow other agents to connect"
+    },
+    {
+        "testId":  "agent-settings-field-label-authenticationMode-description",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.settings.safety-access"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "span"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "How users authenticate when interacting with this agent."
+    },
+    {
+        "testId":  "agent-settings-field-label-authenticationMode-title",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.settings.safety-access"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "span"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "Authentication"
+    },
+    {
+        "testId":  "agent-settings-field-label-moderationLevel-description",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.settings.ai-behavior"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "span"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "Controls how strictly responses are filtered for unsafe content."
+    },
+    {
+        "testId":  "agent-settings-field-label-moderationLevel-title",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.settings.ai-behavior"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "span"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "Moderation level"
+    },
+    {
+        "testId":  "agent-settings-field-label-primaryLanguage-description",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.settings.agent-details"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "span"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "The language the agent prefers for its responses."
+    },
+    {
+        "testId":  "agent-settings-field-label-primaryLanguage-title",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.settings.agent-details"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "span"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "Primary language"
+    },
+    {
+        "testId":  "agent-settings-field-label-schemaName-description",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.settings.agent-details"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "span"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  null
+    },
+    {
+        "testId":  "agent-settings-field-label-schemaName-title",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.settings.agent-details"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "span"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "Schema name"
+    },
+    {
+        "testId":  "agent-settings-field-label-solution-description",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.settings.agent-details"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "span"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "The Power Platform solution this agent belongs to."
+    },
+    {
+        "testId":  "agent-settings-field-label-solution-title",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.settings.agent-details"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "span"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "Solution"
+    },
+    {
+        "testId":  "agent-settings-field-label-userFeedbackEnabled-description",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.settings.safety-access"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "span"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "Show thumbs up/down on each response so users can rate quality."
+    },
+    {
+        "testId":  "agent-settings-field-label-userFeedbackEnabled-title",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.settings.safety-access"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "span"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "User feedback"
+    },
+    {
+        "testId":  "agent-settings-field-label-webChannelSecurity-description",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.settings.safety-access"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "span"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "Required for compatibility with the Direct Line API on web channels."
+    },
+    {
+        "testId":  "agent-settings-field-label-webChannelSecurity-title",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.settings.safety-access"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "span"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "Web channel security"
+    },
+    {
+        "testId":  "agent-settings-field-moderationLevel",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.settings.ai-behavior"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "button"
+                 ],
+        "roles":  [
+                      "combobox"
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Medium"
+    },
+    {
+        "testId":  "agent-settings-field-primaryLanguage",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.settings.agent-details"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "input"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  null
+    },
+    {
+        "testId":  "agent-settings-field-schemaName",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.settings.agent-details"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "input"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  null
+    },
+    {
+        "testId":  "agent-settings-field-solution",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.settings.agent-details"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "input"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  null
+    },
+    {
+        "testId":  "agent-settings-field-userFeedbackDisclaimer",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.settings.safety-access"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "input"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Feedback disclaimer"
+    },
+    {
+        "testId":  "agent-settings-field-userFeedbackEnabled",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.settings.safety-access"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "input"
+                 ],
+        "roles":  [
+                      "switch"
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  null
+    },
+    {
+        "testId":  "agent-settings-greeting-text",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.settings.greeting-prompts"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "textarea"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Greeting message"
+    },
+    {
+        "testId":  "agent-settings-info-banner",
+        "occurrences":  4,
+        "surfaces":  [
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access"
+                     ],
+        "surfaceCount":  4,
+        "isShared":  true,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+                      "group"
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "Changes to settings take effect after you save and publish the agent."
+    },
+    {
+        "testId":  "agent-settings-prompt-add",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.settings.greeting-prompts"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "button"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Add a suggested prompt"
+    },
+    {
+        "testId":  "agent-settings-tab-agent-details",
+        "occurrences":  4,
+        "surfaces":  [
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access"
+                     ],
+        "surfaceCount":  4,
+        "isShared":  true,
+        "tags":  [
+                     "button"
+                 ],
+        "roles":  [
+                      "tab"
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Agent details"
+    },
+    {
+        "testId":  "agent-settings-tab-ai-behavior",
+        "occurrences":  4,
+        "surfaces":  [
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access"
+                     ],
+        "surfaceCount":  4,
+        "isShared":  true,
+        "tags":  [
+                     "button"
+                 ],
+        "roles":  [
+                      "tab"
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "AI \u0026 behavior"
+    },
+    {
+        "testId":  "agent-settings-tab-greeting-prompts",
+        "occurrences":  4,
+        "surfaces":  [
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access"
+                     ],
+        "surfaceCount":  4,
+        "isShared":  true,
+        "tags":  [
+                     "button"
+                 ],
+        "roles":  [
+                      "tab"
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Greeting \u0026 prompts"
+    },
+    {
+        "testId":  "agent-settings-tab-safety-access",
+        "occurrences":  4,
+        "surfaces":  [
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access"
+                     ],
+        "surfaceCount":  4,
+        "isShared":  true,
+        "tags":  [
+                     "button"
+                 ],
+        "roles":  [
+                      "tab"
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Safety \u0026 access"
+    },
+    {
+        "testId":  "agent-settings-web-channel-security-drill-in",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.settings.safety-access"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "button"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Web channel security"
+    },
+    {
+        "testId":  "agent-side-panel",
+        "occurrences":  13,
+        "surfaces":  [
+                         "build.main",
+                         "dialog.add.microsoft-iq",
+                         "dialog.add-connected-agent",
+                         "dialog.add-knowledge",
+                         "dialog.add-knowledge.advanced",
+                         "dialog.add-mcp-server",
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload",
+                         "dialog.add-tool",
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access"
+                     ],
+        "surfaceCount":  13,
+        "isShared":  true,
+        "tags":  [
+                     "aside"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "Agent configuration"
+    },
+    {
+        "testId":  "agent-side-panel.connected-agents.add-button",
+        "occurrences":  13,
+        "surfaces":  [
+                         "build.main",
+                         "dialog.add.microsoft-iq",
+                         "dialog.add-connected-agent",
+                         "dialog.add-knowledge",
+                         "dialog.add-knowledge.advanced",
+                         "dialog.add-mcp-server",
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload",
+                         "dialog.add-tool",
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access"
+                     ],
+        "surfaceCount":  13,
+        "isShared":  true,
+        "tags":  [
+                     "button"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Add connected agent"
+    },
+    {
+        "testId":  "agent-side-panel.drag-handle",
+        "occurrences":  13,
+        "surfaces":  [
+                         "build.main",
+                         "dialog.add.microsoft-iq",
+                         "dialog.add-connected-agent",
+                         "dialog.add-knowledge",
+                         "dialog.add-knowledge.advanced",
+                         "dialog.add-mcp-server",
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload",
+                         "dialog.add-tool",
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access"
+                     ],
+        "surfaceCount":  13,
+        "isShared":  true,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+                      "separator"
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Resize panel"
+    },
+    {
+        "testId":  "agent-side-panel.iq",
+        "occurrences":  13,
+        "surfaces":  [
+                         "build.main",
+                         "dialog.add.microsoft-iq",
+                         "dialog.add-connected-agent",
+                         "dialog.add-knowledge",
+                         "dialog.add-knowledge.advanced",
+                         "dialog.add-mcp-server",
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload",
+                         "dialog.add-tool",
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access"
+                     ],
+        "surfaceCount":  13,
+        "isShared":  true,
+        "tags":  [
+                     "section"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "Microsoft IQ"
+    },
+    {
+        "testId":  "agent-side-panel.knowledge",
+        "occurrences":  13,
+        "surfaces":  [
+                         "build.main",
+                         "dialog.add.microsoft-iq",
+                         "dialog.add-connected-agent",
+                         "dialog.add-knowledge",
+                         "dialog.add-knowledge.advanced",
+                         "dialog.add-mcp-server",
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload",
+                         "dialog.add-tool",
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access"
+                     ],
+        "surfaceCount":  13,
+        "isShared":  true,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "KnowledgeProvide trusted context to guide decisionshttps://docs.ray.io"
+    },
+    {
+        "testId":  "agent-side-panel.knowledge.item",
+        "occurrences":  13,
+        "surfaces":  [
+                         "build.main",
+                         "dialog.add.microsoft-iq",
+                         "dialog.add-connected-agent",
+                         "dialog.add-knowledge",
+                         "dialog.add-knowledge.advanced",
+                         "dialog.add-mcp-server",
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload",
+                         "dialog.add-tool",
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access"
+                     ],
+        "surfaceCount":  13,
+        "isShared":  true,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "https://docs.ray.io"
+    },
+    {
+        "testId":  "agent-side-panel.knowledge.list",
+        "occurrences":  13,
+        "surfaces":  [
+                         "build.main",
+                         "dialog.add.microsoft-iq",
+                         "dialog.add-connected-agent",
+                         "dialog.add-knowledge",
+                         "dialog.add-knowledge.advanced",
+                         "dialog.add-mcp-server",
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload",
+                         "dialog.add-tool",
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access"
+                     ],
+        "surfaceCount":  13,
+        "isShared":  true,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+                      "toolbar"
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "Knowledge"
+    },
+    {
+        "testId":  "agent-side-panel.memory",
+        "occurrences":  13,
+        "surfaces":  [
+                         "build.main",
+                         "dialog.add.microsoft-iq",
+                         "dialog.add-connected-agent",
+                         "dialog.add-knowledge",
+                         "dialog.add-knowledge.advanced",
+                         "dialog.add-mcp-server",
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload",
+                         "dialog.add-tool",
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access"
+                     ],
+        "surfaceCount":  13,
+        "isShared":  true,
+        "tags":  [
+                     "section"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "Memory"
+    },
+    {
+        "testId":  "agent-side-panel.memory.section",
+        "occurrences":  13,
+        "surfaces":  [
+                         "build.main",
+                         "dialog.add.microsoft-iq",
+                         "dialog.add-connected-agent",
+                         "dialog.add-knowledge",
+                         "dialog.add-knowledge.advanced",
+                         "dialog.add-mcp-server",
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload",
+                         "dialog.add-tool",
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access"
+                     ],
+        "surfaceCount":  13,
+        "isShared":  true,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "MemoryRemember interactions, workflows and context for improved results."
+    },
+    {
+        "testId":  "agent-side-panel.memory.toggle",
+        "occurrences":  13,
+        "surfaces":  [
+                         "build.main",
+                         "dialog.add.microsoft-iq",
+                         "dialog.add-connected-agent",
+                         "dialog.add-knowledge",
+                         "dialog.add-knowledge.advanced",
+                         "dialog.add-mcp-server",
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload",
+                         "dialog.add-tool",
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access"
+                     ],
+        "surfaceCount":  13,
+        "isShared":  true,
+        "tags":  [
+                     "input"
+                 ],
+        "roles":  [
+                      "switch"
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Enable memory"
+    },
+    {
+        "testId":  "agent-side-panel.skills",
+        "occurrences":  13,
+        "surfaces":  [
+                         "build.main",
+                         "dialog.add.microsoft-iq",
+                         "dialog.add-connected-agent",
+                         "dialog.add-knowledge",
+                         "dialog.add-knowledge.advanced",
+                         "dialog.add-mcp-server",
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload",
+                         "dialog.add-tool",
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access"
+                     ],
+        "surfaceCount":  13,
+        "isShared":  true,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "SkillsDefine behaviors through structured instructionsray-cluster-troubleshooter"
+    },
+    {
+        "testId":  "agent-side-panel.skills.add-button",
+        "occurrences":  13,
+        "surfaces":  [
+                         "build.main",
+                         "dialog.add.microsoft-iq",
+                         "dialog.add-connected-agent",
+                         "dialog.add-knowledge",
+                         "dialog.add-knowledge.advanced",
+                         "dialog.add-mcp-server",
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload",
+                         "dialog.add-tool",
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access"
+                     ],
+        "surfaceCount":  13,
+        "isShared":  true,
+        "tags":  [
+                     "button"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Add skill"
+    },
+    {
+        "testId":  "agent-side-panel.skills.item",
+        "occurrences":  13,
+        "surfaces":  [
+                         "build.main",
+                         "dialog.add.microsoft-iq",
+                         "dialog.add-connected-agent",
+                         "dialog.add-knowledge",
+                         "dialog.add-knowledge.advanced",
+                         "dialog.add-mcp-server",
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload",
+                         "dialog.add-tool",
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access"
+                     ],
+        "surfaceCount":  13,
+        "isShared":  true,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "ray-cluster-troubleshooter"
+    },
+    {
+        "testId":  "agent-side-panel.skills.list",
+        "occurrences":  13,
+        "surfaces":  [
+                         "build.main",
+                         "dialog.add.microsoft-iq",
+                         "dialog.add-connected-agent",
+                         "dialog.add-knowledge",
+                         "dialog.add-knowledge.advanced",
+                         "dialog.add-mcp-server",
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload",
+                         "dialog.add-tool",
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access"
+                     ],
+        "surfaceCount":  13,
+        "isShared":  true,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+                      "toolbar"
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "Skills"
+    },
+    {
+        "testId":  "agent-side-panel.tools",
+        "occurrences":  13,
+        "surfaces":  [
+                         "build.main",
+                         "dialog.add.microsoft-iq",
+                         "dialog.add-connected-agent",
+                         "dialog.add-knowledge",
+                         "dialog.add-knowledge.advanced",
+                         "dialog.add-mcp-server",
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload",
+                         "dialog.add-tool",
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access"
+                     ],
+        "surfaceCount":  13,
+        "isShared":  true,
+        "tags":  [
+                     "section"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "Tools"
+    },
+    {
+        "testId":  "agent-side-panel.tools.add-button",
+        "occurrences":  13,
+        "surfaces":  [
+                         "build.main",
+                         "dialog.add.microsoft-iq",
+                         "dialog.add-connected-agent",
+                         "dialog.add-knowledge",
+                         "dialog.add-knowledge.advanced",
+                         "dialog.add-mcp-server",
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload",
+                         "dialog.add-tool",
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access"
+                     ],
+        "surfaceCount":  13,
+        "isShared":  true,
+        "tags":  [
+                     "button"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Add tool"
+    },
+    {
+        "testId":  "analytics-agent-summary",
+        "occurrences":  1,
+        "surfaces":  [
+                         "monitor.main"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+                      "group"
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "Analytics agent summary"
+    },
+    {
+        "testId":  "analytics-overview",
+        "occurrences":  1,
+        "surfaces":  [
+                         "monitor.main"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  null
+    },
+    {
+        "testId":  "analytics-page",
+        "occurrences":  1,
+        "surfaces":  [
+                         "monitor.main"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  null
+    },
+    {
+        "testId":  "analyticsV3-actions-card",
+        "occurrences":  1,
+        "surfaces":  [
+                         "monitor.main"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+                      "group"
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "Tool use"
+    },
+    {
+        "testId":  "analyticsV3-actions-card-empty-state",
+        "occurrences":  1,
+        "surfaces":  [
+                         "monitor.main"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "No tools yetAdd tools to your agent to start tracking their use."
+    },
+    {
+        "testId":  "analyticsV3-knowledge-card-new-experience-empty-state",
+        "occurrences":  1,
+        "surfaces":  [
+                         "monitor.main"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  null
+    },
+    {
+        "testId":  "analyticsV3-kpis-card",
+        "occurrences":  1,
+        "surfaces":  [
+                         "monitor.main"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+                      "group"
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "Overview"
+    },
+    {
+        "testId":  "analyticsV3-reactions-card",
+        "occurrences":  1,
+        "surfaces":  [
+                         "monitor.main"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+                      "group"
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "Reactions"
+    },
+    {
+        "testId":  "analyticsV3-savings-card",
+        "occurrences":  1,
+        "surfaces":  [
+                         "monitor.main"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+                      "group"
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "Savings"
+    },
+    {
+        "testId":  "analyticsV3-savings-card-calculate-savings-button",
+        "occurrences":  1,
+        "surfaces":  [
+                         "monitor.main"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "button"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Calculate savings"
+    },
+    {
+        "testId":  "analyticsV3-savings-card-menu-button",
+        "occurrences":  1,
+        "surfaces":  [
+                         "monitor.main"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "button"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "More options"
+    },
+    {
+        "testId":  "appshell-skip-link",
+        "occurrences":  16,
+        "surfaces":  [
+                         "build.main",
+                         "dialog.add.microsoft-iq",
+                         "dialog.add-connected-agent",
+                         "dialog.add-knowledge",
+                         "dialog.add-knowledge.advanced",
+                         "dialog.add-mcp-server",
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload",
+                         "dialog.add-tool",
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access",
+                         "evaluate.main",
+                         "monitor.main",
+                         "preview.main"
+                     ],
+        "surfaceCount":  16,
+        "isShared":  true,
+        "tags":  [
+                     "a"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Skip to main content"
+    },
+    {
+        "testId":  "average-dau-value-component",
+        "occurrences":  1,
+        "surfaces":  [
+                         "monitor.main"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "span"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "0"
+    },
+    {
+        "testId":  "bot-avatar",
+        "occurrences":  1,
+        "surfaces":  [
+                         "preview.main"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  null
+    },
+    {
+        "testId":  "bot-avatar-gutter",
+        "occurrences":  1,
+        "surfaces":  [
+                         "preview.main"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  null
+    },
+    {
+        "testId":  "bot-message-header",
+        "occurrences":  1,
+        "surfaces":  [
+                         "preview.main"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "Raybot"
+    },
+    {
+        "testId":  "bot-response-group",
+        "occurrences":  1,
+        "surfaces":  [
+                         "preview.main"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "RaybotHello! I\u0027m Raybot. How can I help you today?"
+    },
+    {
+        "testId":  "chat-container",
+        "occurrences":  4,
+        "surfaces":  [
+                         "dialog.add.microsoft-iq",
+                         "evaluate.main",
+                         "monitor.main",
+                         "preview.main"
+                     ],
+        "surfaceCount":  4,
+        "isShared":  true,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  null
+    },
+    {
+        "testId":  "chat-input-textarea",
+        "occurrences":  4,
+        "surfaces":  [
+                         "dialog.add.microsoft-iq",
+                         "evaluate.main",
+                         "monitor.main",
+                         "preview.main"
+                     ],
+        "surfaceCount":  4,
+        "isShared":  true,
+        "tags":  [
+                     "textarea"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Chat message input"
+    },
+    {
+        "testId":  "chat-input-wrapper",
+        "occurrences":  4,
+        "surfaces":  [
+                         "dialog.add.microsoft-iq",
+                         "evaluate.main",
+                         "monitor.main",
+                         "preview.main"
+                     ],
+        "surfaceCount":  4,
+        "isShared":  true,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  null
+    },
+    {
+        "testId":  "conversational-agent-authoring-page",
+        "occurrences":  16,
+        "surfaces":  [
+                         "build.main",
+                         "dialog.add.microsoft-iq",
+                         "dialog.add-connected-agent",
+                         "dialog.add-knowledge",
+                         "dialog.add-knowledge.advanced",
+                         "dialog.add-mcp-server",
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload",
+                         "dialog.add-tool",
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access",
+                         "evaluate.main",
+                         "monitor.main",
+                         "preview.main"
+                     ],
+        "surfaceCount":  16,
+        "isShared":  true,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "RaybotRaybotBuildPreviewEvaluateMonitorPublishRaybotInstructionsYou are Raybot, an expert assistant for Ray and Ray clus…"
+    },
+    {
+        "testId":  "copy-button",
+        "occurrences":  1,
+        "surfaces":  [
+                         "preview.main"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "button"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Copy"
+    },
+    {
+        "testId":  "dv-knowledge-add-button",
+        "occurrences":  13,
+        "surfaces":  [
+                         "build.main",
+                         "dialog.add.microsoft-iq",
+                         "dialog.add-connected-agent",
+                         "dialog.add-knowledge",
+                         "dialog.add-knowledge.advanced",
+                         "dialog.add-mcp-server",
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload",
+                         "dialog.add-tool",
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access"
+                     ],
+        "surfaceCount":  13,
+        "isShared":  true,
+        "tags":  [
+                     "button"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Add knowledge"
+    },
+    {
+        "testId":  "dv-knowledge-agent-knowledge",
+        "occurrences":  13,
+        "surfaces":  [
+                         "build.main",
+                         "dialog.add.microsoft-iq",
+                         "dialog.add-connected-agent",
+                         "dialog.add-knowledge",
+                         "dialog.add-knowledge.advanced",
+                         "dialog.add-mcp-server",
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload",
+                         "dialog.add-tool",
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access"
+                     ],
+        "surfaceCount":  13,
+        "isShared":  true,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "https://docs.ray.io"
+    },
+    {
+        "testId":  "env-picker-trigger",
+        "occurrences":  16,
+        "surfaces":  [
+                         "build.main",
+                         "dialog.add.microsoft-iq",
+                         "dialog.add-connected-agent",
+                         "dialog.add-knowledge",
+                         "dialog.add-knowledge.advanced",
+                         "dialog.add-mcp-server",
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload",
+                         "dialog.add-tool",
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access",
+                         "evaluate.main",
+                         "monitor.main",
+                         "preview.main"
+                     ],
+        "surfaceCount":  16,
+        "isShared":  true,
+        "tags":  [
+                     "button"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Switch environment (current: Cypherdyne (default))"
+    },
+    {
+        "testId":  "evaluation-new-button",
+        "occurrences":  1,
+        "surfaces":  [
+                         "evaluate.main"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "button"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "New evaluation"
+    },
+    {
+        "testId":  "evaluation-page",
+        "occurrences":  1,
+        "surfaces":  [
+                         "evaluate.main"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  null
+    },
+    {
+        "testId":  "evaluation-page-container",
+        "occurrences":  1,
+        "surfaces":  [
+                         "evaluate.main"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+                      "tabpanel"
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "Evaluate"
+    },
+    {
+        "testId":  "evaluation-preview",
+        "occurrences":  1,
+        "surfaces":  [
+                         "evaluate.main"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  null
+    },
+    {
+        "testId":  "evaluation-test-config-card",
+        "occurrences":  1,
+        "surfaces":  [
+                         "evaluate.main"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+                      "link"
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  null
+    },
+    {
+        "testId":  "file-dropzone",
+        "occurrences":  2,
+        "surfaces":  [
+                         "dialog.add-knowledge",
+                         "dialog.add-knowledge.advanced"
+                     ],
+        "surfaceCount":  2,
+        "isShared":  true,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+                      "presentation"
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Drag and drop or click to upload"
+    },
+    {
+        "testId":  "file-input",
+        "occurrences":  4,
+        "surfaces":  [
+                         "dialog.add.microsoft-iq",
+                         "evaluate.main",
+                         "monitor.main",
+                         "preview.main"
+                     ],
+        "surfaceCount":  4,
+        "isShared":  true,
+        "tags":  [
+                     "input"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Attach file"
+    },
+    {
+        "testId":  "knowledge-card-oneDrive",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.add-knowledge"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+                      "button"
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Add OneDrive for Business"
+    },
+    {
+        "testId":  "knowledge-card-publicWebsite",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.add-knowledge"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+                      "button"
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Add Public websites"
+    },
+    {
+        "testId":  "knowledge-card-sharePointOneDrive",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.add-knowledge"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+                      "button"
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Add SharePoint"
+    },
+    {
+        "testId":  "mcp-create-submit",
+        "occurrences":  2,
+        "surfaces":  [
+                         "dialog.add-mcp-server",
+                         "dialog.add-tool"
+                     ],
+        "surfaceCount":  2,
+        "isShared":  true,
+        "tags":  [
+                     "button"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Add"
+    },
+    {
+        "testId":  "mcp-server-description-input",
+        "occurrences":  2,
+        "surfaces":  [
+                         "dialog.add-mcp-server",
+                         "dialog.add-tool"
+                     ],
+        "surfaceCount":  2,
+        "isShared":  true,
+        "tags":  [
+                     "textarea"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Describe what this server does"
+    },
+    {
+        "testId":  "mcp-server-name-input",
+        "occurrences":  2,
+        "surfaces":  [
+                         "dialog.add-mcp-server",
+                         "dialog.add-tool"
+                     ],
+        "surfaceCount":  2,
+        "isShared":  true,
+        "tags":  [
+                     "input"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "e.g. My MCP Server"
+    },
+    {
+        "testId":  "mcp-server-url-input",
+        "occurrences":  2,
+        "surfaces":  [
+                         "dialog.add-mcp-server",
+                         "dialog.add-tool"
+                     ],
+        "surfaceCount":  2,
+        "isShared":  true,
+        "tags":  [
+                     "input"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "https://example.com/mcp"
+    },
+    {
+        "testId":  "message-item",
+        "occurrences":  1,
+        "surfaces":  [
+                         "preview.main"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "RaybotHello! I\u0027m Raybot. How can I help you today?"
+    },
+    {
+        "testId":  "message-list-scroll-container",
+        "occurrences":  1,
+        "surfaces":  [
+                         "preview.main"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "RaybotHello! I\u0027m Raybot. How can I help you today?"
+    },
+    {
+        "testId":  "model-selector",
+        "occurrences":  13,
+        "surfaces":  [
+                         "build.main",
+                         "dialog.add.microsoft-iq",
+                         "dialog.add-connected-agent",
+                         "dialog.add-knowledge",
+                         "dialog.add-knowledge.advanced",
+                         "dialog.add-mcp-server",
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload",
+                         "dialog.add-tool",
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access"
+                     ],
+        "surfaceCount":  13,
+        "isShared":  true,
+        "tags":  [
+                     "button"
+                 ],
+        "roles":  [
+                      "combobox"
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Prompt model"
+    },
+    {
+        "testId":  "nav-agents",
+        "occurrences":  16,
+        "surfaces":  [
+                         "build.main",
+                         "dialog.add.microsoft-iq",
+                         "dialog.add-connected-agent",
+                         "dialog.add-knowledge",
+                         "dialog.add-knowledge.advanced",
+                         "dialog.add-mcp-server",
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload",
+                         "dialog.add-tool",
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access",
+                         "evaluate.main",
+                         "monitor.main",
+                         "preview.main"
+                     ],
+        "surfaceCount":  16,
+        "isShared":  true,
+        "tags":  [
+                     "button"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Agents"
+    },
+    {
+        "testId":  "nav-home",
+        "occurrences":  16,
+        "surfaces":  [
+                         "build.main",
+                         "dialog.add.microsoft-iq",
+                         "dialog.add-connected-agent",
+                         "dialog.add-knowledge",
+                         "dialog.add-knowledge.advanced",
+                         "dialog.add-mcp-server",
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload",
+                         "dialog.add-tool",
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access",
+                         "evaluate.main",
+                         "monitor.main",
+                         "preview.main"
+                     ],
+        "surfaceCount":  16,
+        "isShared":  true,
+        "tags":  [
+                     "button"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Home"
+    },
+    {
+        "testId":  "nav-workflows",
+        "occurrences":  16,
+        "surfaces":  [
+                         "build.main",
+                         "dialog.add.microsoft-iq",
+                         "dialog.add-connected-agent",
+                         "dialog.add-knowledge",
+                         "dialog.add-knowledge.advanced",
+                         "dialog.add-mcp-server",
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload",
+                         "dialog.add-tool",
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access",
+                         "evaluate.main",
+                         "monitor.main",
+                         "preview.main"
+                     ],
+        "surfaceCount":  16,
+        "isShared":  true,
+        "tags":  [
+                     "button"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Workflows"
+    },
+    {
+        "testId":  "new-chat-button",
+        "occurrences":  16,
+        "surfaces":  [
+                         "build.main",
+                         "dialog.add.microsoft-iq",
+                         "dialog.add-connected-agent",
+                         "dialog.add-knowledge",
+                         "dialog.add-knowledge.advanced",
+                         "dialog.add-mcp-server",
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload",
+                         "dialog.add-tool",
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access",
+                         "evaluate.main",
+                         "monitor.main",
+                         "preview.main"
+                     ],
+        "surfaceCount":  16,
+        "isShared":  true,
+        "tags":  [
+                     "button"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "New chat"
+    },
+    {
+        "testId":  "pass-rate-0",
+        "occurrences":  1,
+        "surfaces":  [
+                         "evaluate.main"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "span"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "0%"
+    },
+    {
+        "testId":  "preview-chat-card",
+        "occurrences":  16,
+        "surfaces":  [
+                         "build.main",
+                         "dialog.add.microsoft-iq",
+                         "dialog.add-connected-agent",
+                         "dialog.add-knowledge",
+                         "dialog.add-knowledge.advanced",
+                         "dialog.add-mcp-server",
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload",
+                         "dialog.add-tool",
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access",
+                         "evaluate.main",
+                         "monitor.main",
+                         "preview.main"
+                     ],
+        "surfaceCount":  16,
+        "isShared":  true,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  null
+    },
+    {
+        "testId":  "preview-chat-end-user-toggle",
+        "occurrences":  16,
+        "surfaces":  [
+                         "build.main",
+                         "dialog.add.microsoft-iq",
+                         "dialog.add-connected-agent",
+                         "dialog.add-knowledge",
+                         "dialog.add-knowledge.advanced",
+                         "dialog.add-mcp-server",
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload",
+                         "dialog.add-tool",
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access",
+                         "evaluate.main",
+                         "monitor.main",
+                         "preview.main"
+                     ],
+        "surfaceCount":  16,
+        "isShared":  true,
+        "tags":  [
+                     "input"
+                 ],
+        "roles":  [
+                      "switch"
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "on"
+    },
+    {
+        "testId":  "preview-chat-header",
+        "occurrences":  16,
+        "surfaces":  [
+                         "build.main",
+                         "dialog.add.microsoft-iq",
+                         "dialog.add-connected-agent",
+                         "dialog.add-knowledge",
+                         "dialog.add-knowledge.advanced",
+                         "dialog.add-mcp-server",
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload",
+                         "dialog.add-tool",
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access",
+                         "evaluate.main",
+                         "monitor.main",
+                         "preview.main"
+                     ],
+        "surfaceCount":  16,
+        "isShared":  true,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "New chatEnd user preview"
+    },
+    {
+        "testId":  "preview-chat-header-overflow",
+        "occurrences":  15,
+        "surfaces":  [
+                         "build.main",
+                         "dialog.add.microsoft-iq",
+                         "dialog.add-connected-agent",
+                         "dialog.add-knowledge",
+                         "dialog.add-knowledge.advanced",
+                         "dialog.add-mcp-server",
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload",
+                         "dialog.add-tool",
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access",
+                         "evaluate.main",
+                         "monitor.main"
+                     ],
+        "surfaceCount":  15,
+        "isShared":  true,
+        "tags":  [
+                     "button"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "More actions"
+    },
+    {
+        "testId":  "preview-chat-suggestions-area",
+        "occurrences":  16,
+        "surfaces":  [
+                         "build.main",
+                         "dialog.add.microsoft-iq",
+                         "dialog.add-connected-agent",
+                         "dialog.add-knowledge",
+                         "dialog.add-knowledge.advanced",
+                         "dialog.add-mcp-server",
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload",
+                         "dialog.add-tool",
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access",
+                         "evaluate.main",
+                         "monitor.main",
+                         "preview.main"
+                     ],
+        "surfaceCount":  16,
+        "isShared":  true,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  null
+    },
+    {
+        "testId":  "result-details-grid",
+        "occurrences":  1,
+        "surfaces":  [
+                         "evaluate.main"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+                      "grid"
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "Recent results"
+    },
+    {
+        "testId":  "result-list-column-name-Ray Knowledge Eval - 6Q",
+        "occurrences":  1,
+        "surfaces":  [
+                         "evaluate.main"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "Ray Knowledge Eval - 6Q6 test cases • Data type: ConversationEvaluate"
+    },
+    {
+        "testId":  "send-button",
+        "occurrences":  4,
+        "surfaces":  [
+                         "dialog.add.microsoft-iq",
+                         "evaluate.main",
+                         "monitor.main",
+                         "preview.main"
+                     ],
+        "surfaceCount":  4,
+        "isShared":  true,
+        "tags":  [
+                     "button"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Send"
+    },
+    {
+        "testId":  "sidebar-model-picker",
+        "occurrences":  13,
+        "surfaces":  [
+                         "build.main",
+                         "dialog.add.microsoft-iq",
+                         "dialog.add-connected-agent",
+                         "dialog.add-knowledge",
+                         "dialog.add-knowledge.advanced",
+                         "dialog.add-mcp-server",
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload",
+                         "dialog.add-tool",
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access"
+                     ],
+        "surfaceCount":  13,
+        "isShared":  true,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "ModelClaude Sonnet 4.6"
+    },
+    {
+        "testId":  "skill-description-counter",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.add-skill.blank"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "span"
+                 ],
+        "roles":  [
+                      "status"
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "0 / 1024"
+    },
+    {
+        "testId":  "skill-description-input",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.add-skill.blank"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "textarea"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Describe what the skill does and when to use it"
+    },
+    {
+        "testId":  "skill-editor-dialog-cancel",
+        "occurrences":  2,
+        "surfaces":  [
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload"
+                     ],
+        "surfaceCount":  2,
+        "isShared":  true,
+        "tags":  [
+                     "button"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Cancel"
+    },
+    {
+        "testId":  "skill-editor-dialog-create",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.add-skill.blank"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "button"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Create"
+    },
+    {
+        "testId":  "skill-editor-entry-mode",
+        "occurrences":  2,
+        "surfaces":  [
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload"
+                     ],
+        "surfaceCount":  2,
+        "isShared":  true,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+                      "tablist"
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "Skill creation method"
+    },
+    {
+        "testId":  "skill-editor-entry-mode-blank",
+        "occurrences":  2,
+        "surfaces":  [
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload"
+                     ],
+        "surfaceCount":  2,
+        "isShared":  true,
+        "tags":  [
+                     "button"
+                 ],
+        "roles":  [
+                      "tab"
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Create from blank"
+    },
+    {
+        "testId":  "skill-editor-entry-mode-upload",
+        "occurrences":  2,
+        "surfaces":  [
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload"
+                     ],
+        "surfaceCount":  2,
+        "isShared":  true,
+        "tags":  [
+                     "button"
+                 ],
+        "roles":  [
+                      "tab"
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Upload a skillUpload a skill"
+    },
+    {
+        "testId":  "skill-file-dropzone",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.add-skill.upload"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "button"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Upload skill file. Accepted: .md"
+    },
+    {
+        "testId":  "skill-file-dropzone-illustration",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.add-skill.upload"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "img"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  null
+    },
+    {
+        "testId":  "skill-file-dropzone-input",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.add-skill.upload"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "input"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Skill file picker. Accepted: .md"
+    },
+    {
+        "testId":  "skill-file-dropzone-live-region",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.add-skill.upload"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+                      "status"
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  null
+    },
+    {
+        "testId":  "skill-file-requirements",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.add-skill.upload"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  ".zip or .skill file must include a SKILL.md file"
+    },
+    {
+        "testId":  "skill-file-requirements-callout",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.add-skill.upload"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  null
+    },
+    {
+        "testId":  "skill-instructions-input",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.add-skill.blank"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "textarea"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Step-by-step instructions for the skill…"
+    },
+    {
+        "testId":  "skill-instructions-replace-input",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.add-skill.upload"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "input"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  null
+    },
+    {
+        "testId":  "skill-instructions-view-mode-preview",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.add-skill.blank"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "button"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Preview rendered markdown"
+    },
+    {
+        "testId":  "skill-instructions-view-mode-text",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.add-skill.blank"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "button"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Edit as markdown text"
+    },
+    {
+        "testId":  "skill-instructions-view-mode-toggle",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.add-skill.blank"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+                      "radiogroup"
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "Instructions view mode"
+    },
+    {
+        "testId":  "skill-name-counter",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.add-skill.blank"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "span"
+                 ],
+        "roles":  [
+                      "status"
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "0 / 64"
+    },
+    {
+        "testId":  "skill-name-input",
+        "occurrences":  1,
+        "surfaces":  [
+                         "dialog.add-skill.blank"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "input"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "my-skill-name"
+    },
+    {
+        "testId":  "summary-date-picker-trigger",
+        "occurrences":  1,
+        "surfaces":  [
+                         "monitor.main"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "button"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Time range picker"
+    },
+    {
+        "testId":  "test-result-list-container",
+        "occurrences":  1,
+        "surfaces":  [
+                         "evaluate.main"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  null
+    },
+    {
+        "testId":  "toolbar-group-divider",
+        "occurrences":  39,
+        "surfaces":  [
+                         "build.main",
+                         "dialog.add.microsoft-iq",
+                         "dialog.add-connected-agent",
+                         "dialog.add-knowledge",
+                         "dialog.add-knowledge.advanced",
+                         "dialog.add-mcp-server",
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload",
+                         "dialog.add-tool",
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access"
+                     ],
+        "surfaceCount":  13,
+        "isShared":  true,
+        "tags":  [
+                     "span"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  null
+    },
+    {
+        "testId":  "total-reactions-value-component",
+        "occurrences":  1,
+        "surfaces":  [
+                         "monitor.main"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "span"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "0"
+    },
+    {
+        "testId":  "trend-indicator",
+        "occurrences":  2,
+        "surfaces":  [
+                         "monitor.main"
+                     ],
+        "surfaceCount":  1,
+        "isShared":  false,
+        "tags":  [
+                     "span"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "0%"
+    },
+    {
+        "testId":  "user-pill",
+        "occurrences":  16,
+        "surfaces":  [
+                         "build.main",
+                         "dialog.add.microsoft-iq",
+                         "dialog.add-connected-agent",
+                         "dialog.add-knowledge",
+                         "dialog.add-knowledge.advanced",
+                         "dialog.add-mcp-server",
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload",
+                         "dialog.add-tool",
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access",
+                         "evaluate.main",
+                         "monitor.main",
+                         "preview.main"
+                     ],
+        "surfaceCount":  16,
+        "isShared":  true,
+        "tags":  [
+                     "div"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  false,
+        "sampleLabel":  "D"
+    },
+    {
+        "testId":  "user-pill-avatar",
+        "occurrences":  16,
+        "surfaces":  [
+                         "build.main",
+                         "dialog.add.microsoft-iq",
+                         "dialog.add-connected-agent",
+                         "dialog.add-knowledge",
+                         "dialog.add-knowledge.advanced",
+                         "dialog.add-mcp-server",
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload",
+                         "dialog.add-tool",
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access",
+                         "evaluate.main",
+                         "monitor.main",
+                         "preview.main"
+                     ],
+        "surfaceCount":  16,
+        "isShared":  true,
+        "tags":  [
+                     "button"
+                 ],
+        "roles":  [
+                      "button"
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "Open account menu for Darbot"
+    },
+    {
+        "testId":  "user-pill-more",
+        "occurrences":  16,
+        "surfaces":  [
+                         "build.main",
+                         "dialog.add.microsoft-iq",
+                         "dialog.add-connected-agent",
+                         "dialog.add-knowledge",
+                         "dialog.add-knowledge.advanced",
+                         "dialog.add-mcp-server",
+                         "dialog.add-skill.blank",
+                         "dialog.add-skill.upload",
+                         "dialog.add-tool",
+                         "dialog.settings.agent-details",
+                         "dialog.settings.ai-behavior",
+                         "dialog.settings.greeting-prompts",
+                         "dialog.settings.safety-access",
+                         "evaluate.main",
+                         "monitor.main",
+                         "preview.main"
+                     ],
+        "surfaceCount":  16,
+        "isShared":  true,
+        "tags":  [
+                     "button"
+                 ],
+        "roles":  [
+
+                  ],
+        "anyInteractive":  true,
+        "sampleLabel":  "More options for Darbot"
+    }
+]

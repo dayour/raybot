@@ -1,0 +1,173 @@
+---
+id: phase-3-foundry-iq
+title: "Phase 3 — Microsoft IQ"
+sidebar_label: "Phase 3: Microsoft IQ"
+---
+
+import Gallery from '@site/src/components/Gallery';
+
+# Phase 3 — Microsoft IQ (Foundry IQ retrieval)
+
+This is the only phase that leaves the browser. Microsoft IQ **binds** a Copilot Studio agent to an
+Azure AI Search knowledge base; it does not create one. The knowledge base has to exist first, and
+building it requires Azure CLI and a REST surface that has no UI.
+
+The goal is agentic retrieval — query planning plus answer synthesis — over `docs.ray.io`.
+
+The add dialog (`agent-iq-add-button`) offers exactly one option: **Foundry IQ (Preview)**.
+
+Capture: `18_iq_add-dialog.png`
+
+## Step 9a — Provision Azure AI Search
+
+```powershell
+az account set --subscription 88dc9c38-361e-4516-9072-ae9504620c0f
+
+az search service create `
+  --name darbotlm `
+  --resource-group rg-DarbotLM `
+  --sku basic `
+  --location centralus
+
+az search admin-key show `
+  --service-name darbotlm `
+  --resource-group rg-DarbotLM `
+  --query primaryKey -o tsv
+```
+
+:::danger Basic tier or higher is mandatory
+A Free-tier search service's knowledge bases are **never surfaced by the Copilot Studio picker**. The
+picker reports "No knowledge bases found" with no explanation of why.
+
+This was the key blocker of the entire build. A first service, `raybot-foundryiq-search`, was created
+on the Free tier in Australia East. Its knowledge base worked correctly when queried over REST and
+returned proper synthesised answers. It never once appeared in the picker. The service was discarded
+and rebuilt on Basic.
+
+If the picker is empty, check the SKU before you check anything else.
+:::
+
+## Step 9b — Build the knowledge base
+
+The `/knowledgeBases` endpoint exists **only** on api-version `2025-11-01-preview`. Earlier preview
+versions return 404 for the whole path. There is no portal UI for this surface.
+
+```powershell
+$svc = "https://darbotlm.search.windows.net"
+$ver = "2025-11-01-preview"
+$hdr = @{ "api-key" = $searchKey; "Content-Type" = "application/json" }
+```
+
+### The knowledge source
+
+A source of `kind: "web"` needs no further parameters.
+
+```http
+PUT $svc/knowledgeSources/ray-docs-web?api-version=2025-11-01-preview
+```
+
+```json
+{
+  "name": "ray-docs-web",
+  "kind": "web"
+}
+```
+
+### The knowledge base
+
+A web-backed knowledge base **requires** `outputMode: "answerSynthesis"` and an Azure OpenAI model
+for query planning. It will not accept extractive output over a web source.
+
+```http
+PUT $svc/knowledgeBases/raybot-kb?api-version=2025-11-01-preview
+```
+
+```json
+{
+  "name": "raybot-kb",
+  "knowledgeSources": [{ "name": "ray-docs-web" }],
+  "outputMode": "answerSynthesis",
+  "retrievalReasoningEffort": { "kind": "low" },
+  "answerInstructions": "...",
+  "models": [
+    {
+      "kind": "azureOpenAI",
+      "azureOpenAIParameters": {
+        "resourceUri": "https://darbotlm-resource.openai.azure.com/",
+        "deploymentId": "gpt-4.1",
+        "modelName": "gpt-4.1",
+        "apiKey": "$aoaiKey"
+      }
+    }
+  ]
+}
+```
+
+### Verify before leaving Azure
+
+```http
+POST $svc/knowledgeBases/raybot-kb/retrieve?api-version=2025-11-01-preview
+```
+
+A healthy response contains query-planning activity, web-search activity, answer-synthesis activity,
+and web references. Confirm this before returning to Copilot Studio — it isolates Azure-side problems
+from binding-side problems.
+
+## Step 9c — Attach in Copilot Studio
+
+```text
+playwright-browser_click   agent-iq-add-button
+playwright-browser_click   agent-iq-foundry-add-button
+```
+
+The connection form is backed by the `azureaisearchfoundryiq` connector and asks for two values:
+**Search Service Endpoint** and **API Key**.
+
+:::warning Use the native value setter here
+This form jumbles under `type` and `fill` exactly as the skill form does. Set both fields through
+`browser_evaluate` with the native value setter. See [Phase 2](./phase-2-right-rail.mdx).
+:::
+
+Then **Create**, **Next**, and the "Select a knowledge base" step. That picker is populated by the
+Dataverse action `AzureFoundryIQKnowledgeBases` — which is the call that silently omits Free-tier
+services. Check **raybot-kb**, **Add to agent**, then Save and Publish.
+
+Captures: `19_iq_foundry-connection.png`, `20_iq_select-kb.png`, `21_iq_attached.png`
+
+## Step 9d — Verify in Preview
+
+Ask a question that can only be answered from the documentation:
+
+> Explain Ray object spilling
+
+The trace shows **raybot-kb** invoked, a "Searched knowledge" step, and a grounded answer with a
+**Citations** panel naming Object Spilling and Memory Management from Ray 2.55.1.
+
+This is the proof that the binding works. It is also, as [Phase 5](./phase-5-publish-evaluate.mdx)
+shows, the **only** surface that exercises this path — the Evaluate runtime does not.
+
+Capture: `22_iq_verified-preview.png`
+
+## Resources created
+
+| Resource | Detail |
+| --- | --- |
+| `darbotlm` | Azure AI Search, Basic, Central US |
+| `ray-docs-web` | Knowledge source, kind `web` |
+| `raybot-kb` | Knowledge base, answerSynthesis, reasoning effort low |
+| `gpt-4.1` | Azure OpenAI deployment on `darbotlm-resource` |
+| `raybot-foundryiq-search` | Free, Australia East. Discarded. Works over REST, invisible to the picker. |
+
+## Captures
+
+<Gallery phase="iq" />
+
+## What Phase 3 establishes
+
+1. Microsoft IQ binds rather than creates. The Azure side must be finished first.
+2. SKU gates visibility, not function. A Free-tier knowledge base answers correctly and is still
+   unusable, with no diagnostic in the UI.
+3. API version gates existence. `2025-11-01-preview` is the only version exposing `/knowledgeBases`.
+4. Web sources force answer synthesis and require an Azure OpenAI deployment for query planning.
+5. Verify at each boundary. `retrieve` over REST proves Azure; Preview proves the binding. Testing
+   only at the end conflates two very different failure modes.

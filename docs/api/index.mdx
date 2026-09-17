@@ -1,0 +1,83 @@
+---
+id: index
+title: API surface
+sidebar_label: Overview
+---
+
+import { EndpointTable, HostTable } from '@site/src/components/CoralTables';
+
+# API surface
+
+Fifty-seven endpoints, observed on the wire while the agent was built. This is **not** a published
+contract. Every row was read from a live network capture, classified, and assigned a semantic
+identifier reconciled against the authoritative Copilot Studio corpus.
+
+## How it was derived
+
+1,249 total requests were observed across the sixteen audited surfaces. 611 were classified as
+functional — excluding static assets, telemetry, and authentication chatter. Those 611 resolve to 57
+distinct endpoints across 11 functional domains and 7 hosts.
+
+Response statuses across the functional set:
+
+| Status | Count | Notes |
+| --- | --- | --- |
+| 200 | 555 | |
+| 404 | 35 | Mostly optional-resource probes |
+| 500 | 9 | Includes the Teams channel-status failures |
+| 405 | 6 | Method probes |
+| 412 | 3 | Precondition failures |
+| FAILED | 3 | Network-level failures |
+
+The nine HTTP 500s matter. They are the evidence behind
+[Phase 6](../runbook/phase-6-teams.mdx) — the Teams channel reporting itself enabled while the
+server-side registration never completed.
+
+## The eleven domains
+
+| Domain | Endpoints | Purpose |
+| --- | --- | --- |
+| `agent-persistence` | 8 | Create, read, update the agent record |
+| `channels-teams-m365` | 9 | Teams and M365 channel management |
+| `governance-dlp` | 8 | Data loss prevention and policy evaluation |
+| `evaluate` | 7 | Test sets and evaluation runs |
+| `agent-components-save` | 6 | Per-rail-section component persistence |
+| `platform-tenant` | 6 | Tenant and environment metadata |
+| `monitor-analytics` | 4 | Runtime analytics |
+| `model-and-features` | 3 | Model catalog and feature flags |
+| `identity-graph` | 3 | Identity and Graph lookups |
+| `publish` | 2 | Publish v2 operations |
+| `preview-runtime` | 1 | Preview conversation runtime |
+
+## Hosts
+
+<HostTable />
+
+The host split is architecturally significant. Agent persistence runs through **Dataverse**. Channel
+management runs through the **Island Gateway** at
+`powervamg.{region}.gateway.prod.island.powerapps.com`. Because these are different services, a
+channel can report enabled in a Dataverse-backed UI while its gateway-side registration has failed —
+which is exactly what happened to the Teams channel.
+
+## Endpoints
+
+<EndpointTable />
+
+## Reading this table
+
+- **`semanticId`** follows `{namespace}:{surface}:{group}:{operation}`. Namespaces: `cs` Copilot
+  Studio platform, `as` local kit, `ac` cards, `lt` tiles, plus `evidence` and `dl` for audit-side
+  records. Surfaces: `cs:dv` Dataverse, `cs:bm` Bot Management and Island Gateway, `cs:env`,
+  `cs:bap`, `cs:runtime`, `cs:graph`.
+- **`count`** is how many times that endpoint was observed during the audit, not a rate limit.
+- **`confidence`** is `CONFIRMED` for every row, because every row came from a live capture.
+
+## Corroborated against the corpus
+
+Four observations matched the authoritative corpus exactly, which is the strongest available check on
+this map:
+
+1. The Island Gateway host pattern `powervamg.{region}.gateway.prod.island.powerapps.com`.
+2. The evaluation v2 path `.../makerevaluations/queries/generate?ApplyV2Migration=true`.
+3. The Dataverse `POST /api/data/v9.2/bots` create call with the `PvaProvision` create model.
+4. The `channels/msteams/app/status` HTTP 500 correlating with the ACP consent tenant gate.

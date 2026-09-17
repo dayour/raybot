@@ -1,0 +1,85 @@
+---
+id: index
+title: Evaluation
+sidebar_label: Overview
+---
+
+import DataTable from '@site/src/components/DataTable';
+import evalset from '@site/data/evalset.json';
+
+# Evaluation
+
+Raybot was evaluated once, on 2026-06-07 at 12:47 PM, by Darbot. It scored **0 percent**, with all
+six conversations marked Fail.
+
+That number is not a measure of the agent. It is a measure of the evaluation runtime.
+
+## What the score actually means
+
+Two things were tested, and both failed for reasons unrelated to grounding quality.
+
+| Target | Result |
+| --- | --- |
+| Draft agent | Returned the system fallback response instead of a grounded answer |
+| Published agent | Returned HTTP 500 |
+
+Meanwhile the **Preview** pane, exercising the same agent against the same knowledge source in the
+same session, grounded correctly and returned four `docs.ray.io` citations.
+
+An agent that grounds correctly in Preview and returns a fallback under Evaluate has an evaluation
+harness problem, not a knowledge problem. The 0 percent is recorded here because suppressing it would
+be dishonest, and qualified here because reporting it bare would be misleading.
+
+## The test set
+
+Six question and answer pairs, imported as CSV with the header
+`conversationNumber,question,response`.
+
+<DataTable
+  rows={evalset}
+  columns={[
+    { key: 'conversationNumber', label: '#', width: 60 },
+    { key: 'question', label: 'Question' },
+    { key: 'response', label: 'Reference response' },
+  ]}
+  searchKeys={(r) => `${r.question} ${r.response}`}
+  pageSize={10}
+/>
+
+## Importer constraints
+
+Discovered by hitting them.
+
+| Constraint | Value |
+| --- | --- |
+| Accepted format | CSV |
+| Required header | `conversationNumber,question,response` |
+| Maximum file size | 5 MB |
+| Maximum conversation pairs | 6 |
+| Reference response `maxLength` | 1000 characters |
+| Help link | `fwlink` 2335991 |
+
+These are encoded in the object model as `EVAL_MAX_CONVERSATION_PAIRS`,
+`EVAL_REFERENCE_MAX_LENGTH`, and enforced by `validateEvalTestSet()`.
+
+## Evaluate only unlocks after first save
+
+Like Publish and Share, the Evaluate surface is inert until the agent record exists in Dataverse. The
+agent ID is minted by the first save, and every downstream surface keys off it. See
+[Phase 1](../runbook/phase-1-build.mdx).
+
+## Endpoints
+
+The `evaluate` domain accounts for 7 of the 57 mapped endpoints. The v2 evaluation query path
+`.../makerevaluations/queries/generate?ApplyV2Migration=true` was one of four observations
+corroborated exactly against the authoritative corpus.
+
+## Reproducing this
+
+1. Save the agent at least once so Evaluate unlocks.
+2. Import `raybot-evalset.csv` from the source repository.
+3. Run against Draft, then against Published.
+4. Capture both result sets and the Preview transcript for the same questions.
+
+Step 4 is the important one. Without the Preview transcript there is no evidence distinguishing a bad
+agent from a bad harness.

@@ -1,0 +1,202 @@
+[
+    {
+        "testid":  "agent-command-bar",
+        "surfaces":  16,
+        "totalOccurrences":  16
+    },
+    {
+        "testid":  "user-pill",
+        "surfaces":  16,
+        "totalOccurrences":  16
+    },
+    {
+        "testid":  "preview-chat-suggestions-area",
+        "surfaces":  16,
+        "totalOccurrences":  16
+    },
+    {
+        "testid":  "preview-chat-header",
+        "surfaces":  16,
+        "totalOccurrences":  16
+    },
+    {
+        "testid":  "preview-chat-end-user-toggle",
+        "surfaces":  16,
+        "totalOccurrences":  16
+    },
+    {
+        "testid":  "preview-chat-card",
+        "surfaces":  16,
+        "totalOccurrences":  16
+    },
+    {
+        "testid":  "new-chat-button",
+        "surfaces":  16,
+        "totalOccurrences":  16
+    },
+    {
+        "testid":  "nav-workflows",
+        "surfaces":  16,
+        "totalOccurrences":  16
+    },
+    {
+        "testid":  "nav-home",
+        "surfaces":  16,
+        "totalOccurrences":  16
+    },
+    {
+        "testid":  "nav-agents",
+        "surfaces":  16,
+        "totalOccurrences":  16
+    },
+    {
+        "testid":  "env-picker-trigger",
+        "surfaces":  16,
+        "totalOccurrences":  16
+    },
+    {
+        "testid":  "conversational-agent-authoring-page",
+        "surfaces":  16,
+        "totalOccurrences":  16
+    },
+    {
+        "testid":  "appshell-skip-link",
+        "surfaces":  16,
+        "totalOccurrences":  16
+    },
+    {
+        "testid":  "user-pill-avatar",
+        "surfaces":  16,
+        "totalOccurrences":  16
+    },
+    {
+        "testid":  "agent-preview-chat",
+        "surfaces":  16,
+        "totalOccurrences":  16
+    },
+    {
+        "testid":  "user-pill-more",
+        "surfaces":  16,
+        "totalOccurrences":  16
+    },
+    {
+        "testid":  "agent-command-bar.title",
+        "surfaces":  16,
+        "totalOccurrences":  16
+    },
+    {
+        "testid":  "agent-command-bar.feedback",
+        "surfaces":  16,
+        "totalOccurrences":  16
+    },
+    {
+        "testid":  "agent-command-bar.overflow-trigger",
+        "surfaces":  16,
+        "totalOccurrences":  16
+    },
+    {
+        "testid":  "agent-command-bar.publish-button",
+        "surfaces":  16,
+        "totalOccurrences":  16
+    },
+    {
+        "testid":  "agent-command-bar.publish-split-chevron",
+        "surfaces":  16,
+        "totalOccurrences":  16
+    },
+    {
+        "testid":  "agent-command-bar.save-button",
+        "surfaces":  16,
+        "totalOccurrences":  16
+    },
+    {
+        "testid":  "agent-command-bar.share-button",
+        "surfaces":  16,
+        "totalOccurrences":  16
+    },
+    {
+        "testid":  "agent-command-bar.tabs",
+        "surfaces":  16,
+        "totalOccurrences":  16
+    },
+    {
+        "testid":  "preview-chat-header-overflow",
+        "surfaces":  15,
+        "totalOccurrences":  15
+    },
+    {
+        "testid":  "agent-side-panel.tools.add-button",
+        "surfaces":  13,
+        "totalOccurrences":  13
+    },
+    {
+        "testid":  "agent-icon-button",
+        "surfaces":  13,
+        "totalOccurrences":  13
+    },
+    {
+        "testid":  "agent-iq-list",
+        "surfaces":  13,
+        "totalOccurrences":  13
+    },
+    {
+        "testid":  "agent-details",
+        "surfaces":  13,
+        "totalOccurrences":  13
+    },
+    {
+        "testid":  "dv-knowledge-add-button",
+        "surfaces":  13,
+        "totalOccurrences":  13
+    },
+    {
+        "testid":  "dv-knowledge-agent-knowledge",
+        "surfaces":  13,
+        "totalOccurrences":  13
+    },
+    {
+        "testid":  "agent-iq-pill",
+        "surfaces":  13,
+        "totalOccurrences":  13
+    },
+    {
+        "testid":  "model-selector",
+        "surfaces":  13,
+        "totalOccurrences":  13
+    },
+    {
+        "testid":  "agent-connected-agents",
+        "surfaces":  13,
+        "totalOccurrences":  13
+    },
+    {
+        "testid":  "agent-side-panel.tools",
+        "surfaces":  13,
+        "totalOccurrences":  13
+    },
+    {
+        "testid":  "sidebar-model-picker",
+        "surfaces":  13,
+        "totalOccurrences":  13
+    },
+    {
+        "testid":  "toolbar-group-divider",
+        "surfaces":  13,
+        "totalOccurrences":  39
+    },
+    {
+        "testid":  "agent-connected-agents-section",
+        "surfaces":  13,
+        "totalOccurrences":  13
+    },
+    {
+        "testid":  "agent-side-panel.skills.list",
+        "surfaces":  13,
+        "totalOccurrences":  13
+    },
+    {
+        "testid":  "agent-side-panel.skills.add-button",
+        "surfaces":  13,
+        "totalOccurrences":  13
+    }
+]

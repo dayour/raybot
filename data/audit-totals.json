@@ -1,0 +1,160 @@
+{
+    "generated":  "2026-09-16",
+    "auditDate":  "2026-06-07",
+    "surfaces":  16,
+    "elements":  1627,
+    "interactive":  1115,
+    "withTestId":  983,
+    "uniqueTestIds":  177,
+    "interactiveMissingLabel":  228,
+    "sharedTestIds":  76,
+    "labelSourceDistribution":  [
+                                    {
+                                        "source":  "aria-label",
+                                        "count":  866
+                                    },
+                                    {
+                                        "source":  "textContent",
+                                        "count":  384
+                                    },
+                                    {
+                                        "source":  "none",
+                                        "count":  362
+                                    },
+                                    {
+                                        "source":  "placeholder",
+                                        "count":  9
+                                    },
+                                    {
+                                        "source":  "value",
+                                        "count":  4
+                                    },
+                                    {
+                                        "source":  "aria-labelledby",
+                                        "count":  2
+                                    }
+                                ],
+    "interactiveReasonDistribution":  [
+                                          {
+                                              "reason":  "native-control",
+                                              "count":  846
+                                          },
+                                          {
+                                              "reason":  "tabindex",
+                                              "count":  220
+                                          },
+                                          {
+                                              "reason":  "href",
+                                              "count":  25
+                                          },
+                                          {
+                                              "reason":  "role:textbox",
+                                              "count":  13
+                                          },
+                                          {
+                                              "reason":  "role:button",
+                                              "count":  10
+                                          },
+                                          {
+                                              "reason":  "role:link",
+                                              "count":  1
+                                          }
+                                      ],
+    "roleDistribution":  [
+                             {
+                                 "count":  186,
+                                 "role":  "none"
+                             },
+                             {
+                                 "count":  80,
+                                 "role":  "tab"
+                             },
+                             {
+                                 "count":  36,
+                                 "role":  "toolbar"
+                             },
+                             {
+                                 "count":  31,
+                                 "role":  "button"
+                             },
+                             {
+                                 "count":  29,
+                                 "role":  "switch"
+                             },
+                             {
+                                 "count":  17,
+                                 "role":  "tablist"
+                             },
+                             {
+                                 "count":  14,
+                                 "role":  "combobox"
+                             },
+                             {
+                                 "count":  12,
+                                 "role":  "textbox"
+                             },
+                             {
+                                 "count":  12,
+                                 "role":  "separator"
+                             },
+                             {
+                                 "count":  9,
+                                 "role":  "group"
+                             },
+                             {
+                                 "count":  6,
+                                 "role":  "dialog"
+                             },
+                             {
+                                 "count":  4,
+                                 "role":  "gridcell"
+                             },
+                             {
+                                 "count":  3,
+                                 "role":  "status"
+                             },
+                             {
+                                 "count":  2,
+                                 "role":  "presentation"
+                             },
+                             {
+                                 "count":  1,
+                                 "role":  "link"
+                             },
+                             {
+                                 "count":  1,
+                                 "role":  "row"
+                             },
+                             {
+                                 "count":  1,
+                                 "role":  "tabpanel"
+                             },
+                             {
+                                 "count":  1,
+                                 "role":  "grid"
+                             },
+                             {
+                                 "count":  1,
+                                 "role":  "radiogroup"
+                             }
+                         ],
+    "api":  {
+                "allRequests":  1249,
+                "functionalApiRequests":  611,
+                "excluded":  638,
+                "statusDistribution":  {
+                                           "200":  555,
+                                           "404":  35,
+                                           "500":  9,
+                                           "405":  6,
+                                           "412":  3,
+                                           "FAILED":  3
+                                       },
+                "endpointCount":  57,
+                "domainCount":  11
+            },
+    "gallery":  {
+                    "entries":  67,
+                    "missing":  0
+                }
+}

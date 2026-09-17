@@ -1,0 +1,39 @@
+{
+  "name": "@raybot/object-model",
+  "version": "1.0.0",
+  "description": "TypeScript object model and JSON Schemas for Raybot, the Copilot Studio Coral runtime, and the ground-truth UI/API audit.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./schemas/*": "./schemas/*"
+  },
+  "files": [
+    "dist",
+    "schemas",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "keywords": [
+    "raybot",
+    "copilot-studio",
+    "coral",
+    "ray",
+    "object-model",
+    "json-schema"
+  ],
+  "devDependencies": {
+    "typescript": "~5.6.2"
+  },
+  "engines": {
+    "node": ">=20.0"
+  }
+}

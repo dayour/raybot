@@ -1,0 +1,14 @@
+node_modules/
+build/
+.docusaurus/
+.cache-loader/
+*.tsbuildinfo
+dist/
+
+.DS_Store
+Thumbs.db
+
+.env
+.env.local
+*.log
+npm-debug.log*

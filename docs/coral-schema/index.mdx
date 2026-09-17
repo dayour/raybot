@@ -1,0 +1,90 @@
+---
+id: index
+title: Coral schema
+sidebar_label: Overview
+---
+
+# Coral schema
+
+A ground-truth DOM and network audit of sixteen Coral surfaces, captured live on 2026-06-07 and
+re-verified on 2026-06-17. This is the schema-mapping reference for the runtime.
+
+## What was measured
+
+| Measure | Count |
+| --- | --- |
+| Surfaces | 16 |
+| Elements catalogued | 1,627 |
+| Interactive elements | 1,115 |
+| Elements carrying a test id | 983 |
+| Unique test ids | 177 |
+| Test ids shared across surfaces | 76 |
+| Interactive elements with no derivable label | 228 |
+| Network requests observed | 1,249 |
+| Functional requests classified | 611 |
+| Endpoints mapped | 57 |
+
+Response-status breakdown of the 611 functional requests: 555 returned 200, 35 returned 404, 9
+returned 500, 6 returned 405, 3 returned 412, and 3 failed outright.
+
+## The two identifier layers
+
+The audit assigns every element and every endpoint a stable semantic identifier, in two parallel
+schemes.
+
+**UI layer**
+
+```text
+coral.<area>.<surface>.<component>[.<state>]
+```
+
+**API layer**
+
+```text
+{namespace}:{surface}:{group}:{operation}
+```
+
+The API format is adopted from the authoritative Copilot Studio corpus rather than invented here, so
+identifiers in this audit line up with the published model. See [Naming schema](./naming.md).
+
+## The confidence model
+
+Every assertion carries one of three grades.
+
+| Grade | Meaning |
+| --- | --- |
+| `CONFIRMED` | Observed live in a running system |
+| `SOURCE-INSPECTED` | Read from source or a published artifact, not observed executing |
+| `UNCONFIRMED` | Inferred or asserted without direct evidence |
+
+**This audit is `CONFIRMED` throughout.** Every element row came from a live DOM walk and every
+endpoint from a live network capture.
+
+## Honesty notes
+
+These qualify every number above.
+
+1. `isInteractive` is **computed** from native control type, `href`, ARIA role, `tabindex`, and
+   `contenteditable`. It is calculated independently of whether an element carries a `data-testid`.
+   An element can be interactive with no test id, and can carry a test id while being inert.
+2. `derivedLabel` is a **heuristic**, not a strict accessible-name computation. The heuristic that
+   produced each value is recorded in `labelSource`. The 228 label gaps are a lower bound on
+   accessibility work, not an audit finding.
+3. The API map is **observed network activity**, not a published contract. It was reconciled against
+   the ground-truth corpus but not replaced by it.
+4. Test ids are **not unique**. 76 of 177 appear on more than one surface, so a test id alone is not
+   a sufficient selector across the application.
+
+## Source data
+
+All of it lives in `coral-schema/` in the source repository.
+
+| File | Contents |
+| --- | --- |
+| `coral-ui-audit.html` | Self-contained interactive report. Start here. |
+| `naming-schema.md` | Both identifier layers, area rules, state suffixes |
+| `schema-validation.json` | Totals, per-surface counts, label gaps, shared test ids |
+| `api-schema-map.json` | 11 domains, 57 endpoints, 7 hosts |
+| `elements-slim.json` | 1,627 rows with abbreviated keys |
+| `tab-audit-log.json` | Live designer-tab state, 2026-06-07 |
+| `surfaces/*.json` | Per-surface harness output |

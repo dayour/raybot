@@ -1,0 +1,1598 @@
+[
+    {
+        "surface":  "build.main",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "build.main",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "build.main",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "build.main",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "build.main",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "build.main",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "build.main",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "build.main",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "build.main",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "build.main",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "build.main",
+        "testid":  "preview-chat-end-user-toggle",
+        "tag":  "input",
+        "type":  "checkbox",
+        "role":  "switch"
+    },
+    {
+        "surface":  "dialog.add-connected-agent",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-connected-agent",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-connected-agent",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-connected-agent",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-connected-agent",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-connected-agent",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-connected-agent",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-connected-agent",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-connected-agent",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-connected-agent",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-connected-agent",
+        "testid":  "preview-chat-end-user-toggle",
+        "tag":  "input",
+        "type":  "checkbox",
+        "role":  "switch"
+    },
+    {
+        "surface":  "dialog.add-connected-agent",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-connected-agent",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-knowledge.advanced",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-knowledge.advanced",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-knowledge.advanced",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-knowledge.advanced",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-knowledge.advanced",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-knowledge.advanced",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-knowledge.advanced",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-knowledge.advanced",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-knowledge.advanced",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-knowledge.advanced",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-knowledge.advanced",
+        "testid":  "preview-chat-end-user-toggle",
+        "tag":  "input",
+        "type":  "checkbox",
+        "role":  "switch"
+    },
+    {
+        "surface":  "dialog.add-knowledge.advanced",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-knowledge.advanced",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-knowledge.advanced",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-knowledge.advanced",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-knowledge",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-knowledge",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-knowledge",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-knowledge",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-knowledge",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-knowledge",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-knowledge",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-knowledge",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-knowledge",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-knowledge",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-knowledge",
+        "testid":  "preview-chat-end-user-toggle",
+        "tag":  "input",
+        "type":  "checkbox",
+        "role":  "switch"
+    },
+    {
+        "surface":  "dialog.add-knowledge",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-knowledge",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-knowledge",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-knowledge",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-knowledge",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-knowledge",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-knowledge",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-knowledge",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-knowledge",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-knowledge",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-mcp-server",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-mcp-server",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-mcp-server",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-mcp-server",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-mcp-server",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-mcp-server",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-mcp-server",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-mcp-server",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-mcp-server",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-mcp-server",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-mcp-server",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-mcp-server",
+        "testid":  "preview-chat-end-user-toggle",
+        "tag":  "input",
+        "type":  "checkbox",
+        "role":  "switch"
+    },
+    {
+        "surface":  "dialog.add-mcp-server",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-mcp-server",
+        "testid":  null,
+        "tag":  "input",
+        "type":  "file",
+        "role":  null
+    },
+    {
+        "surface":  "dialog.add-mcp-server",
+        "testid":  null,
+        "tag":  "input",
+        "type":  "radio",
+        "role":  null
+    },
+    {
+        "surface":  "dialog.add-mcp-server",
+        "testid":  null,
+        "tag":  "input",
+        "type":  "radio",
+        "role":  null
+    },
+    {
+        "surface":  "dialog.add-mcp-server",
+        "testid":  null,
+        "tag":  "input",
+        "type":  "radio",
+        "role":  null
+    },
+    {
+        "surface":  "dialog.add-mcp-server",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-mcp-server",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add.microsoft-iq",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add.microsoft-iq",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add.microsoft-iq",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add.microsoft-iq",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add.microsoft-iq",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add.microsoft-iq",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add.microsoft-iq",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add.microsoft-iq",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add.microsoft-iq",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add.microsoft-iq",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add.microsoft-iq",
+        "testid":  "preview-chat-end-user-toggle",
+        "tag":  "input",
+        "type":  "checkbox",
+        "role":  "switch"
+    },
+    {
+        "surface":  "dialog.add.microsoft-iq",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add.microsoft-iq",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-skill.blank",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-skill.blank",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-skill.blank",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-skill.blank",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-skill.blank",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-skill.blank",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-skill.blank",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-skill.blank",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-skill.blank",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-skill.blank",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-skill.blank",
+        "testid":  "preview-chat-end-user-toggle",
+        "tag":  "input",
+        "type":  "checkbox",
+        "role":  "switch"
+    },
+    {
+        "surface":  "dialog.add-skill.blank",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-skill.blank",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-skill.blank",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-skill.blank",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-skill.upload",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-skill.upload",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-skill.upload",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-skill.upload",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-skill.upload",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-skill.upload",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-skill.upload",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-skill.upload",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-skill.upload",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-skill.upload",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-skill.upload",
+        "testid":  "preview-chat-end-user-toggle",
+        "tag":  "input",
+        "type":  "checkbox",
+        "role":  "switch"
+    },
+    {
+        "surface":  "dialog.add-skill.upload",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-skill.upload",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-skill.upload",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-skill.upload",
+        "testid":  "skill-instructions-replace-input",
+        "tag":  "input",
+        "type":  "file",
+        "role":  null
+    },
+    {
+        "surface":  "dialog.add-skill.upload",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.add-tool",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  null
+    },
+    {
+        "surface":  "dialog.add-tool",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  null
+    },
+    {
+        "surface":  "dialog.add-tool",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  null
+    },
+    {
+        "surface":  "dialog.add-tool",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  null
+    },
+    {
+        "surface":  "dialog.add-tool",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  null
+    },
+    {
+        "surface":  "dialog.add-tool",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  null
+    },
+    {
+        "surface":  "dialog.add-tool",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  null
+    },
+    {
+        "surface":  "dialog.add-tool",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  null
+    },
+    {
+        "surface":  "dialog.add-tool",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  null
+    },
+    {
+        "surface":  "dialog.add-tool",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  null
+    },
+    {
+        "surface":  "dialog.add-tool",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  null
+    },
+    {
+        "surface":  "dialog.add-tool",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  null
+    },
+    {
+        "surface":  "dialog.add-tool",
+        "testid":  null,
+        "tag":  "input",
+        "type":  "file",
+        "role":  null
+    },
+    {
+        "surface":  "dialog.add-tool",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  null
+    },
+    {
+        "surface":  "dialog.add-tool",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  null
+    },
+    {
+        "surface":  "dialog.settings.agent-details",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.settings.agent-details",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.settings.agent-details",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.settings.agent-details",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.settings.agent-details",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.settings.agent-details",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.settings.agent-details",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.settings.agent-details",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.settings.agent-details",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.settings.agent-details",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.settings.agent-details",
+        "testid":  "preview-chat-end-user-toggle",
+        "tag":  "input",
+        "type":  "checkbox",
+        "role":  "switch"
+    },
+    {
+        "surface":  "dialog.settings.agent-details",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.settings.agent-details",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.settings.agent-details",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.settings.agent-details",
+        "testid":  "agent-settings-field-schemaName",
+        "tag":  "input",
+        "type":  "text",
+        "role":  null
+    },
+    {
+        "surface":  "dialog.settings.agent-details",
+        "testid":  "agent-settings-field-solution",
+        "tag":  "input",
+        "type":  "text",
+        "role":  null
+    },
+    {
+        "surface":  "dialog.settings.agent-details",
+        "testid":  "agent-settings-field-primaryLanguage",
+        "tag":  "input",
+        "type":  "text",
+        "role":  null
+    },
+    {
+        "surface":  "dialog.settings.agent-details",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.settings.ai-behavior",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.settings.ai-behavior",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.settings.ai-behavior",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.settings.ai-behavior",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.settings.ai-behavior",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.settings.ai-behavior",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.settings.ai-behavior",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.settings.ai-behavior",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.settings.ai-behavior",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.settings.ai-behavior",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.settings.ai-behavior",
+        "testid":  "preview-chat-end-user-toggle",
+        "tag":  "input",
+        "type":  "checkbox",
+        "role":  "switch"
+    },
+    {
+        "surface":  "dialog.settings.ai-behavior",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.settings.ai-behavior",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.settings.ai-behavior",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.settings.ai-behavior",
+        "testid":  "agent-settings-field-allowOtherAgentsToConnect",
+        "tag":  "input",
+        "type":  "checkbox",
+        "role":  "switch"
+    },
+    {
+        "surface":  "dialog.settings.ai-behavior",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.settings.greeting-prompts",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.settings.greeting-prompts",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.settings.greeting-prompts",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.settings.greeting-prompts",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.settings.greeting-prompts",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.settings.greeting-prompts",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.settings.greeting-prompts",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.settings.greeting-prompts",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.settings.greeting-prompts",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.settings.greeting-prompts",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.settings.greeting-prompts",
+        "testid":  "preview-chat-end-user-toggle",
+        "tag":  "input",
+        "type":  "checkbox",
+        "role":  "switch"
+    },
+    {
+        "surface":  "dialog.settings.greeting-prompts",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.settings.greeting-prompts",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.settings.greeting-prompts",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.settings.greeting-prompts",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.settings.safety-access",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.settings.safety-access",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.settings.safety-access",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.settings.safety-access",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.settings.safety-access",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.settings.safety-access",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.settings.safety-access",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.settings.safety-access",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.settings.safety-access",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.settings.safety-access",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.settings.safety-access",
+        "testid":  "preview-chat-end-user-toggle",
+        "tag":  "input",
+        "type":  "checkbox",
+        "role":  "switch"
+    },
+    {
+        "surface":  "dialog.settings.safety-access",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.settings.safety-access",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.settings.safety-access",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "dialog.settings.safety-access",
+        "testid":  "agent-settings-field-userFeedbackEnabled",
+        "tag":  "input",
+        "type":  "checkbox",
+        "role":  "switch"
+    },
+    {
+        "surface":  "dialog.settings.safety-access",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "evaluate.main",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "evaluate.main",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "evaluate.main",
+        "testid":  "preview-chat-end-user-toggle",
+        "tag":  "input",
+        "type":  "checkbox",
+        "role":  "switch"
+    },
+    {
+        "surface":  "evaluate.main",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "evaluate.main",
+        "testid":  "evaluation-test-config-card",
+        "tag":  "div",
+        "type":  null,
+        "role":  "link"
+    },
+    {
+        "surface":  "evaluate.main",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "evaluate.main",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "evaluate.main",
+        "testid":  null,
+        "tag":  "div",
+        "type":  null,
+        "role":  "row"
+    },
+    {
+        "surface":  "evaluate.main",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "evaluate.main",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "evaluate.main",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "evaluate.main",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "evaluate.main",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "evaluate.main",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "evaluate.main",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "evaluate.main",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "evaluate.main",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "evaluate.main",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "evaluate.main",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "monitor.main",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "monitor.main",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "monitor.main",
+        "testid":  "preview-chat-end-user-toggle",
+        "tag":  "input",
+        "type":  "checkbox",
+        "role":  "switch"
+    },
+    {
+        "surface":  "preview.main",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "preview.main",
+        "testid":  null,
+        "tag":  "i",
+        "type":  null,
+        "role":  "none"
+    },
+    {
+        "surface":  "preview.main",
+        "testid":  "preview-chat-end-user-toggle",
+        "tag":  "input",
+        "type":  "checkbox",
+        "role":  "switch"
+    }
+]

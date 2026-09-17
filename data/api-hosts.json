@@ -1,0 +1,44 @@
+[
+    {
+        "key":  "powervamg",
+        "host":  "powervamg.us-il106.gateway.prod.island.powerapps.com",
+        "role":  "Primary Bot Management / Power Virtual Agents Management gateway (Copilot Studio backend). Most maker actions route here.",
+        "requestCount":  396
+    },
+    {
+        "key":  "dataverse",
+        "host":  "orgd1da6e38.crm.dynamics.com",
+        "role":  "Dataverse OData (v9.2) — the agent\u0027s persistence store (bot, botcomponents, solutions, user/privilege lookups).",
+        "requestCount":  103
+    },
+    {
+        "key":  "environmentApi",
+        "host":  "default6b104499c49f45dcb3a2df95efd6ee.b4.environment.api.powerplatform.com",
+        "role":  "Power Platform environment API — M365 channel link, connectors, Power Automate operation groups, knowledge sources.",
+        "requestCount":  47
+    },
+    {
+        "key":  "bap",
+        "host":  "api.bap.microsoft.com",
+        "role":  "Business Application Platform — environment metadata and tenant settings.",
+        "requestCount":  39
+    },
+    {
+        "key":  "agenticRuntime",
+        "host":  "agenticruntime.us-il106.gateway.prod.island.powerapps.com",
+        "role":  "Agentic runtime — live test/preview conversation execution.",
+        "requestCount":  1
+    },
+    {
+        "key":  "graph",
+        "host":  "graph.microsoft.com",
+        "role":  "Microsoft Graph — current user, license details, profile photos.",
+        "requestCount":  10
+    },
+    {
+        "key":  "content",
+        "host":  "content.powerapps.com / preview.content.powerapps.com",
+        "role":  "Content/blob storage for agent assets (icons, attachments). Treated as supporting/static.",
+        "requestCount":  103
+    }
+]
