@@ -71,7 +71,7 @@ to match.
 Result: commit `7698a0d` — 71 files changed, 59 insertions, 59 deletions.
 
 All nine PowerShell commands from that session are recovered verbatim in the
-[session command reference](../session/index.md).
+[session command reference](../session/command-reference.md).
 
 A second CLI session the same minute, `a38c8e08` at 16:24:29Z, was a misfire — four PowerShell probes
 hunting a directory that does not exist. It is recorded because the forensic claim is "exactly two

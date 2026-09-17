@@ -190,4 +190,4 @@ Get-ChildItem -Path . -Filter "*.png" |
   Where-Object { $_.DirectoryName -eq (Get-Location).Path }
 ```
 
-This is command 1 and command 2 in the [session command reference](../session/index.md).
+This is command 1 and command 2 in the [session command reference](../session/command-reference.md).

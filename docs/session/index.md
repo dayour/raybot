@@ -21,6 +21,14 @@ were recovered, and why the original build transcript does not exist.
 | Logs | `~/.copilot/logs/` | |
 | Cloud session store | Queried via `session_store_sql` | `sessions`, `turns`, `session_files`, `session_refs`, `events`, `tool_requests` |
 
+## Pages in this section
+
+| Page | Contents |
+| --- | --- |
+| [Command reference](./command-reference.md) | The nine recovered PowerShell commands, fully annotated |
+| [Store queries](./store-queries.md) | Working queries against both stores, with the performance rules |
+| [Provenance](./provenance.md) | The full evidence chain, including the retracted finding |
+
 ## Sessions that touched this project
 
 Three, and only three.
@@ -39,30 +47,24 @@ repository.
 
 An earlier pass through this material reported that **no** session existed at the
 `Clawpilot\raybot-runbook` path. That was wrong. The search window was set to June, and the session
-is dated September. The session exists and has been inspected.
+is dated September.
 
 The corrected finding is narrower but still holds: session `75113b80` is a **review** of the runbook,
-not the build that produced it. Its tool profile is dominated by `view` and read-only
-`session_store_sql`, with only three `apply_patch` calls. There is no Playwright activity, no browser
-automation, and no Copilot Studio navigation anywhere in it.
+not the build that produced it. The full retraction, and the rule it produced, are on the
+[provenance](./provenance.md) page.
 
 ## The build transcript does not exist
 
-The evidence:
+Five independent evidence points support this, the strongest being that `RUNBOOK.legacy.md` Step 0
+creates its working directory via `filesystem-create_directory` — an MCP filesystem tool, not a
+Copilot CLI shell call. **The build ran under a different client**, whose transcripts were never in
+these stores.
 
-1. No session in either store references Playwright, Coral, or Copilot Studio in the relevant window.
-2. The local FTS `search_index` table, queried with `MATCH 'raybot'`, returns two rows, both unrelated
-   Azure resource-group work.
-3. `command-history-state.json` retains only the last 50 prompts. None of them is a build prompt.
-4. `RUNBOOK.legacy.md` Step 0 points at `...\Clawpilot\raybot-runbook` created via
-   `filesystem-create_directory` — an MCP filesystem tool, not a Copilot CLI shell call. The build
-   ran under a **different client**.
-5. The repository arrived whole. Commit `16e4d1a` (darbotlabs, 2026-06-17 15:09 +0100) added all 206
-   files in one shot: 71,796 insertions, no prior history.
+The surviving record of the Coral build is the runbook prose, the screenshots, and the audit JSON.
+There is no replayable transcript. That is precisely why the runbook records the exact `data-testid`
+of every control it touched — it was written to be the transcript.
 
-So the surviving record of the Coral build is the runbook prose, the 67 screenshots, and the audit
-JSON. There is no replayable transcript. That is precisely why the runbook records the exact
-`data-testid` of every control it touched — it was written to be the transcript.
+The full chain is on [provenance](./provenance.md).
 
 ## The nine recovered commands
 
@@ -71,66 +73,31 @@ From session `d106b6f4`, in order. The prompt that started it:
 > move all the screenshots from C:\0DEV0\raybot to C:\0DEV0\raybot\screenshots folder and set all
 > relevant scripts and docs within raybot to use the screenshots folder going forward
 
-**1. First move attempt — failed.**
+| # | Command | Outcome |
+| --- | --- | --- |
+| 1 | `Get-ChildItem -Path . -MaxDepth 1 -Filter "*.png" \| ...` | Failed — `-MaxDepth` is not a valid parameter |
+| 2 | Retry with `Where-Object { $_.DirectoryName -eq (Get-Location).Path }` | Moved 66 files |
+| 3 | Regex `(\d{2}_[a-z][\w-]+\.png)` to `screenshots/$1` on `RUNBOOK.md` | Phase 1-6 references |
+| 4 | Regex `(\d{2}-[\w-]+\.png)` to `captures-2026-06-17/annotated/$1` | Phase 7 references |
+| 5 | Both rewrites on `RUNBOOK.legacy.md`, plus brand-asset prefixing | Legacy narrative |
+| 6 | Verify no PNGs remain in the repository root | Confirmed |
+| 7 | `git --no-pager status --short` | Working-tree inspection |
+| 8 | `git --no-pager add -A` | Rename detection confirmed |
+| 9 | `git --no-pager commit -m "Move all screenshots..."` | Commit `7698a0d` |
 
-```powershell
-Get-ChildItem -Path . -MaxDepth 1 -Filter "*.png" | ForEach-Object { Move-Item $_.FullName "screenshots\" }
-```
+Result: 71 files changed, 59 insertions, 59 deletions. Git detected all 66 moves as renames rather
+than delete-plus-add pairs, which is why the commit is 118 lines rather than tens of thousands.
 
-`-MaxDepth` is not a valid parameter on `Get-ChildItem`. It exists on `Get-ChildItem -Recurse` only
-in PowerShell 7 via `-Depth`, and never as `-MaxDepth`.
-
-**2. Retry with a directory filter — succeeded, 66 files moved.**
-
-```powershell
-Get-ChildItem -Path . -Filter "*.png" | Where-Object { $_.DirectoryName -eq (Get-Location).Path } | ForEach-Object { Move-Item $_.FullName "screenshots\" }
-```
-
-**3. Rewrite Phase 1 through 6 references in `RUNBOOK.md`.**
-
-Regex `(\d{2}_[a-z][\w-]+\.png)` replaced with `screenshots/$1`.
-
-**4. Rewrite Phase 7 references in `RUNBOOK.md`.**
-
-Regex `(\d{2}-[\w-]+\.png)` replaced with `captures-2026-06-17/annotated/$1`.
-
-**5. Same two rewrites on `RUNBOOK.legacy.md`**, plus prefixing for `raybot-logo*.png` and
-`raybot-icon-teams-white.png`.
-
-**6. Verify no PNGs remain in the repository root.**
-
-**7. Inspect the working tree.**
-
-```powershell
-git --no-pager status --short
-```
-
-**8. Stage everything, confirming rename detection.**
-
-```powershell
-git --no-pager add -A
-```
-
-Git correctly detected all 66 moves as renames rather than delete-plus-add pairs, which is why the
-resulting commit is 59 insertions and 59 deletions rather than thousands.
-
-**9. Commit.**
-
-```powershell
-git --no-pager commit -m "Move all screenshots to screenshots/ folder and update references..."
-```
-
-Result: commit `7698a0d`, 71 files changed, 59 insertions, 59 deletions.
+Each command is annotated in full on the [command reference](./command-reference.md) page.
 
 ## Store query notes
 
-For anyone reproducing this analysis:
+Three rules govern reproducing this analysis:
 
-- The `sessions` table is fast and safe to query broadly.
-- The `tool_requests` table **times out at 60 seconds** even with `LIMIT 12` and `substr()` applied
-  to the arguments column. Do not try to recover tool arguments from it. The nine commands above were
-  reconstructed from turn content, not from `tool_requests`.
-- Always filter on time. `turns` and `events` are large enough that an unfiltered `ILIKE` scan will
-  time out.
-- Set the time window from the artifact, not from intuition. The correction described above happened
-  because the window was set from the commit date rather than from the session date.
+- `sessions` is fast. `tool_requests` **times out at 60 seconds** even with `LIMIT 12` and `substr()`
+  — the nine commands were reconstructed from turn content, not from it.
+- Always filter `turns` and `events` by time. Never ILIKE-scan unfiltered.
+- **Set the time window from the artifact, not from intuition.** The correction above happened
+  because the window was set from the commit date rather than the session date.
+
+Every working query is on [store queries](./store-queries.md).

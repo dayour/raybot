@@ -26,7 +26,7 @@ This is the single most important line in the legacy document, because it is the
 pointer to where the build actually ran.
 
 That directory **no longer exists** on any local drive. It is also not the directory the current
-repository lives in. See Provenance for what this implies about the
+repository lives in. See [Provenance](../session/provenance.md) for what this implies about the
 recoverability of the build transcript.
 
 ### The exact entry URL

@@ -52,7 +52,12 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'Session forensics',
-      items: ['session/index'],
+      items: [
+        'session/index',
+        'session/command-reference',
+        'session/store-queries',
+        'session/provenance',
+      ],
     },
     {
       type: 'category',

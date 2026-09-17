@@ -61,7 +61,7 @@ There are two, and they are not interchangeable.
 
 The underscore versus hyphen distinction is load-bearing. The screenshot-move commands in session
 `d106b6f4` used exactly that difference to route each filename to the right folder with two separate
-regular expressions. See Command reference.
+regular expressions. See [Command reference](../session/command-reference.md).
 
 The 67 captures surfaced in this wiki's [gallery](../screenshots/gallery.mdx) are the curated subset:
 41 from `screenshots/` and 26 from `captures-2026-06-17/annotated/`.
