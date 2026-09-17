@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dayour.github.io/raybot/schemas/AgentMemory.schema.json",
+  "$ref": "#/definitions/AgentMemory",
+  "definitions": {
+    "AgentMemory": {
+      "type": "object",
+      "properties": {
+        "enabled": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "enabled"
+      ],
+      "description": "Conversation memory toggle state on the Build tab right rail."
+    }
+  }
+}

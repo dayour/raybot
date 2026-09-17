@@ -42,7 +42,7 @@ export interface Evidenced {
    */
   evidence?: string[];
   /** Free-text qualifier, used when a claim is true only under conditions. */
-  note?: string;
+  note?: string | null;
 }
 
 /** An ISO-8601 date, `YYYY-MM-DD`. */

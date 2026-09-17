@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dayour.github.io/raybot/schemas/EvalTestSet.schema.json",
+  "$ref": "#/definitions/EvalTestSet",
+  "definitions": {
+    "EvalTestSet": {
+      "type": "object",
+      "properties": {
+        "confidence": {
+          "$ref": "#/definitions/ConfidenceLevel"
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Capture filenames, dump filenames, or request ids that back the claim. Relative to the audit repository root."
+        },
+        "note": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Free-text qualifier, used when a claim is true only under conditions."
+        },
+        "name": {
+          "type": "string"
+        },
+        "dataType": {
+          "$ref": "#/definitions/EvalDataType"
+        },
+        "cases": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/EvalTestCase"
+          }
+        }
+      },
+      "required": [
+        "cases",
+        "confidence",
+        "dataType",
+        "name"
+      ],
+      "description": "A complete evaluation test set."
+    },
+    "ConfidenceLevel": {
+      "type": "string",
+      "enum": [
+        "CONFIRMED",
+        "SOURCE-INSPECTED",
+        "UNCONFIRMED"
+      ],
+      "description": "How a recorded fact was established.\n\n- `CONFIRMED` - observed directly in the running product: a DOM dump, a   captured network request, or a screenshot showing the resulting state.\n- `SOURCE-INSPECTED` - read out of shipped client source (bundle, sourcemap,   or manifest) but never exercised at runtime during the audit.\n- `UNCONFIRMED` - inferred from naming, adjacency, or documentation, with no   direct observation behind it."
+    },
+    "EvalDataType": {
+      "type": "string",
+      "enum": [
+        "Conversation",
+        "SingleTurn"
+      ],
+      "description": "Test-set data type offered by the evaluation importer."
+    },
+    "EvalTestCase": {
+      "type": "object",
+      "properties": {
+        "conversationNumber": {
+          "type": "number",
+          "description": "1-based conversation ordinal, the CSV's first column."
+        },
+        "question": {
+          "type": "string"
+        },
+        "response": {
+          "type": "string",
+          "description": "Expected or reference response."
+        }
+      },
+      "required": [
+        "conversationNumber",
+        "question",
+        "response"
+      ],
+      "description": "One question-and-expected-response pair."
+    }
+  }
+}

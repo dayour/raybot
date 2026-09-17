@@ -16,6 +16,8 @@
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "typecheck": "tsc",
+    "schemas": "npm run schemas --workspace @raybot/object-model",
+    "validate-data": "npm run validate-data --workspace @raybot/object-model",
     "export-data": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/export-wiki-data.ps1"
   },
   "dependencies": {

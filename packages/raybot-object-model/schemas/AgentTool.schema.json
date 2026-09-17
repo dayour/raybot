@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dayour.github.io/raybot/schemas/AgentTool.schema.json",
+  "$ref": "#/definitions/AgentTool",
+  "definitions": {
+    "AgentTool": {
+      "type": "object",
+      "properties": {
+        "confidence": {
+          "$ref": "#/definitions/ConfidenceLevel"
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Capture filenames, dump filenames, or request ids that back the claim. Relative to the audit repository root."
+        },
+        "note": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Free-text qualifier, used when a claim is true only under conditions."
+        },
+        "catalog": {
+          "$ref": "#/definitions/ToolCatalog"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string",
+          "description": "Description the orchestrator reads when deciding to invoke the tool."
+        },
+        "mcpServer": {
+          "type": "string",
+          "description": "Present for MCP-sourced tools."
+        },
+        "connectorId": {
+          "type": "string",
+          "description": "Present for connector-sourced tools."
+        }
+      },
+      "required": [
+        "catalog",
+        "confidence",
+        "name"
+      ]
+    },
+    "ConfidenceLevel": {
+      "type": "string",
+      "enum": [
+        "CONFIRMED",
+        "SOURCE-INSPECTED",
+        "UNCONFIRMED"
+      ],
+      "description": "How a recorded fact was established.\n\n- `CONFIRMED` - observed directly in the running product: a DOM dump, a   captured network request, or a screenshot showing the resulting state.\n- `SOURCE-INSPECTED` - read out of shipped client source (bundle, sourcemap,   or manifest) but never exercised at runtime during the audit.\n- `UNCONFIRMED` - inferred from naming, adjacency, or documentation, with no   direct observation behind it."
+    },
+    "ToolCatalog": {
+      "type": "string",
+      "enum": [
+        "featured",
+        "mcp",
+        "connectors",
+        "workflows",
+        "custom"
+      ],
+      "description": "The four tabs offered by the add-tool flyout, plus the custom entry point.\n\n`custom` corresponds to the explicit \"Add\" affordance that lets a maker register a tool that is not present in any of the four catalogs."
+    }
+  }
+}

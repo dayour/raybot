@@ -85,6 +85,7 @@ const sidebars: SidebarsConfig = {
 
   objectModelSidebar: [
     'object-model/index',
+    'object-model/json-schemas',
     {
       type: 'category',
       label: 'SDK',

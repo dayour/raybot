@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dayour.github.io/raybot/schemas/ApiHost.schema.json",
+  "$ref": "#/definitions/ApiHost",
+  "definitions": {
+    "ApiHost": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "type": "string"
+        },
+        "host": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string"
+        },
+        "requestCount": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "key",
+        "host",
+        "role",
+        "requestCount"
+      ],
+      "description": "A host observed serving functional (non-telemetry) traffic."
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dayour.github.io/raybot/schemas/SecuritySettings.schema.json",
+  "$ref": "#/definitions/SecuritySettings",
+  "definitions": {
+    "SecuritySettings": {
+      "type": "object",
+      "properties": {
+        "authentication": {
+          "$ref": "#/definitions/AuthenticationMode"
+        },
+        "requireSecuredAccess": {
+          "type": "boolean",
+          "description": "Enabling this while relying on the Demo or Preview surfaces locks the maker out of their own agent preview. Leave it off until a real channel is carrying traffic."
+        }
+      },
+      "required": [
+        "authentication",
+        "requireSecuredAccess"
+      ],
+      "description": "Settings tab: Security."
+    },
+    "AuthenticationMode": {
+      "type": "string",
+      "enum": [
+        "NoAuthentication",
+        "AuthenticateWithMicrosoft",
+        "Manual"
+      ],
+      "description": "End-user authentication mode for the agent."
+    }
+  }
+}

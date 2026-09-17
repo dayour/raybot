@@ -216,7 +216,11 @@ export interface ApiHost {
 /** A single observed endpoint, grouped into a functional domain. */
 export interface ApiEndpoint extends Evidenced {
   domain: string;
-  domainTitle: string;
+  /**
+   * Human-readable domain title. Null throughout the published export: the
+   * titles live in the domain lookup, not on the endpoint row.
+   */
+  domainTitle: string | null;
   method: string;
   host: string;
   hostName: string;
@@ -230,6 +234,29 @@ export interface ApiEndpoint extends Evidenced {
   status?: string | null;
 }
 
+/**
+ * One bucket in a distribution published by `audit-totals.json`.
+ *
+ * The exporter emits distributions as arrays of labelled counts rather than as
+ * keyed objects, because the label is data — `aria-label`, `native-control`,
+ * `none` — and several labels are not safe object keys. The key name varies per
+ * distribution, hence the three concrete shapes below.
+ */
+export interface LabelSourceCount {
+  source: string;
+  count: number;
+}
+
+export interface InteractiveReasonCount {
+  reason: string;
+  count: number;
+}
+
+export interface RoleCount {
+  role: string;
+  count: number;
+}
+
 /** Roll-up of the whole audit, as published by `audit-totals.json`. */
 export interface AuditTotals {
   generated: string;
@@ -241,9 +268,9 @@ export interface AuditTotals {
   uniqueTestIds: number;
   interactiveMissingLabel: number;
   sharedTestIds: number;
-  labelSourceDistribution: Record<string, number>;
-  interactiveReasonDistribution: Record<string, number>;
-  roleDistribution: Record<string, number>;
+  labelSourceDistribution: LabelSourceCount[];
+  interactiveReasonDistribution: InteractiveReasonCount[];
+  roleDistribution: RoleCount[];
   api: {
     allRequests: number;
     functionalApiRequests: number;

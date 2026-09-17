@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dayour.github.io/raybot/schemas/ApiSemanticId.schema.json",
+  "$ref": "#/definitions/ApiSemanticId",
+  "definitions": {
+    "ApiSemanticId": {
+      "type": "object",
+      "properties": {
+        "namespace": {
+          "type": "string"
+        },
+        "surface": {
+          "type": "string"
+        },
+        "group": {
+          "type": "string"
+        },
+        "operation": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "namespace",
+        "surface",
+        "group",
+        "operation"
+      ],
+      "description": "A parsed `{namespace}:{surface}:{group}:{operation}` identifier."
+    }
+  }
+}

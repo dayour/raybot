@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dayour.github.io/raybot/schemas/MicrosoftIQBinding.schema.json",
+  "$ref": "#/definitions/MicrosoftIQBinding",
+  "definitions": {
+    "MicrosoftIQBinding": {
+      "type": "object",
+      "properties": {
+        "confidence": {
+          "$ref": "#/definitions/ConfidenceLevel"
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Capture filenames, dump filenames, or request ids that back the claim. Relative to the audit repository root."
+        },
+        "note": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Free-text qualifier, used when a claim is true only under conditions."
+        },
+        "knowledgeBase": {
+          "type": "string",
+          "description": "Knowledge base name, for example `raybot-kb`."
+        },
+        "searchService": {
+          "type": "string",
+          "description": "Azure AI Search service short name."
+        },
+        "region": {
+          "type": "string",
+          "description": "Azure region of the search service."
+        },
+        "sku": {
+          "type": "string",
+          "enum": [
+            "free",
+            "basic",
+            "standard",
+            "standard2",
+            "standard3"
+          ],
+          "description": "Search service SKU. Basic or higher is required for the picker."
+        },
+        "knowledgeSources": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Names of the knowledge sources bound into the knowledge base."
+        },
+        "apiVersion": {
+          "type": "string",
+          "description": "Search REST api-version used. Only this version exposes /knowledgeBases."
+        },
+        "outputMode": {
+          "type": "string",
+          "enum": [
+            "answerSynthesis",
+            "extractiveData"
+          ]
+        },
+        "retrievalReasoningEffort": {
+          "type": "string",
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        "synthesisModel": {
+          "type": "string",
+          "description": "Azure OpenAI deployment backing answer synthesis."
+        }
+      },
+      "required": [
+        "apiVersion",
+        "confidence",
+        "knowledgeBase",
+        "knowledgeSources",
+        "region",
+        "searchService",
+        "sku"
+      ],
+      "description": "A Microsoft IQ (Foundry IQ) knowledge base binding.\n\nThe binding points at an Azure AI Search knowledge base created through the `2025-11-01-preview` Search REST surface. The tier constraint is the critical one: knowledge bases hosted on a Free-tier search service never appear in the Copilot Studio picker, regardless of whether they answer correctly over REST."
+    },
+    "ConfidenceLevel": {
+      "type": "string",
+      "enum": [
+        "CONFIRMED",
+        "SOURCE-INSPECTED",
+        "UNCONFIRMED"
+      ],
+      "description": "How a recorded fact was established.\n\n- `CONFIRMED` - observed directly in the running product: a DOM dump, a   captured network request, or a screenshot showing the resulting state.\n- `SOURCE-INSPECTED` - read out of shipped client source (bundle, sourcemap,   or manifest) but never exercised at runtime during the audit.\n- `UNCONFIRMED` - inferred from naming, adjacency, or documentation, with no   direct observation behind it."
+    }
+  }
+}

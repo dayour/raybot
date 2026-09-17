@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dayour.github.io/raybot/schemas/ConversationStartSettings.schema.json",
+  "$ref": "#/definitions/ConversationStartSettings",
+  "definitions": {
+    "ConversationStartSettings": {
+      "type": "object",
+      "properties": {
+        "greeting": {
+          "type": "string",
+          "description": "Greeting message. Empty for Raybot."
+        },
+        "suggestedPrompts": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Suggested prompt chips. Empty for Raybot."
+        }
+      },
+      "required": [
+        "suggestedPrompts"
+      ],
+      "description": "Settings tab: Conversation start."
+    }
+  }
+}

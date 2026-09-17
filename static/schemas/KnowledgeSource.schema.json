@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dayour.github.io/raybot/schemas/KnowledgeSource.schema.json",
+  "$ref": "#/definitions/KnowledgeSource",
+  "definitions": {
+    "KnowledgeSource": {
+      "type": "object",
+      "properties": {
+        "confidence": {
+          "$ref": "#/definitions/ConfidenceLevel"
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Capture filenames, dump filenames, or request ids that back the claim. Relative to the audit repository root."
+        },
+        "note": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Free-text qualifier, used when a claim is true only under conditions."
+        },
+        "kind": {
+          "$ref": "#/definitions/KnowledgeSourceKind"
+        },
+        "name": {
+          "type": "string",
+          "description": "Display name shown on the knowledge card."
+        },
+        "url": {
+          "type": "string",
+          "description": "Root URL for `publicWebsite` and `sharePoint` sources."
+        },
+        "description": {
+          "type": "string",
+          "description": "Description passed to the orchestrator to decide when to search."
+        }
+      },
+      "required": [
+        "confidence",
+        "kind",
+        "name"
+      ]
+    },
+    "ConfidenceLevel": {
+      "type": "string",
+      "enum": [
+        "CONFIRMED",
+        "SOURCE-INSPECTED",
+        "UNCONFIRMED"
+      ],
+      "description": "How a recorded fact was established.\n\n- `CONFIRMED` - observed directly in the running product: a DOM dump, a   captured network request, or a screenshot showing the resulting state.\n- `SOURCE-INSPECTED` - read out of shipped client source (bundle, sourcemap,   or manifest) but never exercised at runtime during the audit.\n- `UNCONFIRMED` - inferred from naming, adjacency, or documentation, with no   direct observation behind it."
+    },
+    "KnowledgeSourceKind": {
+      "type": "string",
+      "enum": [
+        "publicWebsite",
+        "sharePoint",
+        "dataverse",
+        "file",
+        "enterpriseData",
+        "microsoftIQ"
+      ],
+      "description": "A knowledge source attached to the agent.\n\nRaybot uses a single public website source pointed at the Ray documentation. The card types offered by the add-knowledge flow are enumerated here because the set is a closed list in the UI."
+    }
+  }
+}

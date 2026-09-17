@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dayour.github.io/raybot/schemas/WorkflowTriggerDefinition.schema.json",
+  "$ref": "#/definitions/WorkflowTriggerDefinition",
+  "definitions": {
+    "WorkflowTriggerDefinition": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "$ref": "#/definitions/WorkflowTriggerKind"
+        },
+        "label": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "label",
+        "description"
+      ]
+    },
+    "WorkflowTriggerKind": {
+      "type": "string",
+      "enum": [
+        "manual",
+        "recurrence",
+        "event",
+        "agent"
+      ],
+      "description": "How a workflow run begins."
+    }
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dayour.github.io/raybot/schemas/AgentSettings.schema.json",
+  "$ref": "#/definitions/AgentSettings",
+  "definitions": {
+    "AgentSettings": {
+      "type": "object",
+      "properties": {
+        "details": {
+          "$ref": "#/definitions/DetailsSettings"
+        },
+        "security": {
+          "$ref": "#/definitions/SecuritySettings"
+        },
+        "generativeAi": {
+          "$ref": "#/definitions/GenerativeAiSettings"
+        },
+        "conversationStart": {
+          "$ref": "#/definitions/ConversationStartSettings"
+        }
+      },
+      "required": [
+        "details",
+        "security",
+        "generativeAi",
+        "conversationStart"
+      ]
+    },
+    "DetailsSettings": {
+      "type": "object",
+      "properties": {
+        "displayName": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "schemaName": {
+          "type": "string",
+          "description": "Read-only after the first save."
+        },
+        "agentId": {
+          "$ref": "#/definitions/Guid",
+          "description": "Read-only after the first save."
+        }
+      },
+      "required": [
+        "displayName",
+        "schemaName",
+        "agentId"
+      ],
+      "description": "Settings tab: Details. Identity fields are read-only after first save."
+    },
+    "Guid": {
+      "type": "string",
+      "description": "A GUID in canonical 8-4-4-4-12 lowercase form."
+    },
+    "SecuritySettings": {
+      "type": "object",
+      "properties": {
+        "authentication": {
+          "$ref": "#/definitions/AuthenticationMode"
+        },
+        "requireSecuredAccess": {
+          "type": "boolean",
+          "description": "Enabling this while relying on the Demo or Preview surfaces locks the maker out of their own agent preview. Leave it off until a real channel is carrying traffic."
+        }
+      },
+      "required": [
+        "authentication",
+        "requireSecuredAccess"
+      ],
+      "description": "Settings tab: Security."
+    },
+    "AuthenticationMode": {
+      "type": "string",
+      "enum": [
+        "NoAuthentication",
+        "AuthenticateWithMicrosoft",
+        "Manual"
+      ],
+      "description": "End-user authentication mode for the agent."
+    },
+    "GenerativeAiSettings": {
+      "type": "object",
+      "properties": {
+        "moderationLevel": {
+          "$ref": "#/definitions/ModerationLevel"
+        },
+        "userFeedbackEnabled": {
+          "type": "boolean",
+          "description": "Whether end users can leave thumbs-up or thumbs-down feedback."
+        }
+      },
+      "required": [
+        "moderationLevel",
+        "userFeedbackEnabled"
+      ],
+      "description": "Settings tab: Generative AI."
+    },
+    "ModerationLevel": {
+      "type": "string",
+      "enum": [
+        "Minimum",
+        "Low",
+        "Medium",
+        "High",
+        "Maximum"
+      ],
+      "description": "Content moderation levels, ordered from least to most restrictive."
+    },
+    "ConversationStartSettings": {
+      "type": "object",
+      "properties": {
+        "greeting": {
+          "type": "string",
+          "description": "Greeting message. Empty for Raybot."
+        },
+        "suggestedPrompts": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Suggested prompt chips. Empty for Raybot."
+        }
+      },
+      "required": [
+        "suggestedPrompts"
+      ],
+      "description": "Settings tab: Conversation start."
+    }
+  }
+}

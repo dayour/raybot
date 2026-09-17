@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dayour.github.io/raybot/schemas/StepTarget.schema.json",
+  "$ref": "#/definitions/StepTarget",
+  "definitions": {
+    "StepTarget": {
+      "type": "object",
+      "properties": {
+        "testId": {
+          "type": "string",
+          "description": "Raw Coral `data-testid`, when the step targeted one."
+        },
+        "semanticId": {
+          "type": "string",
+          "description": "Normalized `coral.*` semantic id."
+        },
+        "role": {
+          "type": "string",
+          "description": "ARIA role used to locate the element, when role-based location was used."
+        },
+        "name": {
+          "type": "string",
+          "description": "Accessible name used with the role."
+        }
+      },
+      "description": "A UI element targeted by a step."
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dayour.github.io/raybot/schemas/ScreenshotCapture.schema.json",
+  "$ref": "#/definitions/ScreenshotCapture",
+  "definitions": {
+    "ScreenshotCapture": {
+      "type": "object",
+      "properties": {
+        "file": {
+          "type": "string",
+          "description": "Repository-relative path, including its folder prefix."
+        },
+        "phase": {
+          "type": "string",
+          "description": "Runbook phase the capture belongs to."
+        },
+        "caption": {
+          "type": "string"
+        },
+        "order": {
+          "type": "number",
+          "description": "Sort order within the gallery."
+        }
+      },
+      "required": [
+        "file",
+        "phase",
+        "caption",
+        "order"
+      ],
+      "description": "A screenshot captured during the build."
+    }
+  }
+}

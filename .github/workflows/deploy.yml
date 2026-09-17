@@ -31,6 +31,15 @@ jobs:
       - name: Typecheck object model
         run: npx tsc --noEmit -p packages/raybot-object-model/tsconfig.json
 
+      - name: Emit JSON Schemas
+        run: npm run schemas
+
+      - name: Check emitted schemas are committed
+        run: git diff --exit-code -- packages/raybot-object-model/schemas static/schemas
+
+      - name: Validate audit datasets against schemas
+        run: npm run validate-data
+
       - name: Build site
         run: npm run build
 

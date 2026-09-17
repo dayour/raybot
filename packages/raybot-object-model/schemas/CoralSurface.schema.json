@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dayour.github.io/raybot/schemas/CoralSurface.schema.json",
+  "$ref": "#/definitions/CoralSurface",
+  "definitions": {
+    "CoralSurface": {
+      "type": "object",
+      "properties": {
+        "surface": {
+          "type": "string",
+          "description": "Dotted surface name, for example `build.main` or `dialog.add-tool`."
+        },
+        "dumpFile": {
+          "type": "string",
+          "description": "Filename of the raw DOM dump inside `coral-schema/surfaces/`."
+        },
+        "total": {
+          "type": "number"
+        },
+        "interactive": {
+          "type": "number"
+        },
+        "hasTestId": {
+          "type": "number"
+        },
+        "testIdOnlyNonInteractive": {
+          "type": "number",
+          "description": "Elements carrying a test id that are nonetheless not interactive."
+        },
+        "missingLabel": {
+          "type": "number",
+          "description": "Interactive elements with no derivable accessible name."
+        },
+        "disabled": {
+          "type": "number"
+        },
+        "notVisible": {
+          "type": "number"
+        },
+        "occludedVisibleNotTopmost": {
+          "type": "number",
+          "description": "Visible in layout but covered by another element at their centre point."
+        },
+        "dupTestIdsInSurface": {
+          "type": "number",
+          "description": "Test ids appearing more than once within this one surface."
+        },
+        "uniqueTestIds": {
+          "type": "number"
+        },
+        "isModal": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "surface",
+        "dumpFile",
+        "total",
+        "interactive",
+        "hasTestId",
+        "testIdOnlyNonInteractive",
+        "missingLabel",
+        "disabled",
+        "notVisible",
+        "occludedVisibleNotTopmost",
+        "dupTestIdsInSurface",
+        "uniqueTestIds",
+        "isModal"
+      ],
+      "description": "One captured surface: a full DOM dump of a page or dialog.\n\n`interactive` and `hasTestId` are tracked independently on purpose. Coral attaches test ids to many non-interactive wrappers, so the presence of a test id is not a signal that an element can be clicked."
+    }
+  }
+}

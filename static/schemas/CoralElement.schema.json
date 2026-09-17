@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dayour.github.io/raybot/schemas/CoralElement.schema.json",
+  "$ref": "#/definitions/CoralElement",
+  "definitions": {
+    "CoralElement": {
+      "type": "object",
+      "properties": {
+        "surface": {
+          "type": "string"
+        },
+        "testId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "tag": {
+          "type": "string"
+        },
+        "role": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "label": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "labelSource": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "isInteractive": {
+          "type": "boolean"
+        },
+        "interactiveReason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "isDisabled": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "surface",
+        "testId",
+        "tag",
+        "role",
+        "label",
+        "labelSource",
+        "isInteractive",
+        "interactiveReason",
+        "isDisabled"
+      ]
+    }
+  }
+}

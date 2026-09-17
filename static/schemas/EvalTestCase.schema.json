@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dayour.github.io/raybot/schemas/EvalTestCase.schema.json",
+  "$ref": "#/definitions/EvalTestCase",
+  "definitions": {
+    "EvalTestCase": {
+      "type": "object",
+      "properties": {
+        "conversationNumber": {
+          "type": "number",
+          "description": "1-based conversation ordinal, the CSV's first column."
+        },
+        "question": {
+          "type": "string"
+        },
+        "response": {
+          "type": "string",
+          "description": "Expected or reference response."
+        }
+      },
+      "required": [
+        "conversationNumber",
+        "question",
+        "response"
+      ],
+      "description": "One question-and-expected-response pair."
+    }
+  }
+}

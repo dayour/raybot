@@ -1,0 +1,141 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dayour.github.io/raybot/schemas/Workflow.schema.json",
+  "$ref": "#/definitions/Workflow",
+  "definitions": {
+    "Workflow": {
+      "type": "object",
+      "properties": {
+        "confidence": {
+          "$ref": "#/definitions/ConfidenceLevel"
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Capture filenames, dump filenames, or request ids that back the claim. Relative to the audit repository root."
+        },
+        "note": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Free-text qualifier, used when a claim is true only under conditions."
+        },
+        "name": {
+          "type": "string"
+        },
+        "trigger": {
+          "$ref": "#/definitions/WorkflowTriggerKind"
+        },
+        "nodes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/WorkflowNode"
+          }
+        },
+        "designerModule": {
+          "type": "string",
+          "description": "Designer module version the definition was captured against."
+        }
+      },
+      "required": [
+        "confidence",
+        "name",
+        "nodes",
+        "trigger"
+      ],
+      "description": "A workflow definition."
+    },
+    "ConfidenceLevel": {
+      "type": "string",
+      "enum": [
+        "CONFIRMED",
+        "SOURCE-INSPECTED",
+        "UNCONFIRMED"
+      ],
+      "description": "How a recorded fact was established.\n\n- `CONFIRMED` - observed directly in the running product: a DOM dump, a   captured network request, or a screenshot showing the resulting state.\n- `SOURCE-INSPECTED` - read out of shipped client source (bundle, sourcemap,   or manifest) but never exercised at runtime during the audit.\n- `UNCONFIRMED` - inferred from naming, adjacency, or documentation, with no   direct observation behind it."
+    },
+    "WorkflowTriggerKind": {
+      "type": "string",
+      "enum": [
+        "manual",
+        "recurrence",
+        "event",
+        "agent"
+      ],
+      "description": "How a workflow run begins."
+    },
+    "WorkflowNode": {
+      "type": "object",
+      "properties": {
+        "confidence": {
+          "$ref": "#/definitions/ConfidenceLevel"
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Capture filenames, dump filenames, or request ids that back the claim. Relative to the audit repository root."
+        },
+        "note": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Free-text qualifier, used when a claim is true only under conditions."
+        },
+        "id": {
+          "type": "string"
+        },
+        "kind": {
+          "$ref": "#/definitions/WorkflowNodeKind"
+        },
+        "displayName": {
+          "type": "string"
+        },
+        "next": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Ids of the nodes this node hands control to."
+        },
+        "children": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/WorkflowNode"
+          },
+          "description": "Populated for container nodes."
+        }
+      },
+      "required": [
+        "confidence",
+        "id",
+        "kind"
+      ],
+      "description": "A node placed on a concrete workflow canvas."
+    },
+    "WorkflowNodeKind": {
+      "type": "string",
+      "enum": [
+        "agent",
+        "classify",
+        "m365Copilot",
+        "humanReview",
+        "connector",
+        "function",
+        "variable",
+        "ifElse",
+        "loop",
+        "note",
+        "switch",
+        "scope",
+        "end"
+      ],
+      "description": "The thirteen node kinds available from the add-step picker.\n\nEach was captured one at a time because the picker closes on selection and the canvas has to be reset before the next capture."
+    }
+  }
+}

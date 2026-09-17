@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dayour.github.io/raybot/schemas/PublishOperation.schema.json",
+  "$ref": "#/definitions/PublishOperation",
+  "definitions": {
+    "PublishOperation": {
+      "type": "object",
+      "properties": {
+        "confidence": {
+          "$ref": "#/definitions/ConfidenceLevel"
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Capture filenames, dump filenames, or request ids that back the claim. Relative to the audit repository root."
+        },
+        "note": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Free-text qualifier, used when a claim is true only under conditions."
+        },
+        "operationId": {
+          "type": "string"
+        },
+        "startedAt": {
+          "$ref": "#/definitions/IsoInstant"
+        },
+        "completedAt": {
+          "$ref": "#/definitions/IsoInstant"
+        },
+        "succeeded": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "confidence",
+        "succeeded"
+      ],
+      "description": "A publish operation.\n\nCoral publishes inline with no confirmation dialog: the command bar posts to a publish operations endpoint and then long-polls the returned operation id until it terminates."
+    },
+    "ConfidenceLevel": {
+      "type": "string",
+      "enum": [
+        "CONFIRMED",
+        "SOURCE-INSPECTED",
+        "UNCONFIRMED"
+      ],
+      "description": "How a recorded fact was established.\n\n- `CONFIRMED` - observed directly in the running product: a DOM dump, a   captured network request, or a screenshot showing the resulting state.\n- `SOURCE-INSPECTED` - read out of shipped client source (bundle, sourcemap,   or manifest) but never exercised at runtime during the audit.\n- `UNCONFIRMED` - inferred from naming, adjacency, or documentation, with no   direct observation behind it."
+    },
+    "IsoInstant": {
+      "type": "string",
+      "description": "An ISO-8601 instant, `YYYY-MM-DDTHH:mm:ssZ`."
+    }
+  }
+}

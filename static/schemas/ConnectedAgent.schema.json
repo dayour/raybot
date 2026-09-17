@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dayour.github.io/raybot/schemas/ConnectedAgent.schema.json",
+  "$ref": "#/definitions/ConnectedAgent",
+  "definitions": {
+    "ConnectedAgent": {
+      "type": "object",
+      "properties": {
+        "confidence": {
+          "$ref": "#/definitions/ConfidenceLevel"
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Capture filenames, dump filenames, or request ids that back the claim. Relative to the audit repository root."
+        },
+        "note": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Free-text qualifier, used when a claim is true only under conditions."
+        },
+        "agentId": {
+          "$ref": "#/definitions/Guid"
+        },
+        "displayName": {
+          "type": "string"
+        },
+        "isPublished": {
+          "type": "boolean",
+          "description": "Always true in practice, because the picker filters drafts out."
+        }
+      },
+      "required": [
+        "agentId",
+        "confidence",
+        "displayName",
+        "isPublished"
+      ],
+      "description": "A connected (child) agent reference.\n\nThe connect flow refuses drafts: only published agents can be connected. This is the single most common cause of an empty connected-agent picker."
+    },
+    "ConfidenceLevel": {
+      "type": "string",
+      "enum": [
+        "CONFIRMED",
+        "SOURCE-INSPECTED",
+        "UNCONFIRMED"
+      ],
+      "description": "How a recorded fact was established.\n\n- `CONFIRMED` - observed directly in the running product: a DOM dump, a   captured network request, or a screenshot showing the resulting state.\n- `SOURCE-INSPECTED` - read out of shipped client source (bundle, sourcemap,   or manifest) but never exercised at runtime during the audit.\n- `UNCONFIRMED` - inferred from naming, adjacency, or documentation, with no   direct observation behind it."
+    },
+    "Guid": {
+      "type": "string",
+      "description": "A GUID in canonical 8-4-4-4-12 lowercase form."
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dayour.github.io/raybot/schemas/GenerativeAiSettings.schema.json",
+  "$ref": "#/definitions/GenerativeAiSettings",
+  "definitions": {
+    "GenerativeAiSettings": {
+      "type": "object",
+      "properties": {
+        "moderationLevel": {
+          "$ref": "#/definitions/ModerationLevel"
+        },
+        "userFeedbackEnabled": {
+          "type": "boolean",
+          "description": "Whether end users can leave thumbs-up or thumbs-down feedback."
+        }
+      },
+      "required": [
+        "moderationLevel",
+        "userFeedbackEnabled"
+      ],
+      "description": "Settings tab: Generative AI."
+    },
+    "ModerationLevel": {
+      "type": "string",
+      "enum": [
+        "Minimum",
+        "Low",
+        "Medium",
+        "High",
+        "Maximum"
+      ],
+      "description": "Content moderation levels, ordered from least to most restrictive."
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dayour.github.io/raybot/schemas/DetailsSettings.schema.json",
+  "$ref": "#/definitions/DetailsSettings",
+  "definitions": {
+    "DetailsSettings": {
+      "type": "object",
+      "properties": {
+        "displayName": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "schemaName": {
+          "type": "string",
+          "description": "Read-only after the first save."
+        },
+        "agentId": {
+          "$ref": "#/definitions/Guid",
+          "description": "Read-only after the first save."
+        }
+      },
+      "required": [
+        "displayName",
+        "schemaName",
+        "agentId"
+      ],
+      "description": "Settings tab: Details. Identity fields are read-only after first save."
+    },
+    "Guid": {
+      "type": "string",
+      "description": "A GUID in canonical 8-4-4-4-12 lowercase form."
+    }
+  }
+}

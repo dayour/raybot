@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dayour.github.io/raybot/schemas/EvalCaseResult.schema.json",
+  "$ref": "#/definitions/EvalCaseResult",
+  "definitions": {
+    "EvalCaseResult": {
+      "type": "object",
+      "properties": {
+        "conversationNumber": {
+          "type": "number"
+        },
+        "passed": {
+          "type": "boolean"
+        },
+        "actualResponse": {
+          "type": "string",
+          "description": "The response the agent actually produced."
+        },
+        "failureReason": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "conversationNumber",
+        "passed"
+      ],
+      "description": "Per-case outcome from an evaluation run."
+    }
+  }
+}

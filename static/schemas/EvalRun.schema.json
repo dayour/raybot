@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dayour.github.io/raybot/schemas/EvalRun.schema.json",
+  "$ref": "#/definitions/EvalRun",
+  "definitions": {
+    "EvalRun": {
+      "type": "object",
+      "properties": {
+        "confidence": {
+          "$ref": "#/definitions/ConfidenceLevel"
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Capture filenames, dump filenames, or request ids that back the claim. Relative to the audit repository root."
+        },
+        "note": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Free-text qualifier, used when a claim is true only under conditions."
+        },
+        "testSetName": {
+          "type": "string"
+        },
+        "runAt": {
+          "$ref": "#/definitions/IsoInstant"
+        },
+        "testedBy": {
+          "type": "string"
+        },
+        "generalQualityPercent": {
+          "type": "number",
+          "description": "General quality score as reported by the Evaluate tab, 0 to 100."
+        },
+        "passed": {
+          "type": "number"
+        },
+        "failed": {
+          "type": "number"
+        },
+        "results": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/EvalCaseResult"
+          }
+        },
+        "runtimeLimitation": {
+          "type": "string",
+          "description": "Set when the score reflects a platform limitation rather than agent behaviour. Raybot scored zero percent while the identical questions grounded correctly in Preview with live citations."
+        }
+      },
+      "required": [
+        "confidence",
+        "failed",
+        "generalQualityPercent",
+        "passed",
+        "testSetName"
+      ],
+      "description": "The result of one evaluation run."
+    },
+    "ConfidenceLevel": {
+      "type": "string",
+      "enum": [
+        "CONFIRMED",
+        "SOURCE-INSPECTED",
+        "UNCONFIRMED"
+      ],
+      "description": "How a recorded fact was established.\n\n- `CONFIRMED` - observed directly in the running product: a DOM dump, a   captured network request, or a screenshot showing the resulting state.\n- `SOURCE-INSPECTED` - read out of shipped client source (bundle, sourcemap,   or manifest) but never exercised at runtime during the audit.\n- `UNCONFIRMED` - inferred from naming, adjacency, or documentation, with no   direct observation behind it."
+    },
+    "IsoInstant": {
+      "type": "string",
+      "description": "An ISO-8601 instant, `YYYY-MM-DDTHH:mm:ssZ`."
+    },
+    "EvalCaseResult": {
+      "type": "object",
+      "properties": {
+        "conversationNumber": {
+          "type": "number"
+        },
+        "passed": {
+          "type": "boolean"
+        },
+        "actualResponse": {
+          "type": "string",
+          "description": "The response the agent actually produced."
+        },
+        "failureReason": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "conversationNumber",
+        "passed"
+      ],
+      "description": "Per-case outcome from an evaluation run."
+    }
+  }
+}

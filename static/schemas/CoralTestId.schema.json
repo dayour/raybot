@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dayour.github.io/raybot/schemas/CoralTestId.schema.json",
+  "$ref": "#/definitions/CoralTestId",
+  "definitions": {
+    "CoralTestId": {
+      "type": "object",
+      "properties": {
+        "testId": {
+          "type": "string"
+        },
+        "occurrences": {
+          "type": "number"
+        },
+        "surfaces": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "surfaceCount": {
+          "type": "number"
+        },
+        "isShared": {
+          "type": "boolean",
+          "description": "True when the test id appears on more than one surface."
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "roles": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "anyInteractive": {
+          "type": "boolean"
+        },
+        "sampleLabel": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "testId",
+        "occurrences",
+        "surfaces",
+        "surfaceCount",
+        "isShared",
+        "tags",
+        "roles",
+        "anyInteractive",
+        "sampleLabel"
+      ],
+      "description": "Aggregated view of a single `data-testid` across every surface."
+    }
+  }
+}

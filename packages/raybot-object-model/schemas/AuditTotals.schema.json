@@ -1,0 +1,169 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dayour.github.io/raybot/schemas/AuditTotals.schema.json",
+  "$ref": "#/definitions/AuditTotals",
+  "definitions": {
+    "AuditTotals": {
+      "type": "object",
+      "properties": {
+        "generated": {
+          "type": "string"
+        },
+        "auditDate": {
+          "type": "string"
+        },
+        "surfaces": {
+          "type": "number"
+        },
+        "elements": {
+          "type": "number"
+        },
+        "interactive": {
+          "type": "number"
+        },
+        "withTestId": {
+          "type": "number"
+        },
+        "uniqueTestIds": {
+          "type": "number"
+        },
+        "interactiveMissingLabel": {
+          "type": "number"
+        },
+        "sharedTestIds": {
+          "type": "number"
+        },
+        "labelSourceDistribution": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/LabelSourceCount"
+          }
+        },
+        "interactiveReasonDistribution": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/InteractiveReasonCount"
+          }
+        },
+        "roleDistribution": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/RoleCount"
+          }
+        },
+        "api": {
+          "type": "object",
+          "properties": {
+            "allRequests": {
+              "type": "number"
+            },
+            "functionalApiRequests": {
+              "type": "number"
+            },
+            "excluded": {
+              "type": "number"
+            },
+            "statusDistribution": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "number"
+              }
+            },
+            "endpointCount": {
+              "type": "number"
+            },
+            "domainCount": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "allRequests",
+            "functionalApiRequests",
+            "excluded",
+            "statusDistribution",
+            "endpointCount",
+            "domainCount"
+          ]
+        },
+        "gallery": {
+          "type": "object",
+          "properties": {
+            "entries": {
+              "type": "number"
+            },
+            "missing": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "entries",
+            "missing"
+          ]
+        }
+      },
+      "required": [
+        "generated",
+        "auditDate",
+        "surfaces",
+        "elements",
+        "interactive",
+        "withTestId",
+        "uniqueTestIds",
+        "interactiveMissingLabel",
+        "sharedTestIds",
+        "labelSourceDistribution",
+        "interactiveReasonDistribution",
+        "roleDistribution",
+        "api",
+        "gallery"
+      ],
+      "description": "Roll-up of the whole audit, as published by `audit-totals.json`."
+    },
+    "LabelSourceCount": {
+      "type": "object",
+      "properties": {
+        "source": {
+          "type": "string"
+        },
+        "count": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "source",
+        "count"
+      ],
+      "description": "One bucket in a distribution published by `audit-totals.json`.\n\nThe exporter emits distributions as arrays of labelled counts rather than as keyed objects, because the label is data — `aria-label`, `native-control`, `none` — and several labels are not safe object keys. The key name varies per distribution, hence the three concrete shapes below."
+    },
+    "InteractiveReasonCount": {
+      "type": "object",
+      "properties": {
+        "reason": {
+          "type": "string"
+        },
+        "count": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "reason",
+        "count"
+      ]
+    },
+    "RoleCount": {
+      "type": "object",
+      "properties": {
+        "role": {
+          "type": "string"
+        },
+        "count": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "role",
+        "count"
+      ]
+    }
+  }
+}

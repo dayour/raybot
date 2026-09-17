@@ -1,0 +1,218 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dayour.github.io/raybot/schemas/Runbook.schema.json",
+  "$ref": "#/definitions/Runbook",
+  "definitions": {
+    "Runbook": {
+      "type": "object",
+      "properties": {
+        "confidence": {
+          "$ref": "#/definitions/ConfidenceLevel"
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Capture filenames, dump filenames, or request ids that back the claim. Relative to the audit repository root."
+        },
+        "note": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Free-text qualifier, used when a claim is true only under conditions."
+        },
+        "title": {
+          "type": "string"
+        },
+        "validatedOn": {
+          "$ref": "#/definitions/IsoDate",
+          "description": "Date the runbook content was last validated end to end."
+        },
+        "phases": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/RunbookPhase"
+          }
+        }
+      },
+      "required": [
+        "confidence",
+        "phases",
+        "title",
+        "validatedOn"
+      ],
+      "description": "The runbook as a whole."
+    },
+    "ConfidenceLevel": {
+      "type": "string",
+      "enum": [
+        "CONFIRMED",
+        "SOURCE-INSPECTED",
+        "UNCONFIRMED"
+      ],
+      "description": "How a recorded fact was established.\n\n- `CONFIRMED` - observed directly in the running product: a DOM dump, a   captured network request, or a screenshot showing the resulting state.\n- `SOURCE-INSPECTED` - read out of shipped client source (bundle, sourcemap,   or manifest) but never exercised at runtime during the audit.\n- `UNCONFIRMED` - inferred from naming, adjacency, or documentation, with no   direct observation behind it."
+    },
+    "IsoDate": {
+      "type": "string",
+      "description": "An ISO-8601 date, `YYYY-MM-DD`."
+    },
+    "RunbookPhase": {
+      "type": "object",
+      "properties": {
+        "confidence": {
+          "$ref": "#/definitions/ConfidenceLevel"
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Capture filenames, dump filenames, or request ids that back the claim. Relative to the audit repository root."
+        },
+        "note": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Free-text qualifier, used when a claim is true only under conditions."
+        },
+        "number": {
+          "type": "number"
+        },
+        "title": {
+          "type": "string"
+        },
+        "summary": {
+          "type": "string",
+          "description": "One-paragraph statement of what the phase accomplishes."
+        },
+        "outcome": {
+          "$ref": "#/definitions/OutcomeStatus"
+        },
+        "steps": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/RunbookStep"
+          }
+        },
+        "blockedReason": {
+          "type": "string",
+          "description": "Why the phase is blocked or partial, when it is."
+        }
+      },
+      "required": [
+        "confidence",
+        "number",
+        "outcome",
+        "steps",
+        "summary",
+        "title"
+      ],
+      "description": "A numbered phase of the runbook."
+    },
+    "OutcomeStatus": {
+      "type": "string",
+      "enum": [
+        "DONE",
+        "PARTIAL",
+        "BLOCKED",
+        "FAILED",
+        "NOT-ATTEMPTED"
+      ],
+      "description": "Outcome of a runbook phase, step, or channel activation."
+    },
+    "RunbookStep": {
+      "type": "object",
+      "properties": {
+        "confidence": {
+          "$ref": "#/definitions/ConfidenceLevel"
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Capture filenames, dump filenames, or request ids that back the claim. Relative to the audit repository root."
+        },
+        "note": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Free-text qualifier, used when a claim is true only under conditions."
+        },
+        "ordinal": {
+          "type": "number",
+          "description": "Stable ordinal within the phase, starting at 1."
+        },
+        "title": {
+          "type": "string"
+        },
+        "mechanism": {
+          "$ref": "#/definitions/StepMechanism"
+        },
+        "target": {
+          "$ref": "#/definitions/StepTarget"
+        },
+        "captures": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Screenshot filenames, relative to the audit repository root."
+        },
+        "outcome": {
+          "$ref": "#/definitions/OutcomeStatus"
+        },
+        "constraint": {
+          "type": "string",
+          "description": "Constraint or gotcha surfaced by this step."
+        }
+      },
+      "required": [
+        "captures",
+        "confidence",
+        "mechanism",
+        "ordinal",
+        "outcome",
+        "title"
+      ],
+      "description": "One discrete action inside a phase."
+    },
+    "StepMechanism": {
+      "type": "string",
+      "enum": [
+        "browser",
+        "azure-cli",
+        "rest",
+        "powershell",
+        "manual"
+      ],
+      "description": "How a step was carried out."
+    },
+    "StepTarget": {
+      "type": "object",
+      "properties": {
+        "testId": {
+          "type": "string",
+          "description": "Raw Coral `data-testid`, when the step targeted one."
+        },
+        "semanticId": {
+          "type": "string",
+          "description": "Normalized `coral.*` semantic id."
+        },
+        "role": {
+          "type": "string",
+          "description": "ARIA role used to locate the element, when role-based location was used."
+        },
+        "name": {
+          "type": "string",
+          "description": "Accessible name used with the role."
+        }
+      },
+      "description": "A UI element targeted by a step."
+    }
+  }
+}

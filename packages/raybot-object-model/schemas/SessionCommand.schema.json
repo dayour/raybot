@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dayour.github.io/raybot/schemas/SessionCommand.schema.json",
+  "$ref": "#/definitions/SessionCommand",
+  "definitions": {
+    "SessionCommand": {
+      "type": "object",
+      "properties": {
+        "ordinal": {
+          "type": "number",
+          "description": "1-based position within its session."
+        },
+        "command": {
+          "type": "string",
+          "description": "The command exactly as issued."
+        },
+        "intent": {
+          "type": "string",
+          "description": "What the command was trying to achieve."
+        },
+        "succeeded": {
+          "type": "boolean"
+        },
+        "failureReason": {
+          "type": "string",
+          "description": "Present when `succeeded` is false."
+        },
+        "result": {
+          "type": "string",
+          "description": "Observable result, such as a file count or a commit hash."
+        }
+      },
+      "required": [
+        "ordinal",
+        "command",
+        "intent",
+        "succeeded"
+      ],
+      "description": "A shell command recovered from a session transcript."
+    }
+  }
+}

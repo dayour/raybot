@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dayour.github.io/raybot/schemas/WorkflowNodeDefinition.schema.json",
+  "$ref": "#/definitions/WorkflowNodeDefinition",
+  "definitions": {
+    "WorkflowNodeDefinition": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "$ref": "#/definitions/WorkflowNodeKind"
+        },
+        "pickerLabel": {
+          "type": "string",
+          "description": "Exact accessible name used by the picker, for role-based location."
+        },
+        "description": {
+          "type": "string",
+          "description": "What the node does once placed on the canvas."
+        },
+        "isContainer": {
+          "type": "boolean",
+          "description": "True when the node can contain other nodes."
+        },
+        "isTerminal": {
+          "type": "boolean",
+          "description": "True when the node terminates a branch."
+        }
+      },
+      "required": [
+        "kind",
+        "pickerLabel",
+        "description",
+        "isContainer",
+        "isTerminal"
+      ]
+    },
+    "WorkflowNodeKind": {
+      "type": "string",
+      "enum": [
+        "agent",
+        "classify",
+        "m365Copilot",
+        "humanReview",
+        "connector",
+        "function",
+        "variable",
+        "ifElse",
+        "loop",
+        "note",
+        "switch",
+        "scope",
+        "end"
+      ],
+      "description": "The thirteen node kinds available from the add-step picker.\n\nEach was captured one at a time because the picker closes on selection and the canvas has to be reset before the next capture."
+    }
+  }
+}

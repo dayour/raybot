@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dayour.github.io/raybot/schemas/CoralSemanticId.schema.json",
+  "$ref": "#/definitions/CoralSemanticId",
+  "definitions": {
+    "CoralSemanticId": {
+      "type": "object",
+      "properties": {
+        "area": {
+          "$ref": "#/definitions/CoralArea"
+        },
+        "surface": {
+          "type": "string",
+          "description": "Dotted surface path, for example `settings.agent-details`."
+        },
+        "component": {
+          "type": "string"
+        },
+        "state": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "area",
+        "surface",
+        "component"
+      ],
+      "description": "A parsed `coral.<area>.<surface>.<component>[.<state>]` identifier."
+    },
+    "CoralArea": {
+      "type": "string",
+      "enum": [
+        "shell",
+        "toolbar",
+        "build",
+        "panel",
+        "dialog",
+        "preview",
+        "evaluate",
+        "monitor"
+      ],
+      "description": "Top-level UI region.\n\nThe area is chosen by where the element lives structurally, not by what it does. Persistent chrome is always `shell` even when it triggers a build action, because the disambiguating value of the segment comes from location."
+    }
+  }
+}

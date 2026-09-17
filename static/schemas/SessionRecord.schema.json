@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dayour.github.io/raybot/schemas/SessionRecord.schema.json",
+  "$ref": "#/definitions/SessionRecord",
+  "definitions": {
+    "SessionRecord": {
+      "type": "object",
+      "properties": {
+        "confidence": {
+          "$ref": "#/definitions/ConfidenceLevel"
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Capture filenames, dump filenames, or request ids that back the claim. Relative to the audit repository root."
+        },
+        "note": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Free-text qualifier, used when a claim is true only under conditions."
+        },
+        "id": {
+          "type": "string"
+        },
+        "mirroredId": {
+          "type": "string",
+          "description": "Matching id in the other store, when the session was mirrored."
+        },
+        "store": {
+          "$ref": "#/definitions/SessionStoreKind"
+        },
+        "cwd": {
+          "type": "string"
+        },
+        "createdAt": {
+          "$ref": "#/definitions/IsoInstant"
+        },
+        "updatedAt": {
+          "$ref": "#/definitions/IsoInstant"
+        },
+        "summary": {
+          "type": "string"
+        },
+        "toolCalls": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "number"
+          },
+          "description": "Tool-call counts keyed by tool name."
+        },
+        "outcome": {
+          "type": "string",
+          "description": "What this session actually accomplished, in one line."
+        }
+      },
+      "required": [
+        "confidence",
+        "createdAt",
+        "cwd",
+        "id",
+        "store"
+      ],
+      "description": "A single recorded CLI session."
+    },
+    "ConfidenceLevel": {
+      "type": "string",
+      "enum": [
+        "CONFIRMED",
+        "SOURCE-INSPECTED",
+        "UNCONFIRMED"
+      ],
+      "description": "How a recorded fact was established.\n\n- `CONFIRMED` - observed directly in the running product: a DOM dump, a   captured network request, or a screenshot showing the resulting state.\n- `SOURCE-INSPECTED` - read out of shipped client source (bundle, sourcemap,   or manifest) but never exercised at runtime during the audit.\n- `UNCONFIRMED` - inferred from naming, adjacency, or documentation, with no   direct observation behind it."
+    },
+    "SessionStoreKind": {
+      "type": "string",
+      "enum": [
+        "local",
+        "cloud"
+      ],
+      "description": "Which store a record came from.\n\n- `local`  SQLite at `~/.copilot/session-store.db`, queried with SQLite            syntax, holds only this machine's sessions, and exposes the FTS5            `search_index` virtual table plus `assistant_usage_events`.\n- `cloud`  DuckDB-backed, queried with DuckDB syntax, spans machines, and            adds the `events`, `tool_requests`, and `attachments` tables."
+    },
+    "IsoInstant": {
+      "type": "string",
+      "description": "An ISO-8601 instant, `YYYY-MM-DDTHH:mm:ssZ`."
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dayour.github.io/raybot/schemas/AgentIcon.schema.json",
+  "$ref": "#/definitions/AgentIcon",
+  "definitions": {
+    "AgentIcon": {
+      "type": "object",
+      "properties": {
+        "contentType": {
+          "type": "string",
+          "const": "image/png",
+          "description": "Only `image/png` was accepted by the upload control."
+        },
+        "sizeBytes": {
+          "type": "number",
+          "description": "Encoded size in bytes. Must be under  {@link  ICON_MAX_BYTES } ."
+        },
+        "edgePixels": {
+          "type": "number",
+          "description": "Square edge length in pixels."
+        },
+        "fileName": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "contentType",
+        "sizeBytes",
+        "edgePixels",
+        "fileName"
+      ],
+      "description": "Agent icon constraints, confirmed by rejection and acceptance during Phase 1.\n\nThe upload control accepts PNG only and enforces a hard 100 KB ceiling. A 512 px render of the Raybot logo was 195.8 KB and was rejected outright; the 256 px render was 53.8 KB and was accepted. The ceiling is on encoded file size, not on pixel dimensions, so the practical rule is to downscale until the encoded PNG clears 100 KB."
+    }
+  }
+}
