@@ -49,15 +49,15 @@ Five failure modes recurred often enough to be worth naming.
 5. **Canvas state accumulates.** Capturing many configuration panels requires a deterministic reset
    between each one.
 
-Each of these is documented with its workaround in Capture patterns.
+Each of these is documented with its workaround in [Capture patterns](./capture-patterns.md).
 
 ## In this section
 
-- Playwright MCP — the tool inventory and the control-identification strategy.
-- Capture patterns — the five failure modes and their workarounds.
-- Workflow node capture — the deterministic reset loop that captured
+- [Playwright MCP](./playwright-mcp.md) — the tool inventory and the control-identification strategy.
+- [Capture patterns](./capture-patterns.md) — the five failure modes and their workarounds.
+- [Workflow node capture](./workflow-node-capture.md) — the deterministic reset loop that captured
   thirteen node types.
-- Darbot Browser MCP — the independent validation pass and its known
+- [Darbot Browser MCP](./darbot-browser-mcp.md) — the independent validation pass and its known
   driver limitation.
-- Scripts — the PowerShell and Python in the repository, including the one that is
+- [Scripts](./scripts.md) — the PowerShell and Python in the repository, including the one that is
   now a no-op.

@@ -37,7 +37,14 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'Automation',
-      items: ['automation/index'],
+      items: [
+        'automation/index',
+        'automation/playwright-mcp',
+        'automation/capture-patterns',
+        'automation/workflow-node-capture',
+        'automation/darbot-browser-mcp',
+        'automation/scripts',
+      ],
     },
     {
       type: 'category',
