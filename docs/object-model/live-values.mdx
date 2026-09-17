@@ -1,0 +1,95 @@
+---
+id: live-values
+title: Live values
+sidebar_label: Live values
+description: Constants rendered directly from the compiled @raybot/object-model package, so documentation drift is a build error.
+---
+
+import ModelValue from '@site/src/components/ModelValue';
+
+Every value on this page is read out of the compiled `@raybot/object-model` package at build time.
+None of it is transcribed.
+
+## Why this page exists
+
+A documentation site that merely *describes* a type package will drift from it. The description is
+prose; the package is code; nothing connects them, so a renamed export leaves the prose quietly
+wrong.
+
+This site imports the package instead. The `ModelValue` component holds a typed table of model
+exports, so:
+
+- **Renaming or deleting an export** breaks `npm run typecheck`, which CI runs on every push.
+- **Referencing an unknown key** throws during static site generation, which fails the build.
+
+Drift becomes a build error rather than slow rot. That is the entire justification for building the
+package rather than leaving it as loose source — see
+[the build decision](#the-build-decision) below.
+
+## Identity
+
+| Field | Value |
+| --- | --- |
+| Agent id | <ModelValue name="agentId" /> |
+| Schema name | <ModelValue name="schemaName" /> |
+| Environment id | <ModelValue name="environmentId" /> |
+| Environment name | <ModelValue name="environmentName" /> |
+| Model | <ModelValue name="model" /> |
+
+These come from `RAYBOT.identity`. See [Identity](./identity.md) for how the values were captured and
+why most of them are immutable after the first save.
+
+## Observed limits
+
+| Constant | Value | Where it was observed |
+| --- | --- | --- |
+| `ICON_MAX_BYTES` | <ModelValue name="iconMaxBytes" /> bytes (<ModelValue name="iconMaxKilobytes" /> KB) | A 512 px PNG at 195.8 KB was rejected; 256 px at 53.8 KB was accepted. |
+| `SKILL_NAME_MAX_LENGTH` | <ModelValue name="skillNameMaxLength" /> | `maxLength` on `skill-name-input`. |
+| `SKILL_DESCRIPTION_MAX_LENGTH` | <ModelValue name="skillDescriptionMaxLength" /> | `maxLength` on `skill-description-input`. |
+| `MICROSOFT_IQ_MIN_SKU` | <ModelValue name="microsoftIqMinSku" /> | Free-tier knowledge bases never appear in the picker. |
+| `SEARCH_API_VERSION` | <ModelValue name="searchApiVersion" /> | The only API version exposing `/knowledgeBases`. |
+| `EVAL_MAX_CONVERSATION_PAIRS` | <ModelValue name="evalMaxConversationPairs" /> | Import ceiling on the evaluation test set. |
+| `EVAL_REFERENCE_MAX_LENGTH` | <ModelValue name="evalReferenceMaxLength" /> | Reference-answer length ceiling. |
+
+Each of these is a limit that was *hit* during the build, not a limit read from documentation. See
+[Agent](./agent.md), [Skills](./skills.md), [Knowledge](./knowledge.md), and
+[Evaluation](./evaluation.md) for the surrounding context.
+
+## Counts
+
+| Collection | Count |
+| --- | --- |
+| Workflow node types | <ModelValue name="workflowNodeCount" /> |
+| Workflow trigger types | <ModelValue name="workflowTriggerCount" /> |
+| Coral areas | <ModelValue name="coralAreaCount" /> |
+| Runbook phases | <ModelValue name="runbookPhaseCount" /> |
+
+The workflows designer module the node types were captured from is
+<ModelValue name="workflowDesignerModule" />. See [Workflow](./workflow.md) for the per-node capture
+pattern, and [Coral surface](./coral-surface.md) for the area taxonomy.
+
+## The build decision
+
+Three options were on the table for the package.
+
+| Option | Verdict |
+| --- | --- |
+| **Source-only** | Rejected. Simplest to set up, but nothing stops the docs and the types from diverging. |
+| **Built and imported** | Chosen. `tsc` emits `dist/` with declarations; the site imports from it; drift fails the build. |
+| **Published to npm** | Rejected. There are no external consumers, so a release process would have nothing on the other end of it. |
+
+The build is wired so it cannot be skipped. The root `prebuild` and `pretypecheck` scripts each build
+the package first, so `npm run build` and `npm run typecheck` are both self-sufficient from a clean
+checkout — including in CI, which runs them in that order.
+
+## What this does not prove
+
+Importing the package proves the site and the types agree. It does **not** prove either one matches
+the live product. That guarantee comes from a different mechanism: every constant traces to a
+captured screenshot, a recorded network request, or a DOM audit row, and the
+[confidence model](./index.md#the-confidence-primitive) records how strongly each fact is supported.
+
+A value can be perfectly consistent across the package, the schemas, and this page while still being
+stale relative to Coral, which ships continuously. The
+[re-audit phase](../runbook/phase-7-reaudit.mdx) exists precisely because that happened — Monitor was
+renamed Analytics between the original build and the audit.

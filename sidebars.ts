@@ -85,6 +85,7 @@ const sidebars: SidebarsConfig = {
 
   objectModelSidebar: [
     'object-model/index',
+    'object-model/live-values',
     {
       type: 'category',
       label: 'Agent',
