@@ -57,7 +57,12 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'Reference',
-      items: ['reference/errata'],
+      items: [
+        'reference/constraints',
+        'reference/troubleshooting',
+        'reference/changelog',
+        'reference/errata',
+      ],
     },
   ],
 
