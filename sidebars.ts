@@ -47,7 +47,12 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'Screenshots',
-      items: ['screenshots/index', 'screenshots/gallery'],
+      items: [
+        'screenshots/index',
+        'screenshots/gallery',
+        'screenshots/map',
+        'screenshots/analysis',
+      ],
     },
     {
       type: 'category',

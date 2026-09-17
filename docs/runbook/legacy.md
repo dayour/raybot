@@ -88,7 +88,7 @@ resolves.
 | `09-skills-dialog.png` | `15_skills_add-dialog.png` |
 
 The crosswalk covers 41 curated captures and 35 superseded ones. See
-Screenshot map.
+[Screenshot map](../screenshots/map.md).
 
 ## Why keep it
 
