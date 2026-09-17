@@ -38,9 +38,9 @@ Six question and answer pairs, imported as CSV with the header
 <DataTable
   rows={evalset}
   columns={[
-    { key: 'conversationNumber', label: '#', width: 60 },
-    { key: 'question', label: 'Question' },
-    { key: 'response', label: 'Reference response' },
+    { key: 'conversationNumber', header: '#', align: 'right' },
+    { key: 'question', header: 'Question' },
+    { key: 'response', header: 'Reference response' },
   ]}
   searchKeys={(r) => `${r.question} ${r.response}`}
   pageSize={10}

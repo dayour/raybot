@@ -1,0 +1,96 @@
+---
+id: endpoints
+title: Endpoints
+sidebar_label: Endpoints
+---
+
+import { EndpointTable } from '@site/src/components/CoralTables';
+
+# Endpoints
+
+All 57 endpoints observed during the audit, filterable by domain, host, method, and confidence.
+
+Use the facets to narrow. The table is sorted by observed request count, so the endpoints the
+application leans on hardest appear first.
+
+<EndpointTable />
+
+## Reading a row
+
+**`method`** and **`path`** are exactly as observed. Path segments that were identifiers have been
+left concrete rather than templated, so a path may contain the specific agent or environment id used
+in this build.
+
+**`semanticId`** follows `{namespace}:{surface}:{group}:{operation}`, described in full on the
+[naming schema](../coral-schema/naming.md) page. Namespaces: `cs` Copilot Studio platform, `as` local
+kit, `ac` cards, `lt` tiles, plus `evidence` and `dl` for audit-side records. Surfaces: `cs:dv`
+Dataverse, `cs:bm` Bot Management and Island Gateway, `cs:env`, `cs:bap`, `cs:runtime`, `cs:graph`.
+
+**`count`** is how many times the endpoint was observed across the audit. It is a measure of how
+chatty the application is, not a rate limit or a quota.
+
+**`confidence`** is `CONFIRMED` on every row, because every row came from a live network capture
+rather than from documentation.
+
+## Domains
+
+| Domain | Endpoints | What it does |
+| --- | --- | --- |
+| `agent-persistence` | 8 | Create, read, and update the agent record in Dataverse |
+| `channels-teams-m365` | 9 | Teams and M365 channel registration and status |
+| `governance-dlp` | 8 | Data loss prevention and policy evaluation |
+| `evaluate` | 7 | Test sets, evaluation runs, and result retrieval |
+| `agent-components-save` | 6 | Per-section persistence for the right rail |
+| `platform-tenant` | 6 | Tenant and environment metadata |
+| `monitor-analytics` | 4 | Runtime analytics, formerly Monitor |
+| `model-and-features` | 3 | Model catalog and feature flags |
+| `identity-graph` | 3 | Identity and Graph lookups |
+| `publish` | 2 | Publish v2 operations |
+| `preview-runtime` | 1 | Preview conversation runtime |
+
+Two things stand out in that distribution.
+
+**`governance-dlp` is larger than `publish` and `preview-runtime` combined.** Policy evaluation runs
+continuously in the background, not only at publish time. Any automation that assumes governance is
+a publish-time gate will be surprised.
+
+**`agent-components-save` is separate from `agent-persistence`.** Right-rail sections do not save
+through the same path as the agent record. This is why the save button can succeed while an
+individual section silently does not persist — they are different requests with different failure
+modes.
+
+## Notable endpoints
+
+**`POST /api/data/v9.2/bots`** — the create call, using the `PvaProvision` create model. This is the
+request that mints the agent id. Everything downstream keys off the id it returns, which is why
+Publish, Share, and Evaluate are inert until the first save completes.
+
+**`POST .../publishv2-operations`** — Coral publishes inline with no confirmation dialog. The POST
+returns an operation handle, and the client long-polls it. There is no modal to dismiss and no
+explicit confirmation step, which is a genuine behavioural difference from the classic runtime.
+
+**`GET /api/botmanagement/v1/channels/msteams/app/status`** — returned HTTP 500 on every publish
+attempt. Nine of the 611 functional requests returned 500, and these account for most of them. See
+[hosts](./hosts.mdx) for why this failure is invisible in the UI.
+
+**`.../makerevaluations/queries/generate?ApplyV2Migration=true`** — the v2 evaluation query path. The
+`ApplyV2Migration` query parameter is carried on the request, not negotiated. This path was
+corroborated exactly against the authoritative corpus.
+
+## What this map is not
+
+It is **observed traffic**, not a published contract. Specifically:
+
+- Absence is not evidence of absence. An endpoint not exercised during the audit does not appear
+  here.
+- Request and response bodies were not exhaustively captured. Where a body shape is stated elsewhere
+  in this wiki, it was read from a specific captured request.
+- Counts reflect this session's usage pattern. A different path through the UI produces different
+  counts.
+- Status codes are what this environment returned under this identity, with this tenant's policy
+  configuration.
+
+The 35 requests that returned 404 are mostly optional-resource probes, where the client checks for a
+resource that may not exist and handles absence normally. They are not errors.
+
+See [ground truth](./ground-truth.md) for what was independently corroborated.

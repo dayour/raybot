@@ -82,7 +82,7 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       label: 'API surface',
       collapsed: false,
-      items: ['api/index'],
+      items: ['api/index', 'api/hosts', 'api/endpoints', 'api/ground-truth'],
     },
   ],
 };

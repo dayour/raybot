@@ -1,0 +1,80 @@
+---
+id: hosts
+title: Hosts
+sidebar_label: Hosts
+---
+
+import { HostTable } from '@site/src/components/CoralTables';
+
+# Hosts
+
+Seven hosts served the 611 functional requests observed during the audit. The split between them is
+not cosmetic. It is the structural reason the Teams channel could report itself enabled while being
+unreachable.
+
+<HostTable />
+
+## Why the split matters
+
+Copilot Studio's maker experience is not backed by one service. At minimum it spans:
+
+- **Dataverse** (`{org}.crm.dynamics.com`) — the agent record itself. Creating the agent, saving its
+  name and instructions, persisting right-rail components, and reading back its configuration all go
+  here. This is the system of record for *what the agent is*.
+- **The Island Gateway** (`powervamg.{region}.gateway.prod.island.powerapps.com`) — channel
+  management, bot registration, and the publish pipeline. This is the system of record for *where
+  the agent is reachable*.
+- **Power Platform API** (`api.powerplatform.com`) and **BAP** (`api.bap.microsoft.com`) —
+  environment and tenant metadata.
+- **Microsoft Graph** (`graph.microsoft.com`) — identity lookups.
+
+These are independently deployed services with independent failure modes.
+
+## The failure this explains
+
+In [Phase 6](../runbook/phase-6-teams.mdx), the maker UI displayed "Channel enabled" for Teams while
+Raybot never appeared in the tenant catalog.
+
+Both facts were true at once, because they were sourced from different services:
+
+| Claim | Backed by | State |
+| --- | --- | --- |
+| "Channel enabled" | Dataverse channel record | Written successfully |
+| Agent reachable in Teams | Island Gateway registration | `GET /api/botmanagement/v1/channels/msteams/app/status` returned HTTP 500 |
+
+Nothing in the UI reconciled the two. The Dataverse write succeeded, so the UI rendered success. The
+gateway-side registration failed, so the agent was never published to the tenant catalog. The user is
+shown the first fact and never the second.
+
+This is why the object model carries two separate fields rather than one boolean:
+
+```ts
+{
+  kind: 'teams',
+  uiReportsEnabled: true,      // what Dataverse says
+  verifiedReachable: false,    // what the gateway says
+  blockedReason: 'Tenant App Customization Policy consent was never granted...'
+}
+```
+
+A single `enabled: boolean` cannot represent this state, and any model that uses one will
+misrepresent it.
+
+## The region token
+
+The gateway host carries a region token: `powervamg.{region}.gateway.prod.island.powerapps.com`. For
+this environment it resolved to the environment's home region, not the caller's location. Automation
+that hard-codes a region will break when pointed at a different environment.
+
+This host pattern was one of four observations corroborated exactly against the authoritative Copilot
+Studio corpus, which is the strongest available evidence that it is stable rather than incidental.
+
+## Practical guidance
+
+1. **Never infer reachability from a maker-UI success state.** Confirm against the service that
+   actually owns reachability.
+2. **Expect partial success.** A save that writes to Dataverse and fails at the gateway will look
+   like a success and behave like a failure.
+3. **Resolve the gateway region from the environment**, not from configuration.
+4. **When a channel misbehaves, check the gateway status endpoint directly.** It carries the signal
+   the UI discards.
