@@ -28,7 +28,26 @@ const config: Config = {
   markdown: {
     mermaid: true,
   },
-  themes: ['@docusaurus/theme-mermaid'],
+  themes: [
+    '@docusaurus/theme-mermaid',
+    [
+      // Local, build-time search index. No third-party service, no network
+      // call, and no API key -- the index ships as a static asset alongside
+      // the site, which matters because this content is an internal audit.
+      require.resolve('@easyops-cn/docusaurus-search-local'),
+      {
+        hashed: true,
+        indexDocs: true,
+        indexBlog: false,
+        indexPages: true,
+        docsRouteBasePath: '/docs',
+        highlightSearchTermsOnTargetPage: true,
+        explicitSearchResultPath: true,
+        searchResultLimits: 12,
+        searchBarShortcutHint: false,
+      },
+    ],
+  ],
 
   i18n: {
     defaultLocale: 'en',

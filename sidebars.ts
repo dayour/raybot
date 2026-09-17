@@ -1,8 +1,15 @@
 import type { SidebarsConfig } from '@docusaurus/plugin-content-docs';
 
 /**
- * Sidebars are trimmed to pages that exist. Remaining sections are tracked as
- * open issues on the repository and will be restored here as pages land.
+ * Every id below must resolve to a file in `docs/`, and every relative link in
+ * those files must resolve, because `onBrokenLinks` is set to `throw`. Both are
+ * deliberate: a sidebar is the only structural index of the site, and a silent
+ * gap in it is indistinguishable from a page that was never written.
+ *
+ * The tree currently covers all 66 doc pages. `schemaSidebar` stays a single
+ * sidebar while its two categories hold nine and four pages; it splits if
+ * either exceeds ten. Versioning is deliberately off -- see
+ * `docs/reference/versioning.md` for the trigger that would turn it on.
  */
 const sidebars: SidebarsConfig = {
   docsSidebar: [
@@ -77,6 +84,7 @@ const sidebars: SidebarsConfig = {
       items: [
         'reference/constraints',
         'reference/troubleshooting',
+        'reference/versioning',
         'reference/changelog',
         'reference/errata',
       ],
