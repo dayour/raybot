@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dayour.github.io/raybot/schemas/AutomationCandidate.schema.json",
+  "$ref": "#/definitions/AutomationCandidate",
+  "definitions": {
+    "AutomationCandidate": {
+      "type": "object",
+      "properties": {
+        "rank": {
+          "type": "number"
+        },
+        "name": {
+          "type": "string"
+        },
+        "rationale": {
+          "type": "string",
+          "description": "Why it is worth building."
+        },
+        "overlap": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Existing work it duplicates, or null when net-new."
+        }
+      },
+      "required": [
+        "rank",
+        "name",
+        "rationale",
+        "overlap"
+      ],
+      "description": "A ranked automation candidate from the 2026-06-18 session-history harvest.\n\nThe harvest mined 262 titled session plans, 145 skills, and the Coral playbook, then deduplicated against work already in flight. The `overlap` field is the important one: a candidate that overlaps existing work is not discarded, but it is not counted as net-new value either."
+    }
+  }
+}

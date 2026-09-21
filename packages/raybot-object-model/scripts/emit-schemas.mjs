@@ -69,6 +69,11 @@ const TYPES = [
   'SessionRecord',
   'SessionCommand',
   'ScreenshotCapture',
+  'ShowcaseConnector',
+  'ShowcaseWorkflow',
+  'IncidentTriageBuildStep',
+  'DesignerPitfall',
+  'AutomationCandidate',
 ];
 
 const generator = createGenerator({

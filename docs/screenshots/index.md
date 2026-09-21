@@ -12,17 +12,22 @@ anecdotal.
 
 ## The three counts
 
-Three different numbers appear across the source repository, and all three are correct in their own
+Four different numbers appear across the source repository, and all four are correct in their own
 scope. This has confused readers, so it is stated plainly here.
 
 | Count | Source | Scope |
 | --- | --- | --- |
-| 67 | `gallery.json` | Every curated capture carried into the gallery |
-| 41 | `screenshot-map.md` | Phase 1 through 6 curated captures only, with 35 superseded originals crosswalked |
+| 95 | `gallery.json` | Every curated capture carried into the gallery, including the 2026-06-17 and 2026-06-18 workflow sets |
+| 66 | `screenshot-map.md` | Numbered originals committed at the repository root |
+| 41 | `screenshot-map.md` | Phase 1 through 6 curated renames, with 35 superseded originals crosswalked |
 | 38 | `darbot-validation/README.md` | Images that loaded successfully during the `file://` validation pass |
 
-67 is the total. 41 is the Phase 1 through 6 subset. 38 is what the validation harness actually
-requested and confirmed HTTP 200 on. None of them contradicts the others.
+95 is the total. 66 is the raw original set. 41 is the Phase 1 through 6 curated subset. 38 is what
+the validation harness actually requested and confirmed HTTP 200 on, back on 2026-06-07, when the
+gallery was smaller. None of them contradicts the others.
+
+The gallery grew from 67 to 95 when the showcase workflow builds landed on 2026-06-18 and 2026-06-19.
+Any figure below 95 quoted elsewhere predates those captures.
 
 ## Two naming conventions
 
@@ -92,4 +97,4 @@ this validation.
 
 ## Browse
 
-See the [gallery](./gallery.mdx) for all 67 captures with phase filtering.
+See the [gallery](./gallery.mdx) for all 95 captures with phase filtering.

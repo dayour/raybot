@@ -3,7 +3,7 @@
   "package": "@raybot/object-model",
   "dialect": "https://json-schema.org/draft/2020-12/schema",
   "baseUri": "https://dayour.github.io/raybot/schemas",
-  "count": 41,
+  "count": 46,
   "schemas": [
     {
       "type": "Evidenced",
@@ -209,6 +209,31 @@
       "type": "ScreenshotCapture",
       "file": "ScreenshotCapture.schema.json",
       "$id": "https://dayour.github.io/raybot/schemas/ScreenshotCapture.schema.json"
+    },
+    {
+      "type": "ShowcaseConnector",
+      "file": "ShowcaseConnector.schema.json",
+      "$id": "https://dayour.github.io/raybot/schemas/ShowcaseConnector.schema.json"
+    },
+    {
+      "type": "ShowcaseWorkflow",
+      "file": "ShowcaseWorkflow.schema.json",
+      "$id": "https://dayour.github.io/raybot/schemas/ShowcaseWorkflow.schema.json"
+    },
+    {
+      "type": "IncidentTriageBuildStep",
+      "file": "IncidentTriageBuildStep.schema.json",
+      "$id": "https://dayour.github.io/raybot/schemas/IncidentTriageBuildStep.schema.json"
+    },
+    {
+      "type": "DesignerPitfall",
+      "file": "DesignerPitfall.schema.json",
+      "$id": "https://dayour.github.io/raybot/schemas/DesignerPitfall.schema.json"
+    },
+    {
+      "type": "AutomationCandidate",
+      "file": "AutomationCandidate.schema.json",
+      "$id": "https://dayour.github.io/raybot/schemas/AutomationCandidate.schema.json"
     }
   ]
 }

@@ -91,8 +91,9 @@ content audit. The correctness of the underlying numbers rests on the
 
 ## Note on image counts
 
-This pass verified **38** gallery images. `gallery.json` covers **41** curated captures, and
-`README.md` in the source repository states **67**. Three different numbers, all defensible in their
-own context — 67 is the total capture count across all phases, 41 is the curated canonical set, and
-38 is what the report's gallery tab actually referenced at validation time. The discrepancy is
-tracked in the [errata](../reference/errata.md).
+This pass verified **38** gallery images on 2026-06-07. `screenshot-map.md` covers **41** curated
+captures, and `gallery.json` now holds **95**. Three different numbers, all defensible in their own
+context - 95 is the total capture count across all phases as of 2026-06-19, 41 is the curated
+canonical set from Phases 1 through 6, and 38 is what the report's gallery tab actually referenced
+at validation time, twelve days before the showcase captures existed. The scoping is recorded in the
+[errata](../reference/errata.md).

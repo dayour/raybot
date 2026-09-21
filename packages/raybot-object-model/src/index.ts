@@ -16,4 +16,5 @@ export * from './workflow.js';
 export * from './runbook.js';
 export * from './evaluation.js';
 export * from './session.js';
+export * from './showcase.js';
 export * from './raybot.js';

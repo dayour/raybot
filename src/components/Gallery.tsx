@@ -49,7 +49,7 @@ function GalleryCard({ entry }: { entry: GalleryEntry }) {
 }
 
 /**
- * The full 67-capture gallery, filterable by phase and free text.
+ * The full 95-capture gallery, filterable by phase and free text.
  *
  * `phase` filtering is offered in the manifest's own ordering rather than
  * alphabetically, so the dropdown reads as the build timeline.

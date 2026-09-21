@@ -1,0 +1,167 @@
+---
+id: incident-triage-workflow
+title: Incident Triage and Routing
+sidebar_label: Incident Triage build
+description: The one Coral workflow in this repository captured action by action, from blank canvas to published, across seventeen stills.
+---
+
+import DataTable from '@site/src/components/DataTable';
+import Gallery from '@site/src/components/Gallery';
+
+# Incident Triage and Routing
+
+The only multi-branch Coral workflow in this repository assembled one action at
+a time, with a screenshot after every command. Seventeen stills, `00` through
+`16`, from an empty canvas to a published flow.
+
+| Fact | Value |
+|---|---|
+| Tenant | Cypherdyne (darbotlabs / `darbot@timelarp.com`) |
+| Workflow id | `29162552-181c-6272-eadf-4638b99c471e` |
+| Captures | `captures-2026-06-17/showcase/annotated/00..16` |
+| Built | 2026-06-17 |
+| Branches | 3 |
+
+Every other workflow record in this repository is either a node-type inventory
+(see [Phase 7](./phase-7-reaudit.mdx), which captured thirteen node types in
+isolation) or a linear three-step pipeline (see
+[Phase 8](./phase-8-showcase-catalog.mdx)). This is the only one that shows a
+branch being created, configured, and completed.
+
+## The pattern
+
+```
+Start (trigger: text input "incidentText")
+  -> Variable  severity = "unclassified"  (String)
+  -> Classify  incidentText into { Critical | Standard | Other }
+       Critical -> Human review   (Outlook approval: Title / Message / Assigned to)
+       Standard -> Agent          (GPT model, free-text triage response)
+       Other    -> Note           (sticky: manual-triage fallback, no automated action)
+```
+
+Each branch terminates differently on purpose, and the three endings are the
+point of the build:
+
+- **Critical** blocks on a person. The workflow stops until someone approves.
+- **Standard** delegates to a model. The workflow continues without a human.
+- **Other** does nothing automated at all.
+
+The third ending is the unusual one. A Note is a **canvas sticky, not a step** -
+it is not wired into the flow and does not execute. Placing one on the Other
+branch documents, inside the artefact itself, that the branch is deliberately
+unautomated. The alternative - leaving the branch empty - is indistinguishable
+from an unfinished workflow.
+
+## The Variable node earns its place
+
+`severity = "unclassified"` is set **before** Classify runs, and Classify never
+writes back to it.
+
+That looks redundant, and in this workflow it is: nothing reads `severity`
+downstream. It was included to capture the Variable node's configuration surface
+- name, Type dropdown, Value field - in a realistic position rather than in
+isolation. The generalisable version of the pattern is a pre-seeded default that
+downstream branches overwrite, so that a branch which fails to set it still
+yields a defined value rather than an empty one.
+
+## Build order
+
+<DataTable
+  rows={[
+    { ord: '00', capture: '00-workflows-list-darbotlabs', step: 'Workflows list in the darbotlabs environment; New workflow entry point.' },
+    { ord: '01', capture: '01-new-blank-canvas', step: 'Blank canvas with the single Start (trigger) node; left Add palette.' },
+    { ord: '02', capture: '02-renamed-workflow', step: 'Rename the workflow title to "Incident Triage and Routing".' },
+    { ord: '03', capture: '03-trigger-input-types', step: 'Trigger config: pick an input type.' },
+    { ord: '04', capture: '04-trigger-input-text-added', step: 'Text input incidentText added to the trigger.' },
+    { ord: '05', capture: '05-add-action-catalog', step: 'Add-action catalog (Agent / Classify / Variable and the rest).' },
+    { ord: '06', capture: '06-node-variable-severity', step: 'Variable node: name=severity, Type=String, Value=unclassified.' },
+    { ord: '07', capture: '07-add-catalog-after-variable', step: 'Add next action after Variable, selecting Classify.' },
+    { ord: '08', capture: '08-classify-configured', step: 'Classify configured with Critical / Standard / Other plus descriptions.' },
+    { ord: '09', capture: '09-human-review-critical-branch', step: 'Human review on the Critical branch (config panel).' },
+    { ord: '10', capture: '10-human-review-configured', step: 'Human review configured (Channel=Outlook, inputs mapped).' },
+    { ord: '11', capture: '11-human-review-complete', step: 'Critical branch complete.' },
+    { ord: '12', capture: '12-agent-standard-branch', step: 'Agent node on the Standard branch.' },
+    { ord: '13', capture: '13-agent-configured-clean', step: 'Agent configured, no errors (fit-to-view).' },
+    { ord: '14', capture: '14-add-catalog-other-branch', step: 'Add action on the Other branch.' },
+    { ord: '15', capture: '15-note-other-branch', step: 'Yellow Note (fallback) on the Other branch.' },
+    { ord: '16', capture: '16-published', step: 'Published; success banner, Test enabled.' },
+  ]}
+  columns={[
+    { key: 'ord', header: '#', mono: true, align: 'right' },
+    { key: 'capture', header: 'Capture', mono: true },
+    { key: 'step', header: 'Step' },
+  ]}
+  searchKeys={(r) => `${r.capture} ${r.step}`}
+  noun="steps"
+  pageSize={20}
+  searchPlaceholder="Search build steps"
+/>
+
+Branches are completed one at a time - Critical fully configured at `11` before
+Standard is started at `12`. That ordering was not aesthetic. Configuring two
+branches concurrently means two open config panels competing for the same canvas,
+and the designer does not handle that well
+([Phase 8](./phase-8-showcase-catalog.mdx#the-agent-config-panel-blocks-the-next-picker)).
+
+## Gotchas confirmed during this build
+
+### Agent Output defaults to Text response, and should stay there
+
+Selecting **Structured output** or **Custom structured output** adds required
+property fields, which triggers *"Fix 1 error before publishing"* and reinstates
+the **Setup needed** badge on a node that was already clean.
+
+```js
+await page.getByRole('option', { name: 'Text response' }).click();
+```
+
+Use structured output only when every required property will actually be filled.
+This behaviour recurred during the Phase 8 rebuild two days later.
+
+### Escape closes the panel and commits
+
+Pressing Escape while an Output dropdown is open closes the entire node panel
+**and commits an unintended value**. Click the desired option explicitly.
+
+### The Note node is a sticky
+
+Test id `action-item-canvasNote`. It is not wired into the flow. Editing it takes
+a double-click, which focuses a textarea; set the value, then click empty canvas
+to commit. Clicking away without committing discards the text.
+
+### Save and Publish
+
+The Save button carries test id `save-button` and is **disabled when the
+workflow is already saved** - a disabled Save is the success state, not a
+failure. Publish via:
+
+```js
+await page.getByRole('button', { name: 'Publish', exact: true }).click();
+```
+
+Publish takes roughly eight seconds. Afterwards the tooltip changes to
+*"Republish to re-enable the running flow (no new changes)"* and **Test**
+enables.
+
+## Captures
+
+<Gallery phase="showcase" />
+
+## What this build does not prove
+
+The workflow published. It was never run.
+
+No incident text was ever submitted to the trigger, so Classify has not been
+observed routing anything, the Outlook approval has not been sent, and the Agent
+on the Standard branch has not produced a triage response. The three-way branch
+is confirmed to be *constructible and publishable*; its routing behaviour is
+unverified.
+
+## Related
+
+- [Phase 7 - Re-audit](./phase-7-reaudit.mdx) - the thirteen node types captured
+  individually, including Classify, Agent, Human review, and Note
+- [Phase 8 - Showcase catalog](./phase-8-showcase-catalog.mdx) - the eleven
+  connector-backed workflows built after this one
+- [Workflow node capture](../automation/workflow-node-capture.md) - the automation
+  pattern used to capture node types one at a time

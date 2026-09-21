@@ -13,7 +13,7 @@ next-generation runtime — codename **Coral** — using nothing but browser aut
 
 This site is the complete record of that build: the runbook that produced the agent, the
 ground-truth UI and API audit of the runtime it was built in, a typed object model and SDK derived
-from both, the recovered terminal history, and all 67 screenshots.
+from both, the recovered terminal history, and all 95 screenshots.
 
 ## What makes this different
 
@@ -62,7 +62,7 @@ actually did, on a specific tenant, on specific dates, with a screenshot for eve
 | Network requests observed | 1,249 |
 | Functional requests classified | 611 |
 | API endpoints mapped | 57 |
-| Screenshots | 67 |
+| Screenshots | 95 |
 
 ## Where to start
 

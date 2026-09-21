@@ -109,7 +109,7 @@ plain JSON with no package dependency.
 | `label-gaps.json` | 228 |
 | `api-endpoints.json` | 57 |
 | `api-hosts.json` | 7 |
-| `gallery.json` | 67 |
+| `gallery.json` | 95 |
 | `evalset.json` | 6 |
 | `audit-totals.json` | 1 |
 | `tab-audit-log.json` | 4 |

@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dayour.github.io/raybot/schemas/ShowcaseConnector.schema.json",
+  "$ref": "#/definitions/ShowcaseConnector",
+  "definitions": {
+    "ShowcaseConnector": {
+      "type": "object",
+      "properties": {
+        "family": {
+          "$ref": "#/definitions/ShowcaseConnectorFamily"
+        },
+        "action": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "The exact action label as it appears in the picker, or null when agent-first."
+        },
+        "boundParameter": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "The connector parameter the trigger input is bound to, or null when agent-first."
+        }
+      },
+      "required": [
+        "family",
+        "action",
+        "boundParameter"
+      ],
+      "description": "A first-party connector action bound into a showcase workflow."
+    },
+    "ShowcaseConnectorFamily": {
+      "type": "string",
+      "enum": [
+        "github",
+        "office365users",
+        "none"
+      ],
+      "description": "The connector family bound to a showcase workflow's first action.\n\n`none` is a real, intentional value: three of the eleven workflows are agent-first by design, because their input is a free-text scope rather than a query against an external system. They are not incomplete."
+    }
+  }
+}

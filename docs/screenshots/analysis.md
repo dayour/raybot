@@ -6,7 +6,7 @@ sidebar_label: Capture analysis
 
 # Capture analysis
 
-What the 67 captures collectively prove, which ones are load-bearing evidence for a documented
+What the 95 captures collectively prove, which ones are load-bearing evidence for a documented
 constraint, and which are context only.
 
 Because [no build transcript exists](../session/provenance.md), the screenshots carry more
@@ -16,24 +16,35 @@ evidentiary weight here than they would in a project that had one.
 
 | Phase | Captures | Share |
 | --- | --- | --- |
-| workflow | 17 | 25 percent |
-| evaluate | 8 | 12 percent |
-| settings | 7 | 10 percent |
-| tools | 6 | 9 percent |
-| iq | 5 | 7 percent |
-| build | 4 | 6 percent |
-| knowledge | 4 | 6 percent |
-| runtime | 4 | 6 percent |
-| skills | 3 | 4 percent |
-| teams | 3 | 4 percent |
-| publish | 2 | 3 percent |
+| workflow | 17 | 18 percent |
+| showcase | 17 | 18 percent |
+| wf-real | 11 | 12 percent |
+| evaluate | 8 | 8 percent |
+| settings | 7 | 7 percent |
+| tools | 6 | 6 percent |
+| iq | 5 | 5 percent |
+| build | 4 | 4 percent |
+| knowledge | 4 | 4 percent |
+| runtime | 4 | 4 percent |
+| skills | 3 | 3 percent |
+| teams | 3 | 3 percent |
+| publish | 2 | 2 percent |
 | connected | 1 | 1 percent |
 | memory | 1 | 1 percent |
 | monitor | 1 | 1 percent |
 | preview | 1 | 1 percent |
-| **Total** | **67** | |
+| **Total** | **95** | |
 
-## Why workflow is 17 of 67
+Workflow work dominates: `workflow`, `showcase`, and `wf-real` together account
+for 45 of 95 captures, nearly half the corpus. All three postdate the original
+Raybot build. The agent itself - the nominal subject of this repository - is
+documented in roughly thirty frames.
+
+That imbalance is real and worth stating plainly. The designer turned out to be
+the more interesting surface, and the capture record followed the interest rather
+than the original scope.
+
+## Why workflow is 17 of 95
 
 The workflow designer accounts for a quarter of all captures despite being a **single surface**
 discovered during the Phase 7 re-audit, not part of the original build.

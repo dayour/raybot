@@ -103,7 +103,50 @@ The first CI run failed on `npm ci` because `package-lock.json` predated the obj
 Fixed with `npm install --package-lock-only`.
 
 Twelve issues were filed to track the remaining pages. They are worked sequentially, one issue per
-commit.
+commit. All twelve are now closed.
+
+## 2026-06-18 and 2026-06-19 — Showcase workflows
+
+Three commits landed in the source repository after this wiki's baseline, and
+substantially changed what it needed to cover.
+
+| Commit | Contents |
+| --- | --- |
+| `b9f9595` | Showcase workflow: Incident Triage and Routing — 17 annotated build captures, runbook Step 24 |
+| `9206f4b` | 11-workflow Coral showcase catalog plus the session-harvest report |
+| `56562d8` | Rebuild the 11 showcase workflows with real connectors, agent, and human review |
+
+The third commit **discarded** the catalog the second one added. The original
+eleven workflows contained only Variable, Classify, and Note nodes — no
+connector, no model call, no human gate — and were replaced wholesale rather than
+extended. Both sets remain in the repository, because the stubs are the evidence
+for why the rebuild happened.
+
+Net effect on the source repository:
+
+- `RUNBOOK.md` grew by 185 lines and gained **Phase 8** plus Step 24
+- `gallery.json` grew from 67 to **95** entries
+- Two new capture trees: `captures-2026-06-18/` (70 files) and
+  `captures-2026-06-17/showcase/` (34 files)
+- Three new Pillow annotators, one of them driven by a measured node-geometry
+  sidecar
+- `coral-schema/automation-candidates.md` — 25 ranked candidates mined from
+  2,923 session-state directories
+- The screenshot layout **reverted**: the 66 numbered originals moved back to the
+  repository root, leaving `screenshots/` with only the 41 curated renames
+
+## 2026-09-17 — Errata fixed and wiki catch-up
+
+Commit `d18c852` in the source repository fixed all four documented errata. Each
+was re-derived against the current tree first, which mattered: three of the four
+had changed shape since they were first recorded, and one had changed enough that
+the originally-planned fix would have introduced a new error. See
+[Errata](./errata.md).
+
+This wiki was then extended to cover the new upstream material: Phase 8, the
+Incident Triage build, the annotation pipeline, the automation candidates, a
+`showcase.ts` object-model module emitting five new JSON Schemas, and a
+reconciliation of every stale capture count from 67 to 95.
 
 ## Provenance gap
 

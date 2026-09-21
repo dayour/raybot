@@ -467,5 +467,201 @@
         "phase":  "runtime",
         "caption":  "Analytics - Effectiveness: Conversation outcomes chart",
         "exists":  true
+    },
+    {
+        "order":  68,
+        "file":  "captures-2026-06-17/showcase/annotated/00-workflows-list-darbotlabs.png",
+        "phase":  "showcase",
+        "caption":  "Showcase: Workflows list in darbotlabs environment",
+        "exists":  true
+    },
+    {
+        "order":  69,
+        "file":  "captures-2026-06-17/showcase/annotated/01-new-blank-canvas.png",
+        "phase":  "showcase",
+        "caption":  "Showcase: New blank canvas with Start trigger node",
+        "exists":  true
+    },
+    {
+        "order":  70,
+        "file":  "captures-2026-06-17/showcase/annotated/02-renamed-workflow.png",
+        "phase":  "showcase",
+        "caption":  "Showcase: Renamed workflow to Incident Triage and Routing",
+        "exists":  true
+    },
+    {
+        "order":  71,
+        "file":  "captures-2026-06-17/showcase/annotated/03-trigger-input-types.png",
+        "phase":  "showcase",
+        "caption":  "Showcase: Trigger input type picker",
+        "exists":  true
+    },
+    {
+        "order":  72,
+        "file":  "captures-2026-06-17/showcase/annotated/04-trigger-input-text-added.png",
+        "phase":  "showcase",
+        "caption":  "Showcase: Trigger text input incidentText added",
+        "exists":  true
+    },
+    {
+        "order":  73,
+        "file":  "captures-2026-06-17/showcase/annotated/05-add-action-catalog.png",
+        "phase":  "showcase",
+        "caption":  "Showcase: Add-action catalog",
+        "exists":  true
+    },
+    {
+        "order":  74,
+        "file":  "captures-2026-06-17/showcase/annotated/06-node-variable-severity.png",
+        "phase":  "showcase",
+        "caption":  "Showcase: Variable node severity=unclassified (String)",
+        "exists":  true
+    },
+    {
+        "order":  75,
+        "file":  "captures-2026-06-17/showcase/annotated/07-add-catalog-after-variable.png",
+        "phase":  "showcase",
+        "caption":  "Showcase: Add action after Variable -\u003e Classify",
+        "exists":  true
+    },
+    {
+        "order":  76,
+        "file":  "captures-2026-06-17/showcase/annotated/08-classify-configured.png",
+        "phase":  "showcase",
+        "caption":  "Showcase: Classify configured (Critical/Standard/Other)",
+        "exists":  true
+    },
+    {
+        "order":  77,
+        "file":  "captures-2026-06-17/showcase/annotated/09-human-review-critical-branch.png",
+        "phase":  "showcase",
+        "caption":  "Showcase: Human review on Critical branch",
+        "exists":  true
+    },
+    {
+        "order":  78,
+        "file":  "captures-2026-06-17/showcase/annotated/10-human-review-configured.png",
+        "phase":  "showcase",
+        "caption":  "Showcase: Human review configured (Outlook)",
+        "exists":  true
+    },
+    {
+        "order":  79,
+        "file":  "captures-2026-06-17/showcase/annotated/11-human-review-complete.png",
+        "phase":  "showcase",
+        "caption":  "Showcase: Critical branch complete",
+        "exists":  true
+    },
+    {
+        "order":  80,
+        "file":  "captures-2026-06-17/showcase/annotated/12-agent-standard-branch.png",
+        "phase":  "showcase",
+        "caption":  "Showcase: Agent node on Standard branch",
+        "exists":  true
+    },
+    {
+        "order":  81,
+        "file":  "captures-2026-06-17/showcase/annotated/13-agent-configured-clean.png",
+        "phase":  "showcase",
+        "caption":  "Showcase: Agent configured, no errors",
+        "exists":  true
+    },
+    {
+        "order":  82,
+        "file":  "captures-2026-06-17/showcase/annotated/14-add-catalog-other-branch.png",
+        "phase":  "showcase",
+        "caption":  "Showcase: Add action on Other branch",
+        "exists":  true
+    },
+    {
+        "order":  83,
+        "file":  "captures-2026-06-17/showcase/annotated/15-note-other-branch.png",
+        "phase":  "showcase",
+        "caption":  "Showcase: Note fallback on Other branch",
+        "exists":  true
+    },
+    {
+        "order":  84,
+        "file":  "captures-2026-06-17/showcase/annotated/16-published.png",
+        "phase":  "showcase",
+        "caption":  "Showcase: Published; success banner, Test enabled",
+        "exists":  true
+    },
+    {
+        "order":  85.0,
+        "file":  "captures-2026-06-18/annotated-real/wf01-real.png",
+        "phase":  "wf-real",
+        "caption":  "WF01 GitHub Key and Token Lifecycle (input: repoQuery) - GitHub: Search Github using Query -\u003e Agent -\u003e Human review approval gate",
+        "exists":  true
+    },
+    {
+        "order":  86.0,
+        "file":  "captures-2026-06-18/annotated-real/wf02-real.png",
+        "phase":  "wf-real",
+        "caption":  "WF02 GitHub PR Triage and Review Routing (input: prQuery) - GitHub: Search Github using Query -\u003e Agent -\u003e Human review approval gate",
+        "exists":  true
+    },
+    {
+        "order":  87.0,
+        "file":  "captures-2026-06-18/annotated-real/wf03-real.png",
+        "phase":  "wf-real",
+        "caption":  "WF03 GitHub Issue Auto-Labeler (input: issueQuery) - GitHub: Search Github using Query -\u003e Agent -\u003e Human review approval gate",
+        "exists":  true
+    },
+    {
+        "order":  88.0,
+        "file":  "captures-2026-06-18/annotated-real/wf04-real.png",
+        "phase":  "wf-real",
+        "caption":  "WF04 Secret Exposure Scan and Alert (input: secretQuery) - GitHub: Search Github using Query -\u003e Agent -\u003e Human review approval gate",
+        "exists":  true
+    },
+    {
+        "order":  89.0,
+        "file":  "captures-2026-06-18/annotated-real/wf05-real.png",
+        "phase":  "wf-real",
+        "caption":  "WF05 Repo Onboarding Provisioner (input: repoQuery) - GitHub: Search Github using Query -\u003e Agent -\u003e Human review approval gate",
+        "exists":  true
+    },
+    {
+        "order":  90.0,
+        "file":  "captures-2026-06-18/annotated-real/wf06-real.png",
+        "phase":  "wf-real",
+        "caption":  "WF06 Release Notes Generator (input: releaseQuery) - GitHub: Search Github using Query -\u003e Agent -\u003e Human review approval gate",
+        "exists":  true
+    },
+    {
+        "order":  91.0,
+        "file":  "captures-2026-06-18/annotated-real/wf07-real.png",
+        "phase":  "wf-real",
+        "caption":  "WF07 Incident to Teams Bridge (input: incidentText) - no connector (agent first) -\u003e Agent -\u003e Human review approval gate",
+        "exists":  true
+    },
+    {
+        "order":  92.0,
+        "file":  "captures-2026-06-18/annotated-real/wf08-real.png",
+        "phase":  "wf-real",
+        "caption":  "WF08 Quarterly Access Review (input: accessScope) - Office 365 Users: Search for users -\u003e Agent -\u003e Human review approval gate",
+        "exists":  true
+    },
+    {
+        "order":  93.0,
+        "file":  "captures-2026-06-18/annotated-real/wf09-real.png",
+        "phase":  "wf-real",
+        "caption":  "WF09 Dependency Health Monitor (input: depQuery) - GitHub: Search Github using Query -\u003e Agent -\u003e Human review approval gate",
+        "exists":  true
+    },
+    {
+        "order":  94.0,
+        "file":  "captures-2026-06-18/annotated-real/wf10-real.png",
+        "phase":  "wf-real",
+        "caption":  "WF10 Docs Capture and Publish Pipeline (input: docTopic) - no connector (agent first) -\u003e Agent -\u003e Human review approval gate",
+        "exists":  true
+    },
+    {
+        "order":  95.0,
+        "file":  "captures-2026-06-18/annotated-real/wf11-real.png",
+        "phase":  "wf-real",
+        "caption":  "WF11 Cloud Key Rotation Orchestrator (input: keyScope) - no connector (agent first) -\u003e Agent -\u003e Human review approval gate",
+        "exists":  true
     }
 ]

@@ -33,7 +33,7 @@ const CARDS = [
   {
     title: 'Screenshot gallery',
     to: '/docs/screenshots/gallery',
-    body: 'All 67 curated captures, filterable by phase, with the crosswalk to the superseded originals.',
+    body: 'All 95 curated captures, filterable by phase, with the crosswalk to the superseded originals.',
   },
   {
     title: 'Automation patterns',

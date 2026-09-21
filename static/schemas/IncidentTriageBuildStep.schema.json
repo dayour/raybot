@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dayour.github.io/raybot/schemas/IncidentTriageBuildStep.schema.json",
+  "$ref": "#/definitions/IncidentTriageBuildStep",
+  "definitions": {
+    "IncidentTriageBuildStep": {
+      "type": "object",
+      "properties": {
+        "ordinal": {
+          "type": "string",
+          "description": "Zero-padded capture ordinal, `00` through `16`."
+        },
+        "capture": {
+          "type": "string",
+          "description": "Capture basename, without extension, inside the showcase annotated folder."
+        },
+        "description": {
+          "type": "string",
+          "description": "What the capture shows."
+        }
+      },
+      "required": [
+        "ordinal",
+        "capture",
+        "description"
+      ],
+      "description": "The fully-captured reference workflow built on 2026-06-17.\n\nThis one is modelled separately from the catalog because it is a different kind of artefact: it branches three ways off a Classify node, where every catalog workflow is linear. It is the only capture set in the repository that shows a multi-branch Coral workflow assembled action by action."
+    }
+  }
+}

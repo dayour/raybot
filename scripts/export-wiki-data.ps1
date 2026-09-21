@@ -172,6 +172,26 @@ $galleryOut = foreach ($g in $gallery) {
 }
 Write-JsonFile -Path (Join-Path $Dest 'gallery.json') -Value @($galleryOut)
 
+# --- gallery images: mirror every referenced capture into static/img ---
+# The gallery component resolves each entry as img/<file>, preserving the
+# source-relative path. Copy only what changed so re-runs stay cheap.
+$imgRoot = Join-Path (Split-Path $Dest -Parent) 'static/img'
+$copied = 0
+$absent = @()
+foreach ($g in $galleryOut) {
+    $src = Join-Path $Source $g.file
+    if (-not (Test-Path -LiteralPath $src)) { $absent += $g.file; continue }
+    $dst = Join-Path $imgRoot $g.file
+    $dstDir = Split-Path $dst -Parent
+    if (-not (Test-Path -LiteralPath $dstDir)) { New-Item -ItemType Directory -Path $dstDir -Force | Out-Null }
+    if ((Test-Path -LiteralPath $dst) -and
+        (Get-Item -LiteralPath $dst).Length -eq (Get-Item -LiteralPath $src).Length) { continue }
+    Copy-Item -LiteralPath $src -Destination $dst -Force
+    $copied++
+}
+Write-Host "gallery images: $($galleryOut.Count) referenced, $copied copied, $($absent.Count) absent at source"
+foreach ($a in $absent) { Write-Warning "gallery image absent at source: $a" }
+
 # --- evalset: the six-pair Copilot Studio evaluation CSV ---
 $evalRows = Import-Csv -LiteralPath (Join-Path $Source 'raybot-evalset.csv')
 $evalOut = foreach ($r in $evalRows) {

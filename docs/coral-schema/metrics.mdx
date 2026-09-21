@@ -95,18 +95,20 @@ them would imply a rigor the method did not have.
 
 ## Counts that disagree elsewhere in the source repo
 
-Three different gallery counts exist across the source repository: 67, 41, and 38. All three are
+Four different gallery counts exist across the source repository: 95, 66, 41, and 38. All four are
 correct for their own scope, and none is a superset of the others.
 
 | Count | Scope |
 | --- | --- |
-| 67 | Every capture in `gallery.json` |
+| 95 | Every capture in `gallery.json` |
+| 66 | Numbered originals committed at the repository root |
 | 41 | Curated set in `screenshot-map.md` |
 | 38 | Images verified HTTP 200 in the `darbot-validation` run |
 
 The disagreement is recorded in the [errata](../reference/errata.md) rather than resolved by picking
 one, because each number answers a different question and silently unifying them would lose
-information.
+information. The source repository now scopes all four in a single table, which is the resolution
+that preserves the distinctions.
 
 ## Validation run
 

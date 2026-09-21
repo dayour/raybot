@@ -38,6 +38,8 @@ const sidebars: SidebarsConfig = {
         'runbook/phase-5-publish-evaluate',
         'runbook/phase-6-teams',
         'runbook/phase-7-reaudit',
+        'runbook/incident-triage-workflow',
+        'runbook/phase-8-showcase-catalog',
         'runbook/legacy',
       ],
     },
@@ -51,6 +53,8 @@ const sidebars: SidebarsConfig = {
         'automation/workflow-node-capture',
         'automation/darbot-browser-mcp',
         'automation/scripts',
+        'automation/annotation-pipeline',
+        'automation/automation-candidates',
       ],
     },
     {
@@ -117,6 +121,7 @@ const sidebars: SidebarsConfig = {
       items: [
         'object-model/evaluation',
         'object-model/workflow',
+        'object-model/showcase',
         'object-model/coral-surface',
       ],
     },

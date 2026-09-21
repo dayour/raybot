@@ -115,19 +115,21 @@ replaced by a cleaner capture of the same thing.
 | `67-dialog-add-connected-agent.png` | Replaced by `17-connected-agents-dialog.png` |
 | `68-dialog-add-microsoft-iq.png` | Replaced by `76-dialog-add-microsoft-iq.png` |
 
-## The three gallery counts
+## The four gallery counts
 
-41 is not the only count in circulation. Three exist, and all three are correct for their own scope:
+41 is not the only count in circulation. Four exist, and all four are correct for their own scope:
 
 | Count | Scope |
 | --- | --- |
-| 67 | Every capture in `gallery.json`, including Phase 7 |
+| 95 | Every capture in `gallery.json`, including Phases 7 and 8 |
+| 66 | Numbered originals committed at the repository root |
 | 41 | The curated set on this page |
 | 38 | Images verified HTTP 200 in the `darbot-validation` run |
 
-The 67 figure includes the 2026-06-17 Phase 7 workflow-designer captures, which postdate this map and
-were never folded into the curated numbering. The 38 figure is the subset the validation harness
-actually fetched.
+The 95 figure includes the 2026-06-17 Phase 7 workflow-designer captures, the 17-frame Incident
+Triage build, and the 2026-06-18 showcase workflow set. All of them postdate this map and none were
+folded into the curated numbering. The 38 figure is the subset the validation harness actually
+fetched on 2026-06-07, before any of that existed.
 
 Recorded in the [errata](../reference/errata.md) rather than resolved, because each number answers a
 different question.

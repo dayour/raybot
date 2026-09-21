@@ -6,7 +6,7 @@ sidebar_label: Overview
 
 # The runbook
 
-The complete, reproducible build of Raybot, in seven phases and twenty-three steps. Every step names
+The complete, reproducible build of Raybot, in eight phases and twenty-four steps. Every step names
 the control it operated and the capture it produced.
 
 ## Method
@@ -32,6 +32,11 @@ Three rules governed the whole build.
 | [5](./phase-5-publish-evaluate.mdx) | Publish, Preview, Evaluate, Monitor | Mixed. Preview works; Evaluate scores zero. |
 | [6](./phase-6-teams.mdx) | Teams and M365 distribution | Blocked. Tenant admin required. |
 | [7](./phase-7-reaudit.mdx) | Workflow designer and analytics re-audit | Complete. 26 captures, 13 node types. |
+| [8](./phase-8-showcase-catalog.mdx) | Showcase workflow catalog | Complete. 11 connector-backed workflows published, none executed. |
+
+Phase 8 is preceded by a standalone build that does not belong to any phase:
+[Incident Triage and Routing](./incident-triage-workflow.mdx), the only
+multi-branch Coral workflow in this repository captured action by action.
 
 ## Tool surface
 

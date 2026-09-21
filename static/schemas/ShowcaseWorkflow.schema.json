@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dayour.github.io/raybot/schemas/ShowcaseWorkflow.schema.json",
+  "$ref": "#/definitions/ShowcaseWorkflow",
+  "definitions": {
+    "ShowcaseWorkflow": {
+      "type": "object",
+      "properties": {
+        "confidence": {
+          "$ref": "#/definitions/ConfidenceLevel"
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Capture filenames, dump filenames, or request ids that back the claim. Relative to the audit repository root."
+        },
+        "note": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Free-text qualifier, used when a claim is true only under conditions."
+        },
+        "ordinal": {
+          "type": "string",
+          "description": "Catalog ordinal, `01` through `11`, zero-padded to match capture folders."
+        },
+        "name": {
+          "type": "string"
+        },
+        "input": {
+          "type": "string",
+          "description": "The single typed Text input on the Start trigger."
+        },
+        "connector": {
+          "$ref": "#/definitions/ShowcaseConnector"
+        },
+        "decisionSignal": {
+          "type": "string",
+          "description": "The uppercase token the agent step is instructed to emit on its final line, for example `ROTATION` or `MERGE_BLOCK`."
+        },
+        "flowIdPrefix": {
+          "type": "string",
+          "description": "First eight characters of the flow GUID. Full GUIDs were not exported."
+        },
+        "captureFolder": {
+          "type": "string",
+          "description": "Capture folder holding the three per-workflow step stills."
+        }
+      },
+      "required": [
+        "captureFolder",
+        "confidence",
+        "connector",
+        "decisionSignal",
+        "flowIdPrefix",
+        "input",
+        "name",
+        "ordinal"
+      ],
+      "description": "One workflow in the eleven-workflow showcase catalog.\n\nEvery entry follows the same three-part shape: a typed text input, an optional connector, an agent that reduces the connector output to a single machine-readable decision line, and a human gate. The decision signal is the load-bearing part. It exists so that a downstream consumer can branch on one grep-able token instead of parsing free prose, and it is the reason each agent's instructions end with a fixed final line."
+    },
+    "ConfidenceLevel": {
+      "type": "string",
+      "enum": [
+        "CONFIRMED",
+        "SOURCE-INSPECTED",
+        "UNCONFIRMED"
+      ],
+      "description": "How a recorded fact was established.\n\n- `CONFIRMED` - observed directly in the running product: a DOM dump, a   captured network request, or a screenshot showing the resulting state.\n- `SOURCE-INSPECTED` - read out of shipped client source (bundle, sourcemap,   or manifest) but never exercised at runtime during the audit.\n- `UNCONFIRMED` - inferred from naming, adjacency, or documentation, with no   direct observation behind it."
+    },
+    "ShowcaseConnector": {
+      "type": "object",
+      "properties": {
+        "family": {
+          "$ref": "#/definitions/ShowcaseConnectorFamily"
+        },
+        "action": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "The exact action label as it appears in the picker, or null when agent-first."
+        },
+        "boundParameter": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "The connector parameter the trigger input is bound to, or null when agent-first."
+        }
+      },
+      "required": [
+        "family",
+        "action",
+        "boundParameter"
+      ],
+      "description": "A first-party connector action bound into a showcase workflow."
+    },
+    "ShowcaseConnectorFamily": {
+      "type": "string",
+      "enum": [
+        "github",
+        "office365users",
+        "none"
+      ],
+      "description": "The connector family bound to a showcase workflow's first action.\n\n`none` is a real, intentional value: three of the eleven workflows are agent-first by design, because their input is a free-text scope rather than a query against an external system. They are not incomplete."
+    }
+  }
+}
